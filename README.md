@@ -1,2 +1,0 @@
-# An-Cuong
-KKonaW
