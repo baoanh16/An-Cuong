@@ -136,11 +136,26 @@
 			font-weight: bold
 			text-transform: uppercase
 		.swiper-container
+			height: 50vh
 			.swiper-slide
+				display: -webkit-box
+				display: -ms-flexbox
+				display: -webkit-flex
+				display: flex
+				-webkit-box-pack: center
+				-ms-flex-pack: center
+				-webkit-justify-content: center
+				justify-content: center
+				-webkit-box-align: center
+				-ms-flex-align: center
+				-webkit-align-items: center
+				align-items: center
 				border-top: r(10px) solid #dbb062
 				border-left: r(10px) solid #dbb062
 				padding: 0 r(10px) 0 0
 				border-right: r(10px) solid #dbb062
+				&:nth-child(n+1)
+					height: 100px
 				&:last-child
 					border-bottom: r(10px) solid #dbb062
 				img

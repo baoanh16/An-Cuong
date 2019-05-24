@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	// Viết Script ở đây!
+
 	var speed = 500;
 	$('#sidebar-index-wrappper > li.have-children > a').click(function (e) {
 		e.preventDefault();
@@ -29,6 +29,8 @@ function swiperInit() {
 			prevEl: '.swiper-button-prev',
 		},
 	});
+
+
 	var mySwiper = new Swiper('#index-news-swiper', {
 		direction: 'horizontal',
 		slidesPerView: 1,
@@ -42,24 +44,17 @@ function swiperInit() {
 			prevEl: '.index-news-swiper-next',
 		},
 	});
-	var mySwiperPartner = new Swiper('#index-news-partner-vertical', {
-		direction: 'vertical',
-		centeredSlides: true,
-		slidesPerView: 'auto',
-		loopedSlides :'auto',
-		autoplay: {
-			delay: 500,
-		},
-		speed: 700,
 
-	});
+
 	var indexSwiperCatalouge = new Swiper('#index-guide-swiper-catalogue', {
 		direction: 'horizontal',
 		slidesPerView: 1,
+		loop: true,
+		effect: 'fade',
 		navigation: {
 			nextEl: '.swiper-catelogue-next',
 			prevEl: '.swiper-catelogue-prev',
-		  },
+		},
 		autoplay: {
 			delay: 500,
 		},
@@ -67,7 +62,20 @@ function swiperInit() {
 
 	});
 	// mySwiperPartner.autoplay.start();
-
+	var mySwiperPartner = new Swiper('#index-news-partner-vertical', {
+		direction: 'vertical',
+		slidesPerView: 'auto',
+		preventInteractionOnTransition: true,
+		touchRatio: 0,
+		loopAdditionalSlides:4,
+		loopedSlides : 4,
+		autoplay: {
+			delay: 500,
+		},
+		speed: 700,
+	});
+	mySwiperPartner.update();
+	mySwiperPartner.autoplay();
 
 
 }
