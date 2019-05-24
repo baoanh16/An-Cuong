@@ -1,0 +1,70 @@
+.footer-an-cuong
+	.footer-nav
+		margin: r(55px) 0 r(25px) 0
+		position: relative
+		padding: 1rem r(180px)
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 1px
+			background: #eaeaea
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			bottom: 0
+			width: 100%
+			height: 1px
+			background: #eaeaea
+		
+		ul
+			margin: 0
+			padding: 0
+			list-style-type: none
+			display: flex
+			justify-content: space-between
+			align-items: center
+			li
+				display: inline-block
+				a
+					text-decoration: none
+					font-size: r(15px)
+					font-family: 'Encode Sans'
+					color: rgb(51, 51, 51)
+					text-transform: uppercase
+					line-height: r(23px)
+		@media screen and(max-width: 1600px)
+			padding: 1rem 2.25rem
+	.footer-contact-information
+		.distribute-title
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-bottom: 1rem
+			span
+				font-size: r(17px)
+				font-family: 'Encode Sans'
+				color: rgb(219, 176, 98)
+				font-weight: 400
+				display: flex
+				justify-content: center
+				align-items: center
+				h2
+					font-size: r(17px)
+					font-family: 'Encode Sans'
+					color: rgb(219, 176, 98)
+					text-transform: uppercase
+					font-weight: 600
+		h5
+			margin-bottom: .5rem
+			font-size: r(14px)
+			font-family: 'Encode Sans'
+			color: rgb(51, 51, 51)
+			text-align: center
+			line-height: r(22px)
+			font-weight: 400
