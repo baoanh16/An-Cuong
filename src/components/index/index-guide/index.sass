@@ -1,6 +1,5 @@
 .index-guide-catalogue
 	.index-guide-video
-		border-right: r(20px) solid #fff
 		.guide-video-sub
 			position: relative
 			overflow: hidden
@@ -94,8 +93,11 @@
 				color: rgb(255, 255, 255)
 				line-height: 1.5
 				text-align: left
+		@media screen and(max-width:1600px)
+			padding-right: 10px
+
 	.index-guide-swiper-wrapper
-		border-right: r(20px) solid #fff
+		border-left: r(10px) solid #fff
 		background: #f6f6f6
 		padding: r(13px) r(30px) r(30px) r(30px)
 		h3
@@ -144,6 +146,8 @@
 		&:first-child
 			margin-bottom: r(10px)
 	.index-guide-contact
+		border-left: r(20px) solid #fff
+
 		.figure
 			.figure-image
 				position: relative
