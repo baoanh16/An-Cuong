@@ -1,0 +1,19 @@
+extends _layout.pug
+
+block var
+	- var title = 'Home'
+	- var bodyClass = 'home-page'
+
+block main
+	// Includes components here
+	.container
+		.row
+			.col-3
+				include ../components/index/sidebar-index/index.pug
+			.col-9
+				.row.no-gutters
+					.col-12
+						include ../components/product-filter/index.pug
+				
+					.col-12
+						include ../components/san-pham/index.pug
