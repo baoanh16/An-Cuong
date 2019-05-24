@@ -2,7 +2,7 @@
 	.footer-nav
 		margin: r(55px) 0 r(25px) 0
 		position: relative
-		padding: 1rem r(180px)
+		padding: 0 r(180px)
 		&:before
 			content: ''
 			display: block
@@ -32,12 +32,16 @@
 			li
 				display: inline-block
 				a
+					padding: 1rem 1rem
 					text-decoration: none
 					font-size: r(15px)
 					font-family: 'Encode Sans'
 					color: rgb(51, 51, 51)
 					text-transform: uppercase
 					line-height: r(23px)
+					&:hover
+						color: #fff
+						background: rgba(#6586a0,.5)
 		@media screen and(max-width: 1600px)
 			padding: 1rem 2.25rem
 	.footer-contact-information
