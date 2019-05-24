@@ -67,15 +67,33 @@ function swiperInit() {
 		slidesPerView: 'auto',
 		preventInteractionOnTransition: true,
 		touchRatio: 0,
-		loopAdditionalSlides:4,
-		loopedSlides : 4,
+		loopAdditionalSlides: 4,
+		loopedSlides: 4,
 		autoplay: {
 			delay: 500,
 		},
 		speed: 700,
+		breakpointsInverse: true,
+		breakpoints: {
+			// when window width is >= 320px
+			320: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+			// when window width is >= 480px
+			1200: {
+				slidesPerView: 'auto',
+				loopAdditionalSlides: 4,
+				spaceBetween: 0
+			},
+			// when window width is >= 640px
+			1600: {
+				slidesPerView:'auto',
+				spaceBetween: 0
+			}
+		}
 	});
-	mySwiperPartner.update();
-	mySwiperPartner.autoplay();
+
 
 
 }

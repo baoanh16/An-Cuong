@@ -3,7 +3,7 @@
 		background: #f6f6f6
 		.figure
 			max-width: r(410px)
-			padding: r(20px) r(20px) r(40px) r(20px)
+			padding: r(20px) r(20px) r(48px) r(20px)
 			position: relative
 			h4
 				font-size: r(16px)
@@ -14,7 +14,6 @@
 			.figure-image
 				overflow: hidden
 				margin-bottom: 1.1rem
-
 				img
 					max-width: 100%
 					height: auto
@@ -28,15 +27,13 @@
 					&:hover
 						opacity: 0.7
 						transform: scale(1.03)
-				
-
 			p
 				font-size: r(16px)
 				font-weight: 400
+				line-height: r(22px)
 				font-family: 'Encode Sans'
 				color: rgb(51, 51, 51)
 				margin-bottom: 1rem
-
 			.figure-link
 				transition: .2s all ease-in-out
 				&:hover
@@ -53,6 +50,17 @@
 					font-family: 'Encode Sans'
 					color: rgb(51, 51, 51)
 					font-weight: bold
+		@media screen and(max-width:1600px)
+			.figure
+				padding: r(21px) r(20px)
+				h4
+					padding-bottom: r(10px)
+				.figure-image
+					margin-bottom: .5rem
+				p
+					font-size: r(14px)
+					margin-bottom: 0.25rem
+
 	.index-news-swiper
 		background: #f6f6f6
 		padding: r(15px) r(35px) r(40px) r(40px)
@@ -129,15 +137,20 @@
 						text-decoration: line-through
 						font-weight: 400
 	.index-news-partner
+		overflow: hidden
 		h2
+			padding: r(14px) r(70px)
+			display: inline-block
+			background: #f2f2f2
 			font-size: r(20px)
 			font-family: 'Encode Sans'
 			color: rgb(51, 51, 51)
 			font-weight: bold
 			text-transform: uppercase
 		.swiper-container
-			height: 50vh
+			height: 24.15rem
 			.swiper-slide
+				height: 25%
 				display: -webkit-box
 				display: -ms-flexbox
 				display: -webkit-flex
@@ -163,4 +176,14 @@
 					padding: 0 r(10px)
 					height: auto
 					width: 100%
-
+		@media screen and(max-width:1600px)
+			h2
+				padding: r(14px) r(54px)
+				font-size: r(16px)
+				text-align: center
+				white-space: nowrap
+			.swiper-container
+				height: 18.85rem
+		@media screen and(max-width:1200px)
+			.swiper-container
+				height: 50vh
