@@ -13,7 +13,6 @@ $(document).ready(function () {
 			$('#sidebar-index-wrappper li').removeClass('active');
 		}
 	});
-
 	swiperInit();
 });
 
