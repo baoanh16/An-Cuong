@@ -1,0 +1,37 @@
+.sidebar-index
+	margin-top: 1rem
+	.sidebar-index-wrappper
+		list-style-type: none
+		margin: 0
+		padding: 0
+		li
+			border-bottom: 1px solid rgba(#fafafa,1)
+			background: #f2f2f2
+			&.active
+				background: #dbb062
+			&.have-children
+				position: relative
+				&:hover
+					background: #dbb062
+					ul
+						li
+							&:hover
+								background: #b6bdc7
+			a
+				position: relative
+				display: block
+				color: #333333
+				text-decoration: none
+				text-transform: uppercase
+				padding: r(16px ) r(22px)
+				font-size: r(15px)
+				font-family: 'Encode Sans'
+				line-height: r(23px)
+				
+			ul
+				list-style-type: none
+				display: none
+				margin: 0
+				padding: 0
+				li
+					border-bottom: 1px solid rgba(#b6bdc7,1)
