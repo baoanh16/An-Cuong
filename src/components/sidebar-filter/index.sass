@@ -1,0 +1,126 @@
+.sidebar-filter
+	.filter-wrapper
+		transition: .3s all ease-in-out
+		margin-top: r(40px)
+		&.active
+			.filter-title
+				// em
+				// 	-webkit-transform: rotate(180deg)
+				// 	-ms-transform: rotate(180deg)
+				// 	transform: rotate(180deg)
+			.filter-body
+				transform: scaleY(1)
+				opacity: 1
+				height: 100%
+		.filter-title
+			padding: r(20px)
+			background: #f2f2f2
+			display: flex
+			justify-content: space-between
+			align-items: center
+			h2
+				font-size: r(15px)
+				font-family: 'Encode Sans'
+				color: rgb(51, 51, 51)
+				text-transform: uppercase
+				line-height: r(23px)
+				font-weight: 400
+			em
+				color: #dbb062
+		.filter-body
+			opacity: 0
+			width: 100%
+			transition: transform 0.3s ease-in-out
+			height: 0
+			transform: scaleY(0)
+			transform-origin: top
+			overflow: hidden
+			.filter-input-wrapper
+				display: flex
+				justify-content: center
+				align-items: center
+				.form-group
+					margin-top: r(10px)
+					padding: 0 .5rem
+					display: flex
+					justify-content: center
+					align-items: center
+					&:first-child
+						position: relative
+						&:after
+							content: ''
+							display: block
+							position: absolute
+							right: -.2rem
+							bottom: 1.2rem
+							width: 5px
+							height: 1px
+							background: #999999
+					input
+						font-size: r(14px)
+						padding: .55rem 1rem
+						font-family: 'Encode Sans'
+						width: 9rem
+						margin: 0
+						transition: .3s all ease-in-out
+						border: 1px solid #e1e1e1
+						&:focus
+							outline: none
+							border: 1px solid #dbb062
+						&:hover
+							border: 1px solid #dbb062
+			.form-check
+				position: relative
+				padding: r(12px) r(20px) r(5px) r(20px)
+				input[type='checkbox']
+					position: absolute
+					left: 0
+					top: 0
+					width: 100%
+					height: 100%
+					z-index: 5
+					opacity: 0
+					cursor: pointer
+					&:focus
+						outline: none
+					&:hover
+						border: 1px solid #dbb062
+					&:checked ~ label
+						&:before
+							content: '\fc2e'
+				label
+					font-size: r(14px)
+					font-family: "EncodeSans"
+					color: rgb(51, 51, 51)
+					line-height: r(22px)
+					position: relative
+					transition: .3s all ease-in-out
+					&:before
+						font-family: 'Material Design Icons'
+						content: '\f1a2'
+						margin-right: r(13px)
+						font-size: 1.2rem
+						color: #c5c5c5
+
+			.frm-btnwrap
+				margin: r(10px) 0 0 r(18px)
+				input[type="submit"]
+					padding: r(8px) r(62px)
+					outline: none
+					background: none
+					border: 1px solid rgb(219, 176, 98)
+					font-size: r(15px)
+					font-family: "EncodeSans"
+					color: rgb(219, 176, 98)
+					text-transform: uppercase
+					&:focus
+						outline: none
+	@media screen and(max-width:1600px)
+		.filter-wrapper
+			.filter-input-wrapper
+				.form-group
+					input
+						width: 6.8rem
+			.frm-btnwrap
+				input[type="submit"]
+					padding: r(8px) r(44px)
