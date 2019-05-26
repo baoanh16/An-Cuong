@@ -8,7 +8,14 @@ block main
 	// Includes components here
 	.container
 		.row
-			.col-3
+			.col-12.col-lg-3
 				include ../components/index/sidebar-index/index.pug
-			.col-9
+			.col-12.col-lg-9
 				include ../components/product-filter/index.pug
+				.article-section-title
+					h2 Tin tức
+					p 26/04/2019
+				include ../components/tin-tuc-ct/index.pug
+				.product-article-title
+					h2 Tin tức khác
+				include ../components/tin-tuc-khac/index.pug

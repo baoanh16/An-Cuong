@@ -135,6 +135,22 @@ function swiperInit() {
 		speed: 700,
 
 	});
+
+	//News autoplay swiper
+	var indexSwiperCatalouge = new Swiper('.swiper-news', {
+		direction: 'horizontal',
+		slidesPerView: 1,
+		loop: true,
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true
+		},
+		autoplay: {
+			delay: 2500,
+		},
+		speed: 700,
+
+	});
 }
 
 
