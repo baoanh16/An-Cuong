@@ -1,0 +1,189 @@
+.product-detail
+	h5
+		margin: r(16px) 0 r(26px) 0
+		text-align: center
+		font-size: r(15px)
+		color: rgb(153, 153, 153)
+		font-family: 'Encode Sans'
+		font-weight: 400
+		font-style: italic
+	.product-detail-swiper
+		.swiper-product-top
+			.swiper-slide
+				border: 3px solid #ebebeb
+				img
+					max-width: 100%
+					height: auto
+					width: 100%
+		.swiper-product-thumbs
+			width: 75%
+			.swiper-slide
+				border: 1px solid #ebebeb
+				opacity: .3
+				img
+					max-width: 100%
+					height: auto
+					width: 100%
+			.swiper-slide-thumb-active 
+				border: 1px solid #dbb062
+				opacity: 1
+	.product-detail-information
+		.pd-line
+			padding: r(16px) 0 r(20px) 0
+			border-top: 1px solid #ebebeb
+		h2
+			font-size: r(28px)
+			font-family: 'Encode Sans'
+			color: rgb(51, 51, 51)
+			font-weight: 600
+			line-height: r(35px)
+		h3
+			font-size: r(20px)
+			font-family: 'Encode Sans'
+			color: rgb(219, 176, 98)
+			font-weight: 600
+			line-height: r(28px)
+		h4
+			font-size: r(15px)
+			font-family: 'Encode Sans'
+			color: #333333
+			font-weight: 700
+			line-height: r(23px)
+		h5
+			font-size: r(15px)
+			font-family: 'Encode Sans'
+			color: rgb(219, 176, 98)
+			font-weight: 700
+			margin: 0 0
+			padding: 0 0
+			font-style: normal
+			text-align: left
+			line-height: r(23px)
+		p
+			font-size: r(15px)
+			font-family: 'Encode Sans'
+			color: rgb(219, 176, 98)
+			font-weight: 400
+			line-height: r(23px)
+			color: #333333
+		span
+			font-size: r(15px)
+			font-family: 'Encode Sans'
+			color: rgb(153, 153, 153)
+		.social-network
+			margin-bottom: 1rem
+			.twitter-follow-button
+				margin: 0 .5rem -.4rem .5rem
+		.product-detail-support
+			border: 1px solid #dbb062
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			margin: 0 -10px 10px 0
+			&:first-child
+				margin-right: 10px
+			a
+				padding: r(13px) r(20px) r(13px) r(10px)
+				display: flex
+				justify-content: center
+				align-items: center
+				img
+					width: 1rem
+					margin-right: .5rem
+				em
+					font-size: r(16px)
+					color: #999999
+					margin-right: .5rem
+				p
+					white-space: nowrap
+					font-size: r(15px)
+					font-family: 'Encode Sans'
+					color: rgb(51, 51, 51)
+					font-weight: 400
+					line-height: r(23px)
+					&:first-letter
+						text-transform: uppercase
+		.add-cart-wrapper
+			margin: r(20px) 0 r(15px) 0
+			display: flex
+			flex-flow: row
+			justify-content: flex-start
+			align-items: flex-start
+			.cart-item-quantity
+				.input-group
+					display: flex
+					justify-content: center
+					align-items: center
+				.input-group-btn
+					display: flex
+					justify-content: center
+					align-items: center
+					background: #f5f5f5
+					height: r(50px)
+					width: r(60px)
+					position: relative
+					&:hover
+						background: rgb(219, 176, 98)
+						color: #fff
+						transition: .25s all ease-in-out
+					button
+						z-index: 5
+						position: absolute
+						top: 0
+						left: 0
+						width: 100%
+						height: 100%
+						cursor: pointer
+						opacity: 0
+						background: #f5f5f5
+						border: none
+						em
+							color: #c5c5c5
+				input
+					border: none
+					text-align: center
+					background: #ffffff
+					width: r(60px)
+					height: r(50px)
+			.cart-item-buy
+				margin-left: r(20px)
+				.form-group
+					background: #dbb062
+					display: flex
+					justify-content: center
+					align-items: center
+					padding: r(12px) r(50px)
+					em
+						color: rgb(255, 255, 255)
+						margin-right: 1rem
+					input[type='submit']
+						font-size: r(15px)
+						border: none
+						background: #dbb062
+						font-family: 'Encode Sans'
+						color: rgb(255, 255, 255)
+						font-weight: bold
+						text-transform: uppercase
+						&:focus
+							outline: none
+		@media screen and(max-width:1600px)
+			.pd-line
+				padding: r(12px) 0 r(12px) 0
+			h2
+				font-size: r(24px)
+			h3
+				font-size: r(18px)
+			.product-detail-support
+				a
+					padding: r(8px) r(20px) r(8px) r(10px)
+			.add-cart-wrapper
+				.cart-item-quantity
+					input
+						height: r(40px)
+						width: r(40px)
+					.input-group-btn
+						height: r(40px)
+						width: r(40px)
+				.cart-item-buy
+					.form-group
+						padding: r(8px) r(30px)

@@ -1,0 +1,88 @@
+.project-detail
+	h4
+		font-size: r(15px)
+		font-family: 'Encode Sans'
+		color: #666666
+		font-weight: 600
+		line-height: r(23px)
+		margin-bottom: .5rem
+		&:first-letter
+			text-transform: uppercase
+	p
+		font-size: r(15px)
+		font-family: 'Encode Sans'
+		color: rgb(219, 176, 98)
+		font-weight: 400
+		line-height: r(23px)
+		color: #666666
+	.social-network-wrapper
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		.social-network
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			.fb-like
+				margin:  0 .5rem .25rem 0
+	.project-detail-nav
+		list-style-type: none
+		padding: 0
+		margin: r(35px) 0 r(25px) r(-10px)
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		li
+			&:first-child
+				margin-right: 1rem
+			&.active
+				a
+					border: 1px solid #dbb062
+					background: #dbb062
+					&:hover
+						background: #dbb062
+					em
+						color: #333333
+					p
+						font-weight: 700
+			a
+				border: 1px solid #e6b135
+				padding: r(8px) r(30px)
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				text-decoration: none
+				&:hover
+					background: #e6e6e6
+				p
+					font-size: r(15px)
+					font-family: 'Encode Sans'
+					color: rgb(51, 51, 51)
+					text-transform: uppercase
+					line-height: r(23px)
+					font-weight: 400
+				em
+					margin-right: .5rem
+					font-size: 1.25rem
+					color: #999999
+	.swiper-project-detail
+		position: relative
+		.swiper-slide
+			img
+				max-width: 100%
+				height: auto
+				width: 100%
+		.swiper-project-deatil-prev
+			left: -.5rem
+		.swiper-project-deatil-next
+			right: -.5rem
+		.swiper-navigation
+			z-index: 99999
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			&:focus
+				outline: none
+			em
+				font-size: 4rem
+				color: rgba(#fff,0.5)

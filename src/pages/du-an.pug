@@ -1,0 +1,17 @@
+extends _layout.pug
+
+block var
+	- var title = 'Home'
+	- var bodyClass = 'home-page'
+
+block main
+	// Includes components here
+	.container
+		.row
+			.col-3
+				include ../components/index/sidebar-index/index.pug
+			.col-9
+				include ../components/product-filter/index.pug
+				.article-section-title
+					h2 Dự án
+				include ../components/du-an/index.pug

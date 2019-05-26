@@ -1,0 +1,44 @@
+.project-display
+	.figure
+		-webkit-box-shadow: 1px 1px 2px 1px rgba(245,245,245,1)
+		-moz-box-shadow: 1px 1px 2px 1px rgba(245,245,245,1)
+		box-shadow: 1px 1px 2px 1px rgba(245,245,245,1)
+		margin-bottom: r(20px)
+		.figure-image
+			img
+				max-width: 100%
+				height: auto
+				width: 100%
+		.figure-caption
+			padding: r(25px) 1rem r(30px) 1rem
+			h5
+				font-size: r(18px)
+				font-family: 'Encode Sans'
+				color: rgb(51, 51, 51)
+				line-height: r(26px)
+				font-weight: 600
+				margin-bottom: r(10px)
+			span
+				margin-bottom: .5rem
+				display: flex
+				justify-content: flex-start
+				align-items: flex-start
+				em
+					margin-right: .5rem
+					color: rgb(128, 128, 128)
+				p
+					font-size: r(15px)
+					font-weight: 400
+					font-family: 'Encode Sans'
+					color: rgb(128, 128, 128)
+		@media screen and(max-width:1600px)
+			.figure-caption
+				padding: 1rem 1rem r(25px) 1rem
+		@media screen and(max-width:1600px)
+			.figure-caption
+				padding: 0.5rem 0.25rem .5rem 1rem
+				h5
+					font-size: r(16px)
+				span
+					p
+						font-size: r(14px)
