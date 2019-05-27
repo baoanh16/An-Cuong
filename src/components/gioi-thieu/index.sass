@@ -1,21 +1,245 @@
 .about-us
+	padding: 50px 0 15px 0
 	article
 		p
+			font-size: r(15px)
+			font-family: 'Encode Sans'
+			color: rgb(51, 51, 51)
+			line-height: r(22px)
+			margin-bottom: 1rem
+			font-weight: 400
 		.article-qoutes
+			padding: r(65px)
+			background: url('../img/gioi-thieu/quote-bg.jpg')
+			background-repeat: no-repeat
+			background-size: cover
+			background-position: center
 			h4
+				font-size: r(18px)
+				font-family: 'Encode Sans'
+				color: rgb(219, 176, 98)
+				font-weight: bold
+				line-height: r(24px)
+				position: relative
+				margin-bottom: .5rem
+				text-align: center
+				&:before
+					content: ''
+					position: absolute
+					display: inline-block
+					background-image: url(../img//gioi-thieu/icon-quote_left.png)
+					background-size: 2rem r(20px)
+					width: 2rem
+					height: r(20px)
+					left: 0
+					top: 0
 			h3
+				display: inline-block
+				font-size: r(18px)
+				font-family: 'Encode Sans'
+				font-weight: bold
+				line-height: r(24px)
+				color: #666666
+				text-transform: uppercase
+				margin-left: 2rem
+				position: relative
+				&:after
+					content: ''
+					position: absolute
+					display: inline-block
+					background-image: url(../img/gioi-thieu/icon-quote_right.png)
+					background-size: 2rem r(20px)
+					width: 2rem
+					height: r(20px)
+					right: -2.5rem
+					top: 0
 	.about-us-image
 		img
 			max-width: 100%
 			height: auto
 			width: 100%
+	@media screen and(max-width:1600px)
+		padding: 50px 0 15px 0
+		article
+			.article-qoutes
+				padding: r(65px) 1rem
+				h4
+					font-size: r(16px)
+					margin-left: 2rem
+					&:before
+						left: -1rem
+				h3
+					font-size: r(16px)
+					margin-left: 3.5rem
+	@media screen and(max-width:1200px)
+
+		article
+			.article-qoutes
+				padding: 3rem 1rem
+				h4
+					margin-left: 2rem
+					font-size: r(14px)
+					line-height: r(22px)
+					&:before
+						left: -1.5rem
+				h3
+					font-size: r(14px)
+					line-height: r(22px)
+					margin-left: 2.5rem
+	@media screen and(max-width:1024.1px)
+		article
+			p
+				font-size: r(14px)
+				line-height: r(21px)
+			.article-qoutes
+				margin-bottom: 1rem
+				h4
+					&:before
+						left: -2rem
+				h3
+					margin-left: 2.5rem
+	@media screen and(max-width:768px)
+		article
+			.article-qoutes
+				h4
+					&:before
+						left: -0.5rem
+				h3
+					margin-left: 4rem
+	@media screen and(max-width:576px)
+		article
+			.article-qoutes
+				h4
+					margin-left: 0
+					&:before
+						left: -1rem
+				h3
+					margin-left: 0
+	@media screen and(max-width:330px)
+		article
+			.article-qoutes
+				h4
+					margin-left: 1.5rem
+					&:before
+						left: -2.2rem
+				h3
+					margin-left: 1.5rem
 .field-of-business
+	padding: 15px 0 15px 0
+	h5
+		font-size: r(18px)
+		font-family: 'Encode Sans'
+		color: rgb(51, 51, 51)
+		font-weight: bold
+		line-height: r(24px)
+		margin: 3rem 0 .8rem 0
+	p
+		font-size: r(18px)
+		font-family: 'Encode Sans'
+		color: rgb(51, 51, 51)
+		font-weight: 400
+		line-height: r(24px)
 	.fancy-wrapper
 		a
 			img
 				max-width: 100%
 				height: auto
 				width: 100%
+	.card-wrapper
+		padding: 2rem 0 3rem 0
+		position: relative
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			bottom: 0
+			width: 100%
+			height: 1px
+			background: #e1e6ec
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			bottom: .1rem
+			width: 100%
+			height: 1px
+			background: #e1e6ec
+		.card
+			display: flex
+			justify-content: center
+			align-items: flex-start
+			.card-image
+				padding-right: 1rem
+				img
+					height: 3.5rem
+					width: 3.5rem
+			.card-caption
+				display: flex
+				justify-content: center
+				align-items: flex-start
+				flex-flow: column
+				h5
+					font-size: r(15px)
+					font-family: 'Encode Sans'
+					color: rgb(102, 102, 102)
+					font-weight: bold
+					line-height: r(23px)
+					margin-bottom: r(7px)
+				p
+					font-size: r(15px)
+					font-family: 'Encode Sans'
+					color: rgb(102, 102, 102)
+					font-weight: 400
+					line-height: r(23px)
+	@media screen and(max-width:1600px)
+		padding: 0 0 20px 0
+		.card-wrapper
+			.card
+				.card-image
+					img
+						height: 3rem
+						width: 3rem
+				.card-caption
+					h5
+						font-size: r(14px)
+						line-height: r(22px)
+					p
+						font-size: r(14px)
+						line-height: r(22px)
+	@media screen and(max-width:1024px)
+		h5
+			margin: 1rem 0 .8rem 0
+			font-size: r(16px)
+			line-height: r(24px)
+		p
+			font-size: r(16px)
+			line-height: r(24px)
+		.card-wrapper
+			.card
+				.card-caption
+					h5
+						font-size: r(14px)
+						line-height: r(20px)
+						margin-bottom: r(7px)
+					p
+						font-size: r(14px)
+						line-height: r(20px)
+	@media screen and(max-width:768px)
+		p
+			font-size: r(14px)
+		.card-wrapper
+			.card
+				margin: 1rem 0
+				justify-content: flex-start
+				align-items: flex-start
+				h5
+					margin-bottom: r(4px)
+	@media screen and(max-width:576px)
+		.card-wrapper
+			.card
+				margin: .5rem 0
 .global-network
 	.fancy-wrapper
 		a
@@ -23,8 +247,10 @@
 				max-width: 100%
 				height: auto
 				width: 100%
+				margin-bottom: r(25px)
 	h3
 		font-size: r(18px)
+		
 		font-family: 'Encode Sans'
 		color: rgb(219, 176, 98)
 		line-height: r(25px)
@@ -74,3 +300,14 @@
 		a
 			font-size: r(14px)
 			line-height: r(21px)
+	@media screen and(max-width:1024px)
+		h3
+			margin: 0 0 1rem 
+	@media screen and(max-width:768px)
+		h4
+			margin: 1rem 0 1rem
+		p
+			margin-bottom: .35rem
+	@media screen and(max-width:768px)
+		h4
+			margin: .5rem 0 .5rem

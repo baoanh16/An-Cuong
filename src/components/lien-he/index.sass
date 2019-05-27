@@ -43,6 +43,18 @@
 			margin-bottom: .25rem
 		.contact-row
 			margin-bottom: .25rem
+	@media screen and(max-width:1024px)
+		h4
+			font-size: r(16px)
+		.contact-image
+			margin-top: .5rem
+		.contact-row
+			p
+				font-size: r(14px)
+				line-height: r(22px)
+			a
+				font-size: r(14px)
+				line-height: r(22px)
 .contact-form
 	.form-group
 		display: flex
@@ -97,4 +109,15 @@
 				font-weight: bold
 				text-transform: uppercase
 
+	@media screen and(max-width:1600px)
+		.form-group
+			input
+				padding: .2rem 1rem
+			.captcha-wrapper
+				input[type=submit]
+					padding: .2rem 4rem
 
+	@media screen and(max-width:1024px)
+		.form-group
+			label
+			font-size: r(14px)
