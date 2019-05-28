@@ -34,11 +34,24 @@
 		@media screen and(max-width:1600px)
 			.figure-caption
 				padding: 1rem 1rem r(25px) 1rem
-		@media screen and(max-width:1600px)
+		@media screen and(max-width:1024px)
 			.figure-caption
-				padding: 0.5rem 0.25rem .5rem 1rem
+				h5
+					font-size: r(16px)
+					line-height: r(23px)
+				span
+					font-size: r(14px)
+					line-height: r(21px)
+					p
+						font-size: r(14px)
+						line-height: r(21px)
+		@media screen and(max-width:768px)
+			.figure-caption
+				padding: 0.25rem 0.25rem .5rem 0.25rem
 				h5
 					font-size: r(16px)
 				span
+					em
+						margin-right: .25rem
 					p
 						font-size: r(14px)
