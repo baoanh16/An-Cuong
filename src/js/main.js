@@ -201,5 +201,5 @@ function prodcutInputQuantityIncreament() {
 function checkMarrk() {
 	$('.filter-check .form-check a').on("click", function () {
         $(this).parents('.filter-check').find('.form-check').removeClass('active');
-        $(this).parents('.form-check').addClass('active');
+		$(this).parents('.form-check').toggleClass('active');
 })}
