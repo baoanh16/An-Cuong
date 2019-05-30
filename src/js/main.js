@@ -13,24 +13,12 @@ $(document).ready(function () {
 		$('.sidebar-index-wrappper').slideToggle()
 	})
 	$(".social-network").jsSocials({
-		shares: [{
-				share: "facebook",
-				label: "Share on Facebook"
-			},
-			{
-				share: "twitter",
-				label: "Tweet it"
-			},
-			{
-				share: "pinterest",
-				label: ""
-			},
-			{
-				share: "email",
-				label: "",
-				logo: "fa fa-envelope-open"
-			}
-		]
+		showLabel: false,
+		shares: ["facebook", "twitter", "pinterest", {
+			share: "email",
+			label: "",
+			logo: "fa fa-envelope-open"
+		}]
 	});
 	$('.filter-title').each(function () {
 		$(this).click(function () {

@@ -3,13 +3,14 @@
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes" />
 	<xsl:template match="/">
-		<section class="product-display ajaxresponse">
-			<div class="article-section-title">
+
+		<section class="product-recently">
+			<div class="product-article-title">
 				<h2>
-					<xsl:value-of select='/ProductList/ZoneTitle'></xsl:value-of>
+					<xsl:value-of select='/ProductList/ModuleTitle'></xsl:value-of>
 				</h2>
 			</div>
-			<div class="row ajaxresponsewrap">
+			<div class="row no-gutters">
 				<xsl:apply-templates select='/ProductList/Product'></xsl:apply-templates>
 			</div>
 		</section>
