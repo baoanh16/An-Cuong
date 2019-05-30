@@ -58,30 +58,30 @@
 						&:hover
 							border: 1px solid #dbb062
 			.form-check
-				position: relative
+				height: 100%
 				padding: r(12px) r(20px) r(5px) r(20px)
-				input[type='checkbox']
-					position: absolute
-					left: 0
-					top: 0
+				&.active
+					a
+						&:before
+							content: '\fc2e'
+							color: #333
+				a
+					text-decoration: none
+					color: #333
+					display: flex
+					justify-content: flex-start
+					align-items: center
+					position: relative
 					width: 100%
 					height: 100%
 					z-index: 5
-					opacity: 0
 					cursor: pointer
 					&:focus
 						outline: none
 					&:hover
-						border: 1px solid #dbb062
-					&:checked ~ label
-						&:before
-							content: '\fc2e'
-				label
-					font-size: r(14px)
-					color: rgb(51, 51, 51)
-					line-height: r(22px)
-					position: relative
-					transition: .3s all ease-in-out
+						-webkit-box-shadow: 0px 0px 1px 0px rgba(219,176,98,1)
+						-moz-box-shadow: 0px 0px 1px 0px rgba(219,176,98,1)
+						box-shadow: 0px 0px 1px 0px rgba(219,176,98,1)
 					&:before
 						font-family: 'Material Design Icons'
 						content: '\f1a2'

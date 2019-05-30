@@ -9,6 +9,7 @@ $(document).ready(function () {
 	});
 	prodcutInputQuantityIncreament();
 	swiperInit();
+	checkMarrk();
 	$('.sidebar-toggle').click(function () {
 		$('.sidebar-index-wrappper').slideToggle()
 	})
@@ -196,3 +197,9 @@ function prodcutInputQuantityIncreament() {
 
 	});
 }
+//Filter active check mark
+function checkMarrk() {
+	$('.filter-check .form-check a').on("click", function () {
+        $(this).parents('.filter-check').find('.form-check').removeClass('active');
+        $(this).parents('.form-check').addClass('active');
+})}
