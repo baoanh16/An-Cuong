@@ -1,11 +1,9 @@
 section.index-news
 	.container
+		.article-title-index
+			h2 Tin tức - chương trình
 		.row
-			.col-12
-				.article-title-index
-					h2 Tin tức - chương trình
-		.row
-			.col-12.col-lg-4
+			.col-md-6.col-lg-4
 				.index-news-figure
 					.figure
 						h4 Vui đón tân xuân - Tri ân khách hàng
@@ -21,10 +19,10 @@ section.index-news
 							a(href="#")
 								em.mdi.mdi-chevron-right
 								a(href="#") Tri ân khách hàng từ 1/1/2019
-			.col-12.col-lg-6
+			.col-md-6
 				.index-news-swiper
 					h2 Khuyến mãi
-					.swiper-container#index-news-swiper
+					.swiper-container
 						.swiper-wrapper
 							.swiper-slide
 								img(src="./img/index/news-discount-image-1.jpg", alt="ƯU ĐÃI 40% HẤP DẪN ")
@@ -47,26 +45,27 @@ section.index-news
 									h5 Mã số: 713.51.101
 									h4 12.900.000đ
 									p 25.900.000đ
-					.swiper-button-prev.index-news-swiper-prev
-					.swiper-button-next.index-news-swiper-next
-			.col-12.col-lg-2
+					.index-news-swiper-prev
+						span.mdi.mdi-chevron-left
+					.index-news-swiper-next
+						span.mdi.mdi-chevron-right
+			.col-lg-2
+				h2 Đối tác
 				.index-news-partner
-					h2 Đối tác
-					.swiper-container#index-news-partner-vertical
+					.swiper-container
 						.swiper-wrapper
 							.swiper-slide
-								img(src="./img/index/partner-logo-1.png", alt="PARTNER LOGO")
+								.logo
+									img(src="./img/index/partner-logo-1.png", alt="PARTNER LOGO")
 							.swiper-slide
-								img(src="./img/index/partner-logo-2.png", alt="PARTNER LOGO")
+								.logo
+									img(src="./img/index/partner-logo-2.png", alt="PARTNER LOGO")
 							.swiper-slide
-								img(src="./img/index/partner-logo-3.png", alt="PARTNER LOGO")
+								.logo
+									img(src="./img/index/partner-logo-3.png", alt="PARTNER LOGO")
 							.swiper-slide
-								img(src="./img/index/partner-logo-3.png", alt="PARTNER LOGO")
+								.logo
+									img(src="./img/index/partner-logo-3.png", alt="PARTNER LOGO")
 							.swiper-slide
-								img(src="./img/index/partner-logo-1.png", alt="PARTNER LOGO")
-							.swiper-slide
-								img(src="./img/index/partner-logo-2.png", alt="PARTNER LOGO")
-							.swiper-slide
-								img(src="./img/index/partner-logo-3.png", alt="PARTNER LOGO")
-							.swiper-slide
-								img(src="./img/index/partner-logo-3.png", alt="PARTNER LOGO")
+								.logo
+									img(src="./img/index/partner-logo-3.png", alt="PARTNER LOGO")

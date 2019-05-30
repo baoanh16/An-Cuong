@@ -1,20 +1,43 @@
 $(document).ready(function () {
 
 	var speed = 500;
-	$('#sidebar-index-wrappper > li.have-children > a').click(function (e) {
-		e.preventDefault();
-		if (!$(this).parent().hasClass('active')) {
-			$('#sidebar-index-wrappper li ul').slideUp(speed);
-			$(this).next().slideToggle(speed);
-			$('#sidebar-index-wrappper li').removeClass('active');
-			$(this).parent().addClass('active');
-		} else {
-			$(this).next().slideToggle(speed);
-			$('#sidebar-index-wrappper li').removeClass('active');
-		}
+	$('.have-children a').each(function () {
+		$(this).click(function (e) {
+			e.stopPropagation()
+			$(this).siblings('ul').slideToggle()
+		})
 	});
 	prodcutInputQuantityIncreament();
 	swiperInit();
+	$('.sidebar-toggle').click(function () {
+		$('.sidebar-index-wrappper').slideToggle()
+	})
+	$(".social-network").jsSocials({
+		shares: [{
+				share: "facebook",
+				label: "Share on Facebook"
+			},
+			{
+				share: "twitter",
+				label: "Tweet it"
+			},
+			{
+				share: "pinterest",
+				label: ""
+			},
+			{
+				share: "email",
+				label: "",
+				logo: "fa fa-envelope-open"
+			}
+		]
+	});
+	$('.filter-title').each(function () {
+		$(this).click(function () {
+			$(this).next().slideToggle()
+			$(this).toggleClass('active')
+		})
+	})
 });
 
 
@@ -31,7 +54,7 @@ function swiperInit() {
 	});
 
 
-	var mySwiper = new Swiper('#index-news-swiper', {
+	var mySwiper2 = new Swiper('.index-news-swiper .swiper-container', {
 		direction: 'horizontal',
 		slidesPerView: 1,
 		loop: true,
@@ -46,11 +69,10 @@ function swiperInit() {
 	});
 
 
-	var indexSwiperCatalouge = new Swiper('#index-guide-swiper-catalogue', {
+	var indexSwiperCatalouge = new Swiper('.index-guide-swiper-wrapper .swiper-container', {
 		direction: 'horizontal',
 		slidesPerView: 1,
 		loop: true,
-		effect: 'fade',
 		navigation: {
 			nextEl: '.swiper-catelogue-next',
 			prevEl: '.swiper-catelogue-prev',
@@ -59,55 +81,49 @@ function swiperInit() {
 			delay: 500,
 		},
 		speed: 700,
+		breakpoints: {
+			768: {
+				slidesPerView: 3
+			}
+		}
 
 	});
 	// mySwiperPartner.autoplay.start();
-	var mySwiperPartner = new Swiper('#index-news-partner-vertical', {
+	var swiperPartner = new Swiper('.index-news-partner .swiper-container', {
 		direction: 'vertical',
-		slidesPerView: 'auto',
-		preventInteractionOnTransition: true,
-		touchRatio: 0,
-		loopAdditionalSlides: 4,
-		loopedSlides: 4,
+		slidesPerView: 4,
 		autoplay: {
-			delay: 500,
+			delay: 1500,
 		},
 		speed: 700,
-		breakpointsInverse: true,
+		loop: true,
 		breakpoints: {
-			// when window width is >= 320px
-			320: {
-				slidesPerView: 2,
-				spaceBetween: 20
+			1025: {
+				direction: 'horizontal',
+				spaceBetween: 10
 			},
-			// when window width is >= 480px
-			1200: {
-				slidesPerView: 'auto',
-				loopAdditionalSlides: 4,
-				spaceBetween: 0
-			},
-			// when window width is >= 640px
-			1600: {
-				slidesPerView: 'auto',
-				spaceBetween: 0
+			576: {
+				direction: 'horizontal',
+				spaceBetween: 10,
+				slidesPerView: 2
 			}
 		}
 	});
 
 	var galleryThumbs = new Swiper('.swiper-product-thumbs', {
 		spaceBetween: 20,
-		loop: true,
-		freeMode: false,
+		freeMode: true,
 		slidesPerView: 4,
-
-		loopedSlides: 5, //looped slides should be the same
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
+		breakpoints: {
+			768: {
+				slidesPerView: 3
+			}
+		}
 	});
 	var galleryTop = new Swiper('.swiper-product-top', {
 		spaceBetween: 10,
-		loop: true,
-		loopedSlides: 5, //looped slides should be the same
 		navigation: {
 			nextEl: '.product-detail-button-next',
 			prevEl: '.product-detail-button-prev',
@@ -117,39 +133,16 @@ function swiperInit() {
 		},
 	});
 	// Project detial swiper
-	var indexSwiperCatalouge = new Swiper('.swiper-project-detail', {
-		direction: 'horizontal',
+	var projectSwiper = new Swiper('.swiper-project-detail .swiper-container', {
 		slidesPerView: 1,
-		loop: true,
-		effect: 'fade',
 		autoplay: {
-			delay: 2500,
-		},
-		fadeEffect: {
-			crossFade: true
+			delay: 2500
 		},
 		navigation: {
-			nextEl: '.swiper-project-deatil-next',
-			prevEl: '.swiper-project-deatil-prev',
+			nextEl: '.swiper-project-detail-next',
+			prevEl: '.swiper-project-detail-prev',
 		},
-		speed: 700,
-
-	});
-
-	//News autoplay swiper
-	var indexSwiperCatalouge = new Swiper('.swiper-news', {
-		direction: 'horizontal',
-		slidesPerView: 1,
-		loop: true,
-		effect: 'fade',
-		fadeEffect: {
-			crossFade: true
-		},
-		autoplay: {
-			delay: 2500,
-		},
-		speed: 700,
-
+		speed: 1500
 	});
 }
 

@@ -1,42 +1,40 @@
 .project-detail
-	padding: 35px 0 40px 0
+	padding-top: 30px
+	@media (max-width: 768px)
+		padding: 20px 0
+	.article-section-title
+		h2
+			margin-top: 0
+			margin-bottom: 20px
 	h4
 		font-size: r(15px)
-		font-family: 'Encode Sans'
 		color: #666666
 		font-weight: 600
 		line-height: r(23px)
-		margin-bottom: .5rem
 		&:first-letter
 			text-transform: uppercase
 	p
 		font-size: r(15px)
-		font-family: 'Encode Sans'
 		color: rgb(219, 176, 98)
 		font-weight: 400
 		line-height: r(23px)
 		color: #666666
-	.social-network-wrapper
-		display: flex
-		justify-content: flex-start
-		align-items: center
-		.social-network
-			display: flex
-			justify-content: flex-start
-			align-items: center
-			.fb-like
-				margin:  0 .5rem .25rem 0
+	.attribute-list
+		.col-sm-6
+			margin-bottom: 15px
+	.other-project
+		margin-top: 40px
 	.project-detail-nav
 		list-style-type: none
 		padding: 0
-		margin: r(35px) 0 r(25px) r(-10px)
+		margin: 20px 0 25px
 		display: flex
 		justify-content: flex-start
 		align-items: center
 		li
 			&:first-child
 				margin-right: 1rem
-			&.active
+			&.active,&:hover
 				a
 					border: 1px solid #dbb062
 					background: #dbb062
@@ -53,11 +51,8 @@
 				justify-content: flex-start
 				align-items: center
 				text-decoration: none
-				&:hover
-					background: #e6e6e6
 				p
 					font-size: r(15px)
-					font-family: 'Encode Sans'
 					color: rgb(51, 51, 51)
 					text-transform: uppercase
 					line-height: r(23px)
@@ -68,17 +63,12 @@
 					color: #999999
 	.swiper-project-detail
 		position: relative
-		.swiper-slide
-			img
-				max-width: 100%
-				height: auto
-				width: 100%
-		.swiper-project-deatil-prev
+		.swiper-project-detail-prev
 			left: -.5rem
-		.swiper-project-deatil-next
+		.swiper-project-detail-next
 			right: -.5rem
 		.swiper-navigation
-			z-index: 99999
+			z-index: 99
 			position: absolute
 			top: 50%
 			transform: translateY(-50%)
@@ -87,4 +77,3 @@
 			em
 				font-size: 4rem
 				color: rgba(#fff,0.5)
-	@media screen and(max-width:1024px)

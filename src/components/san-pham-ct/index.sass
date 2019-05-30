@@ -1,4 +1,5 @@
 .product-detail
+	padding-top: 30px
 	h5
 		margin: r(16px) 0 r(26px) 0
 		text-align: center
@@ -11,19 +12,12 @@
 		.swiper-product-top
 			.swiper-slide
 				border: 3px solid #ebebeb
-				img
-					max-width: 100%
-					height: auto
-					width: 100%
 		.swiper-product-thumbs
 			width: 75%
 			.swiper-slide
 				border: 1px solid #ebebeb
 				opacity: .3
-				img
-					max-width: 100%
-					height: auto
-					width: 100%
+				text-align: center
 			.swiper-slide-thumb-active 
 				border: 1px solid #dbb062
 				opacity: 1
@@ -33,25 +27,21 @@
 			border-top: 1px solid #ebebeb
 		h2
 			font-size: r(28px)
-			font-family: 'Encode Sans'
 			color: rgb(51, 51, 51)
 			font-weight: 600
 			line-height: r(35px)
 		h3
 			font-size: r(20px)
-			font-family: 'Encode Sans'
 			color: rgb(219, 176, 98)
 			font-weight: 600
 			line-height: r(28px)
 		h4
 			font-size: r(15px)
-			font-family: 'Encode Sans'
 			color: #333333
 			font-weight: 700
 			line-height: r(23px)
 		h5
 			font-size: r(15px)
-			font-family: 'Encode Sans'
 			color: rgb(219, 176, 98)
 			font-weight: 700
 			margin: 0 0
@@ -61,30 +51,20 @@
 			line-height: r(23px)
 		p
 			font-size: r(15px)
-			font-family: 'Encode Sans'
 			color: rgb(219, 176, 98)
 			font-weight: 400
 			line-height: r(23px)
 			color: #333333
 		span
 			font-size: r(15px)
-			font-family: 'Encode Sans'
 			color: rgb(153, 153, 153)
-		.social-network
-			margin-bottom: 1rem
-			.twitter-follow-button
-				margin: 0 .5rem -.4rem .5rem
 		.product-detail-support
-			border: 1px solid #dbb062
-			display: flex
-			justify-content: flex-start
-			align-items: center
-			margin: 0 -10px 10px 0
-			&:first-child
-				margin-right: 10px
+			margin-bottom: 10px
+			padding: 0 5px
 			a
-				padding: r(13px) r(20px) r(13px) r(10px)
+				border: 1px solid #dbb062
 				display: flex
+				height: 40px
 				justify-content: center
 				align-items: center
 				img
@@ -97,8 +77,7 @@
 				p
 					white-space: nowrap
 					font-size: r(15px)
-					font-family: 'Encode Sans'
-					color: rgb(51, 51, 51)
+							color: rgb(51, 51, 51)
 					font-weight: 400
 					line-height: r(23px)
 					&:first-letter
@@ -147,35 +126,33 @@
 					height: r(50px)
 			.cart-item-buy
 				margin-left: r(20px)
-				.form-group
-					background: #dbb062
-					display: flex
-					justify-content: center
-					align-items: center
-					padding: r(12px) r(50px)
-					em
-						color: rgb(255, 255, 255)
-						margin-right: 1rem
-					input[type='submit']
-						font-size: r(15px)
-						border: none
-						background: #dbb062
-						font-family: 'Encode Sans'
-						color: rgb(255, 255, 255)
-						font-weight: bold
-						text-transform: uppercase
-						&:focus
-							outline: none
-		@media screen and(max-width:1600px)
+				background: #dbb062
+				display: flex
+				justify-content: center
+				align-items: center
+				height: 40px
+				padding: 0 20px
+				width: 100%
+				em
+					color: rgb(255, 255, 255)
+					margin-right: 1rem
+				span
+					font-size: r(14px)
+					border: none
+					color: rgb(255, 255, 255)
+					font-weight: bold
+					text-transform: uppercase
+					&:focus
+						outline: none
+				@media (min-width: 1600px)
+					height: 50px
+		@media (max-width:1600px)
 			.pd-line
 				padding: r(12px) 0 r(12px) 0
 			h2
 				font-size: r(24px)
 			h3
 				font-size: r(18px)
-			.product-detail-support
-				a
-					padding: r(8px) r(20px) r(8px) r(10px)
 			.add-cart-wrapper
 				.cart-item-quantity
 					input
@@ -185,5 +162,15 @@
 						height: r(40px)
 						width: r(40px)
 				.cart-item-buy
-					.form-group
-						padding: r(8px) r(30px)
+					span
+						font-size: 12px
+		@media (max-width: 1200px)
+			.product-detail-support
+				&:first-child
+					margin-right: 0
+		@media (max-width: 1025px)
+			margin-top: 30px
+			padding: 0 15px
+			.add-cart-wrapper
+				.cart-item-buy
+					width: 160px

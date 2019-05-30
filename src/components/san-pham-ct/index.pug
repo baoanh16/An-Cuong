@@ -1,6 +1,6 @@
 section.product-detail
 	.row
-		.col-7.product-detail-swiper
+		.col-lg-7.product-detail-swiper
 			.swiper-container.swiper-product-top
 				.swiper-wrapper
 					.swiper-slide
@@ -24,80 +24,77 @@ section.product-detail
 						img(src="./img/san-pham-ct/product-image-thumb-3.png", alt="Khóa điện tử")
 					.swiper-slide
 						img(src="./img/san-pham-ct/product-image-thumb-4.png", alt="Khóa điện tử")
-					
-
-		.col-5.product-detail-information
-			h2 Khóa điện tử
-			h3 9.550.000 VND
-			.row.add-cart-wrapper
-				.cart-item-quantity
-					.input-group
-						.input-group-btn
-							button.qty-minus.btn.btn-default.btn-number(type='button', disabled='disabled', data-type='minus', data-field='quant[1]')
-							em.mdi.mdi-minus
-						input.product-details-quantity.form-control.input-number(type='text', name='quant[1]', value='1', min='1', max='100')
-						.input-group-btn
-							button.qty-plus.btn.btn-default.btn-number(type='button', data-type='plus', data-field='quant[1]')
-							em.mdi.mdi-plus
-
-				.cart-item-buy
-					.form-group
+		.col-lg-5
+			.product-detail-information
+				h2 Khóa điện tử
+				h3 9.550.000 VND
+				.add-cart-wrapper
+					.cart-item-quantity
+						.input-group
+							.input-group-btn
+								button.qty-minus.btn.btn-default.btn-number(type='button', disabled='disabled', data-type='minus', data-field='quant[1]')
+								em.mdi.mdi-minus
+							input.product-details-quantity.form-control.input-number(type='text', name='quant[1]', value='1', min='1', max='100')
+							.input-group-btn
+								button.qty-plus.btn.btn-default.btn-number(type='button', data-type='plus', data-field='quant[1]')
+								em.mdi.mdi-plus
+					a(href="#").cart-item-buy
 						em.mdi.mdi-cart
-						input(type="submit" ,value= 'Mua ngay')
-			.row.pd-line
-				.col-3
-					h4 Mã số
-				.col-9
-					h5 713.11.100
-			.row.pd-line
-				.col-3
-					h4 Chất liệu
-				.col-9
-					p Inox 304
-			.row.pd-line
-				.col-3
-					h4  Tên hàng
-				.col-9
-					p Khóa điện tử
-			.row.pd-line
-				.col-3
-					h4 Mở khóa
-				.col-9
-					p Mật mã, thẻ và chìa
-			.row.pd-line
-				.col-3
-					h4 Khả dụng
-				.col-9
-					p 200 mật mã, 800 thẻ và 2 chìa cơ
-			.row.pd-line
-				.col-3
-					h4 Ưu điểm
-				.col-9
-					p Có chức năng ẩn mã số
-					p Khóa đơn hoặc kép
-					p Thân khóa chống phá và cắt
-			.row.pd-line
-				.col-3
-					h4 Ứng dụng
-				.col-9
-					p Biệt thự, căn hộ, văn phòng.. với độ dày cửa38-52 mm
-			.row.pd-line
-				.col-3
-					span Chia sẻ
-				.col-9
-					.social-network
-						.fb-like(data-href='https://developers.facebook.com/docs/plugins/', data-width='', data-layout='button', data-action='like', data-size='small', data-show-faces='false', data-share='true')
-						a.twitter-follow-button(href='https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw', data-show-screen-name='false', data-dnt='true', data-show-count='false') Follow @TwitterDev
-			.row
-				.col-6.product-detail-support
-					a(href="#")
-						img(src="./img/san-pham-ct/icon-pdf.png", alt="pdf file")
-						p tài liệu hướng dẫn
-				.col-6.product-detail-support
-					a(data-fancybox="gallery" href="https://www.youtube.com/watch?v=vl6jn-DdafM")
-						em.mdi.mdi-video
-						p Video clip
-				.col-6.product-detail-support
-					a(href="#")
-						em.mdi.mdi-file-document
-						p Hướng dân lắp đặt
+						span Mua ngay
+				.row.pd-line
+					.col-sm-4
+						h4 Mã số
+					.col-sm-8
+						h5 713.11.100
+				.row.pd-line
+					.col-sm-4
+						h4 Chất liệu
+					.col-sm-8
+						p Inox 304
+				.row.pd-line
+					.col-sm-4
+						h4  Tên hàng
+					.col-sm-8
+						p Khóa điện tử
+				.row.pd-line
+					.col-sm-4
+						h4 Mở khóa
+					.col-sm-8
+						p Mật mã, thẻ và chìa
+				.row.pd-line
+					.col-sm-4
+						h4 Khả dụng
+					.col-sm-8
+						p 200 mật mã, 800 thẻ và 2 chìa cơ
+				.row.pd-line
+					.col-sm-4
+						h4 Ưu điểm
+					.col-sm-8
+						p Có chức năng ẩn mã số
+						p Khóa đơn hoặc kép
+						p Thân khóa chống phá và cắt
+				.row.pd-line
+					.col-sm-4
+						h4 Ứng dụng
+					.col-sm-8
+						p Biệt thự, căn hộ, văn phòng.. với độ dày cửa38-52 mm
+				.row.pd-line
+					.col-sm-4
+						span Chia sẻ
+					.col-sm-8
+						.social-network
+							.fb-like(data-href='https://developers.facebook.com/docs/plugins/', data-width='', data-layout='button', data-action='like', data-size='small', data-show-faces='false', data-share='true')
+							a.twitter-follow-button(href='https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw', data-show-screen-name='false', data-dnt='true', data-show-count='false') Follow @TwitterDev
+				.row
+					.col-sm-6.col-lg-12.col-xl-6.product-detail-support
+						a(href="#")
+							img(src="./img/san-pham-ct/icon-pdf.png", alt="pdf file")
+							p tài liệu hướng dẫn
+					.col-sm-6.col-lg-12.col-xl-6.product-detail-support
+						a(data-fancybox="gallery" href="https://www.youtube.com/watch?v=vl6jn-DdafM")
+							em.mdi.mdi-video
+							p Video clip
+					.col-sm-6.col-lg-12.col-xl-6.product-detail-support
+						a(href="#")
+							em.mdi.mdi-file-document
+							p Hướng dân lắp đặt

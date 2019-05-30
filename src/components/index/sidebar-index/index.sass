@@ -1,5 +1,4 @@
 .sidebar-index
-	margin-top: 1rem
 	.sidebar-index-wrappper
 		list-style-type: none
 		margin: 0
@@ -7,7 +6,7 @@
 		li
 			border-bottom: 1px solid rgba(#fafafa,1)
 			background: #f2f2f2
-			&.active
+			&.active,&:hover
 				background: #dbb062
 				a
 					font-weight: 700
@@ -42,9 +41,29 @@
 				padding: 0
 				li
 					border-bottom: 1px solid rgba(#b6bdc7,1)
-		@media screen and(max-width:1600px)
+		@media (max-width:1600px)
 			li
 				a
 					font-size: r(14px)
 					padding: r(10px) r(22px)
 					line-height: r(20px)
+		@media (max-width:1025px)
+			display: none
+	.sidebar-toggle
+		display: flex
+		align-items: center
+		background: #dbb062
+		color: #fff
+		.mdi
+			font-size: 24px
+			width: 36px
+			height: 36px
+			display: flex
+			justify-content: center
+			align-items: center
+			line-height: 1
+		.text
+			display: block
+			margin-left: 15px
+		@media (min-width: 1025px)
+			display: none

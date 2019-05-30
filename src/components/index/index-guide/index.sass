@@ -1,106 +1,102 @@
 .index-guide-catalogue
-	.index-guide-video
-		padding-right: 10px
-		.guide-video-sub
-			position: relative
-			overflow: hidden
-			&:not(:last-child)
-				border-right: 3px solid #fff
-			&:hover
-				&:before
-					z-index: -1
-				&:after
-					z-index: -1
+	.guide-video-sub
+		position: relative
+		overflow: hidden
+		&:not(:last-child)
+			border-right: 3px solid #fff
+		&:hover
 			&:before
-				content: ''
-				position: absolute
-				width: 100%
-				height: 100%
-				top: 0
-				z-index: 0
-				left: 0
-				background: rgba(#000,.4)
+				z-index: -1
 			&:after
-				content: ''
-				position: absolute
-				display: inline-block
-				background-image: url(../img/index/icon-play.png)
-				background-size: contain
-				width: 2.5rem
-				height: 2.5rem
-				left: 50%
-				z-index: 0
-				top: 50%
-				transform: translate(-50%,-50%)
-			img
-				max-width: 100%
-				height: auto
-				width: 100%
-		.guide-video-wrapper
-			margin-bottom: 2px
-			position: relative
-			&:hover
-				&:before
-					z-index: -1
-				&:after
-					z-index: -1
-			a
-				z-index: 3
+				z-index: -1
+		&:before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			z-index: 0
+			left: 0
+			background: rgba(#000,.4)
+		&:after
+			content: ''
+			position: absolute
+			display: inline-block
+			background-image: url(../img/index/icon-play.png)
+			background-size: contain
+			width: 2.5rem
+			height: 2.5rem
+			left: 50%
+			z-index: 0
+			top: 50%
+			transform: translate(-50%,-50%)
+		@media (max-width: 1025px)
+			margin-bottom: 16px
+	.guide-video-wrapper
+		margin-bottom: 2px
+		position: relative
+		height: 312px
+		img
+			object-fit: cover
+			height: 100%
+			width: 100%
+		&:hover
 			&:before
-				content: ''
-				position: absolute
-				width: 100%
-				height: 100%
-				top: 0
-				z-index: 0
-				left: 0
-				background: rgba(#000,.4)
-
+				z-index: -1
 			&:after
-				content: ''
-				position: absolute
-				display: inline-block
-				background-image: url(../img/index/icon-play.png)
-				background-size: contain
-				width: 5rem
-				height: 5rem
-				left: 50%
-				z-index: 0
-				top: 50%
-				
-				transform: translate(-50%,-50%)
-			h2
-				position: absolute
-				top: 0
-				display: inline-block
-				padding: 1rem 1rem 
-				background: rgba(#fff,.5)
-				font-size: r(16px)
-				font-family: 'Encode Sans'
-				color: rgb(51, 51, 51)
-				font-weight: 600
-				text-transform: uppercase
-			img
-				max-width: 100%
-				height: auto
-				width: 100%
-			h5
-				position: absolute
-				bottom: 1rem
-				left: 2rem
-				font-weight: 500
-				font-size: r(16px)
-				font-family: 'Encode Sans'
-				color: rgb(255, 255, 255)
-				line-height: 1.5
-				text-align: left
-		@media screen and(max-width:1600px)
-			padding-right: 10px
-
+				z-index: -1
+		a
+			z-index: 3
+		&:before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			z-index: 0
+			left: 0
+			background: rgba(#000,.4)
+		&:after
+			content: ''
+			position: absolute
+			display: inline-block
+			background-image: url(../img/index/icon-play.png)
+			background-size: contain
+			width: 5rem
+			height: 5rem
+			left: 50%
+			z-index: 0
+			top: 50%
+			
+			transform: translate(-50%,-50%)
+		h2
+			position: absolute
+			top: 0
+			display: inline-block
+			padding: 11px 16px
+			background: rgba(#fff,.5)
+			font-size: r(16px)
+			font-family: 'Encode Sans'
+			color: rgb(51, 51, 51)
+			font-weight: 600
+			text-transform: uppercase
+		h5
+			position: absolute
+			bottom: 1rem
+			left: 2rem
+			font-weight: 500
+			font-size: r(16px)
+			font-family: 'Encode Sans'
+			color: rgb(255, 255, 255)
+			line-height: 1.5
+			text-align: left
+		@media (max-width: 1200px)
+			height: 323.5px
 	.index-guide-swiper-wrapper
-		border-left: r(10px) solid #fff
 		background: #f6f6f6
 		padding: r(13px) r(30px) r(30px) r(30px)
+		position: relative
+		height: 100%
 		h3
 			padding-bottom: r(20px)
 			font-size: r(16px)
@@ -108,11 +104,6 @@
 			color: rgb(51, 51, 51)
 			font-weight: 600
 			text-transform: uppercase
-		.swiper-slide
-			img
-				max-width: 100%
-				height: auto
-				width: 100%
 		.navigation-wrapper
 			display: flex
 			justify-content: center
@@ -138,23 +129,23 @@
 				&:hover
 					em
 						color: #e2ab49
-
 				em
-
 					color: #999999
 					font-size: 1.25em
-	.mb-1
-		&:first-child
-			margin-bottom: r(10px)
+		@media (max-width: 768px)
+			margin-bottom: 16px
+			height: auto
+			padding: 16px
 	.index-guide-contact
-		border-left: r(20px) solid #fff
-
+		height: calc(405px / 2)
 		.figure
+			height: 100%
 			.figure-image
 				position: relative
+				height: 100%
 				img
-					max-width: 100%
-					height: auto
+					object-fit: cover
+					height: 100%
 					width: 100%
 				.figure-caption-wrapper
 					position: absolute
@@ -174,14 +165,12 @@
 						display: inline-block
 						background: rgba(#fff,.5)
 						margin-bottom: r(5px)
-						padding: r(16px) r(20px) r(16px) r(20px)
+						padding: 11px 16px
 					.figure-caption
 						display: flex
 						justify-content: flex-start
 						align-items: center
 						margin:  1rem  0 0 1rem
-						
-
 						.caption-icon
 							background: rgba(#dbb062,.5)
 							border: 1px solid #dbb062
@@ -209,3 +198,29 @@
 							color: rgb(255, 255, 255)
 							line-height: r(23px)
 							text-align: left
+		&:first-child
+			margin-bottom: 10px
+		@media (max-width: 768px)
+			float: left
+			width: calc(50% - 5px)
+			.figure
+				.figure-image
+					.figure-caption-wrapper
+						.figure-caption
+							h5
+								font-size: 15px
+							.caption-icon
+								width: 36px
+								height: 36px
+								em
+									font-size: 18px
+			&:last-child
+				margin-left: 10px
+				&:after
+					clear: both
+					display: block
+					content: ''
+		@media (max-width: 576px)
+			clear: both
+			width: 100%
+			margin-left: 0 !important

@@ -9,20 +9,12 @@
 			display: flex
 			justify-content: center
 			align-items: center
-			.social-network-button
-				display: flex
-				justify-content: center
-				align-items: center
-				margin-right: .5rem
-				&:nth-child(2)
-					margin-bottom: -.2rem
-				img
-					width: r(24px)
-					height: r(24px)
-			.language-select
-				margin-left: 1rem
-				img
-					width: r(32px)
+			margin-left: auto
+			a
+				display: block
+				margin-right: 8px
+		.language-select
+			margin-left: 1rem
 	.bottom-nav-wrapper
 		.bottom-nav-horizontal
 			list-style: none
@@ -30,12 +22,12 @@
 			padding: 0
 			li
 				display: inline
-				&.active
+				&.active,&:hover
 					a
 						background: #dbb062
-					
+						transition: 0.3s all
 				a
-
+					transition: 0.3s all
 					display: inline-flex
 					justify-content: center
 					align-items: center
@@ -46,3 +38,7 @@
 					color: rgb(51, 51, 51)
 					text-transform: uppercase
 					line-height: r(24px)
+		@media (max-width: 1025px)
+			.bottom-nav-horizontal
+				white-space: nowrap
+				overflow-x: auto

@@ -3,8 +3,7 @@
 	article
 		p
 			font-size: r(15px)
-			font-family: 'Encode Sans'
-			color: rgb(51, 51, 51)
+				color: rgb(51, 51, 51)
 			line-height: r(22px)
 			margin-bottom: 1rem
 			font-weight: 400
@@ -16,7 +15,6 @@
 			background-position: center
 			h4
 				font-size: r(18px)
-				font-family: 'Encode Sans'
 				color: rgb(219, 176, 98)
 				font-weight: bold
 				line-height: r(24px)
@@ -36,8 +34,7 @@
 			h3
 				display: inline-block
 				font-size: r(18px)
-				font-family: 'Encode Sans'
-				font-weight: bold
+						font-weight: bold
 				line-height: r(24px)
 				color: #666666
 				text-transform: uppercase
@@ -58,7 +55,7 @@
 			max-width: 100%
 			height: auto
 			width: 100%
-	@media screen and(max-width:1600px)
+	@media (max-width:1600px)
 		padding: 30px 0 15px 0
 		article
 			.article-qoutes
@@ -71,8 +68,7 @@
 				h3
 					font-size: r(16px)
 					margin-left: 3.5rem
-	@media screen and(max-width:1200px)
-
+	@media (max-width:1200px)
 		article
 			.article-qoutes
 				padding: 3rem 1rem
@@ -86,7 +82,7 @@
 					font-size: r(14px)
 					line-height: r(22px)
 					margin-left: 2.5rem
-	@media screen and(max-width:1024.1px)
+	@media (max-width:1024.1px)
 		article
 			p
 				font-size: r(14px)
@@ -98,7 +94,7 @@
 						left: -2rem
 				h3
 					margin-left: 2.5rem
-	@media screen and(max-width:768px)
+	@media (max-width:768px)
 		article
 			.article-qoutes
 				h4
@@ -106,7 +102,7 @@
 						left: -0.5rem
 				h3
 					margin-left: 4rem
-	@media screen and(max-width:576px)
+	@media (max-width:576px)
 		article
 			.article-qoutes
 				h4
@@ -115,7 +111,7 @@
 						left: -1rem
 				h3
 					margin-left: 0
-	@media screen and(max-width:330px)
+	@media (max-width:330px)
 		article
 			.article-qoutes
 				h4
@@ -126,25 +122,18 @@
 					margin-left: 1.5rem
 .field-of-business
 	padding: 15px 0 15px 0
+
 	h5
 		font-size: r(18px)
-		font-family: 'Encode Sans'
 		color: rgb(51, 51, 51)
 		font-weight: bold
 		line-height: r(24px)
 		margin: 3rem 0 .8rem 0
 	p
 		font-size: r(18px)
-		font-family: 'Encode Sans'
 		color: rgb(51, 51, 51)
 		font-weight: 400
 		line-height: r(24px)
-	.fancy-wrapper
-		a
-			img
-				max-width: 100%
-				height: auto
-				width: 100%
 	.card-wrapper
 		padding: 2rem 0 3rem 0
 		position: relative
@@ -168,13 +157,10 @@
 			background: #e1e6ec
 		.card
 			display: flex
-			justify-content: center
 			align-items: flex-start
 			.card-image
-				padding-right: 1rem
-				img
-					height: 3.5rem
-					width: 3.5rem
+				flex: 0 0 60px
+				margin-right: 10px
 			.card-caption
 				display: flex
 				justify-content: center
@@ -182,25 +168,20 @@
 				flex-flow: column
 				h5
 					font-size: r(15px)
-					font-family: 'Encode Sans'
 					color: rgb(102, 102, 102)
 					font-weight: bold
 					line-height: r(23px)
 					margin-bottom: r(7px)
+					margin-top: 0
 				p
-					font-size: r(15px)
-					font-family: 'Encode Sans'
+					font-size: r(13px)
 					color: rgb(102, 102, 102)
 					font-weight: 400
 					line-height: r(23px)
-	@media screen and(max-width:1600px)
+	@media (max-width:1600px)
 		padding: 0 0 20px 0
 		.card-wrapper
 			.card
-				.card-image
-					img
-						height: 3rem
-						width: 3rem
 				.card-caption
 					h5
 						font-size: r(14px)
@@ -208,7 +189,7 @@
 					p
 						font-size: r(14px)
 						line-height: r(22px)
-	@media screen and(max-width:1024px)
+	@media (max-width:1025px)
 		h5
 			margin: 1rem 0 .8rem 0
 			font-size: r(16px)
@@ -226,7 +207,7 @@
 					p
 						font-size: r(14px)
 						line-height: r(20px)
-	@media screen and(max-width:768px)
+	@media (max-width:768px)
 		p
 			font-size: r(14px)
 		.card-wrapper
@@ -236,22 +217,21 @@
 				align-items: flex-start
 				h5
 					margin-bottom: r(4px)
-	@media screen and(max-width:576px)
+	@media (max-width:576px)
 		.card-wrapper
 			.card
 				margin: .5rem 0
 .global-network
+	.article-section-title
+		h2
+			margin-top: 0
 	.fancy-wrapper
 		a
 			img
-				max-width: 100%
-				height: auto
-				width: 100%
 				margin-bottom: r(25px)
 	h3
 		font-size: r(18px)
 		
-		font-family: 'Encode Sans'
 		color: rgb(219, 176, 98)
 		line-height: r(25px)
 		font-weight: bold
@@ -259,20 +239,14 @@
 		text-transform: uppercase
 	h4
 		font-size: r(18px)
-		font-family: 'Encode Sans'
 		color: rgb(153, 153, 153)
 		font-weight: bold
 		line-height: r(25px)
 		text-transform: uppercase
 		margin: 2rem 0 1rem 0
-	.hq
-
 	p
-		margin-bottom: .5rem
-		white-space: nowrap
 		font-size: r(15px)
-		line-height: r(23px)
-		font-family: 'Encode Sans'
+		line-height: r(24px)
 		color: rgb(51, 51, 51)
 		span
 			font-weight: 700
@@ -280,10 +254,9 @@
 		text-decoration: underline
 		font-size: r(15px)
 		line-height: r(23px)
-		font-family: 'Encode Sans'
 		color: #dbb062
 		font-weight: 400
-	@media screen and(max-width:1200px)
+	@media (max-width:1200px)
 		h3
 			line-height: r(23px)
 			font-size: r(16px)
@@ -300,14 +273,16 @@
 		a
 			font-size: r(14px)
 			line-height: r(21px)
-	@media screen and(max-width:1024px)
+	@media (max-width:1024px)
 		h3
 			margin: 0 0 1rem 
-	@media screen and(max-width:768px)
+	@media (max-width:768px)
 		h4
 			margin: 1rem 0 1rem
 		p
 			margin-bottom: .35rem
-	@media screen and(max-width:768px)
+	@media (max-width:768px)
+		.address-item
+			margin-bottom: 20px
 		h4
 			margin: .5rem 0 .5rem

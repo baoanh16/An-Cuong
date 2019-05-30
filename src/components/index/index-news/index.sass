@@ -1,6 +1,7 @@
 .index-news
 	.index-news-figure
 		background: #f6f6f6
+		height: 380px
 		.figure
 			max-width: r(410px)
 			padding: r(20px) r(20px) r(48px) r(20px)
@@ -18,9 +19,6 @@
 					max-width: 100%
 					height: auto
 					width: 100%
-					-moz-transition: opacity 0.4s ease-in-out, transform 0.2s ease-in-out
-					-o-transition: opacity 0.4s ease-in-out, transform 0.2s ease-in-out
-					-webkit-transition: opacity 0.4s ease-in-out, transform 0.2s ease-in-out
 					transition: opacity 0.4s ease-in-out, transform 0.2s ease-in-out
 					overflow: hidden
 					transform: scale(1)
@@ -50,7 +48,7 @@
 					font-family: 'Encode Sans'
 					color: rgb(51, 51, 51)
 					font-weight: bold
-		@media screen and(max-width:1600px)
+		@media (max-width:1600px)
 			.figure
 				padding: r(21px) r(20px)
 				h4
@@ -60,31 +58,30 @@
 				p
 					font-size: r(14px)
 					margin-bottom: 0.25rem
-
+		@media (max-width: 1025px)
+			height: 420px
+			margin-bottom: 30px
 	.index-news-swiper
 		background: #f6f6f6
-		padding: r(15px) r(35px) r(40px) r(40px)
-		.swiper-button-prev
-			left: 1rem
-			background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23bebebe'%2F%3E%3C%2Fsvg%3E")
-			background-position: center
-			background-repeat: no-repeat
-			background-size: 3rem  3rem
-			outline: none
-			width: r(30px)
-			height: r(30px)
-		.swiper-button-next
-			right: 1rem
-			background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23bebebe'%2F%3E%3C%2Fsvg%3E") 
-			background-repeat: no-repeat
-			background-position: center
-			background-size: 3rem  3rem
-			outline: none
-			width: r(30px)
-			height: r(30px)
+		padding: r(40px)
+		position: relative
+		height: 380px
+		.index-news-swiper-prev,.index-news-swiper-next
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			z-index: 30
+			span
+				font-size: 40px
+				color: #bebebe
+		.index-news-swiper-prev
+			left: 0
+		.index-news-swiper-next
+			right: 0
 		h2
 			display: inline-block
-			padding: r(10px) r(42px)
+			padding: 11px 30px
+			font-size: 16px
 			position: relative
 			margin: 0 0 -2rem -1.5rem
 			background: rgba(#fff,.5)
@@ -94,15 +91,7 @@
 			font-weight: bold
 			text-transform: uppercase
 		.swiper-container
-			overflow: visible
 			.swiper-slide
-				position: relative
-				margin-top: -1rem
-				z-index: 0
-				img
-					max-width: 100%
-					height: auto
-					width: 100%
 				.swiper-caption
 					padding: r(20px) r(20px)
 					background: rgba(#fff,.5)
@@ -121,69 +110,46 @@
 						color: rgb(51, 51, 51)
 						text-transform: uppercase
 						font-weight: 500
-
-
 					h4
 						font-size: r(20px)
 						font-family: 'Encode Sans'
 						color: rgb(51, 51, 51)
 						font-weight: bold
-
-
 					p
 						font-size: r(15px)
 						font-family: 'Encode Sans'
 						color: rgb(51, 51, 51)
 						text-decoration: line-through
 						font-weight: 400
-	.index-news-partner
-		overflow: hidden
+		@media (max-width: 1025px)
+			height: 420px
+			.swiper-container
+				.swiper-slide
+					.swiper-caption
+						position: static
+		@media (max-width: 768px)
+			height: auto
+			margin-bottom: 30px
+	.col-lg-2
 		h2
-			padding: r(14px) r(70px)
-			display: inline-block
+			padding: r(14px)
+			text-align: center
 			background: #f2f2f2
 			font-size: r(20px)
 			font-family: 'Encode Sans'
 			color: rgb(51, 51, 51)
 			font-weight: bold
 			text-transform: uppercase
-		.swiper-container
-			height: 24.15rem
+		.index-news-partner
+			padding: 10px
+			background: #dbb062
 			.swiper-slide
-				height: 25%
-				display: -webkit-box
-				display: -ms-flexbox
-				display: -webkit-flex
-				display: flex
-				-webkit-box-pack: center
-				-ms-flex-pack: center
-				-webkit-justify-content: center
-				justify-content: center
-				-webkit-box-align: center
-				-ms-flex-align: center
-				-webkit-align-items: center
-				align-items: center
-				border-top: r(10px) solid #dbb062
-				border-left: r(10px) solid #dbb062
-				padding: 0 r(10px) 0 0
-				border-right: r(10px) solid #dbb062
-				&:nth-child(n+1)
-					height: 100px
-				&:last-child
-					border-bottom: r(10px) solid #dbb062
-				img
-					max-width: 100%
-					padding: 0 r(10px)
+				.logo
+					display: flex
+					align-items: center
+					justify-content: center
+			.swiper-container
+				height: 303px
+			@media (max-width: 1025px)
+				.swiper-container
 					height: auto
-					width: 100%
-		@media screen and(max-width:1600px)
-			h2
-				padding: r(14px) r(54px)
-				font-size: r(16px)
-				text-align: center
-				white-space: nowrap
-			.swiper-container
-				height: 18.85rem
-		@media screen and(max-width:1200px)
-			.swiper-container
-				height: 50vh

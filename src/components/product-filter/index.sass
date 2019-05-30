@@ -1,17 +1,16 @@
 .product-filter-wrapper
-	margin: 1rem 0 r(5px) 0
+	margin-bottom: 1rem
 	.filter-product-form
-		-webkit-box-shadow: 0px 0px 0px 3px rgba(235,235,235,1)
-		-moz-box-shadow: 0px 0px 0px 3px rgba(235,235,235,1)
-		box-shadow: 0px 0px 0px 3px rgba(235,235,235,1)
+		border: solid 3px rgba(235,235,235,1)
 		display: flex
-		height: r(30px)
+		height: r(35px)
 		justify-content: space-between
 		align-items: center
 		flex-flow: row
+		overflow: hidden
 		.form-group
 			&:first-child
-				width: 100%
+				width: 70%
 				position: relative
 				&:after
 					content: ''
@@ -22,11 +21,10 @@
 					width: 3px
 					height: r(30px)
 					background: rgba(235,235,235,1)
-				input
-					width: 100%
 				
 			input
 				border: none
+				width: 100%
 				padding: 1px 1rem
 				font-size: r(14px)
 				font-family: 'Encode Sans'
@@ -40,26 +38,21 @@
 					outline: none
 			span
 				display: none
-		.frm-btnwrap
+		.cart
 			display: flex
 			justify-content: center
 			align-items: center
-			height: r(30px)
+			height: r(35px)
 			padding: 0 r(14px)
-			-webkit-box-shadow: 0px 0px 0px 3px rgba(235,235,235,1)
-			-moz-box-shadow: 0px 0px 0px 3px rgba(235,235,235,1)
-			box-shadow: 0px 0px 0px 3px rgba(235,235,235,1)
-			background: -moz-linear-gradient( 0deg, rgb(226,171,73) 0%, rgb(234,204,150) 100%)
-			background: -webkit-linear-gradient( 0deg, rgb(226,171,73) 0%, rgb(234,204,150) 100%)
-			background: -ms-linear-gradient( 0deg, rgb(226,171,73) 0%, rgb(234,204,150) 100%)
-			background: linear-gradient( 0deg, rgb(226,171,73) 0%, rgb(234,204,150) 100%)
-			frm-btn
+			flex: 0 0 175px
+			background-image: linear-gradient( 90deg, rgb(226,171,73) 0%, rgb(234,204,150) 100%)
+			.cart-toggle
 				display: flex
 				justify-content: center
 				align-items: center
 				em
 					color: #fff
-				input[type="submit"]
+				.amount-wrapper
 					background: none
 					border: none
 					color: #fff
@@ -67,25 +60,46 @@
 					font-family: 'Encode Sans'
 					&:focus
 						outline: none
-	@media screen and(max-width:768px)
+	@media (max-width:1025px)
+		margin-top: 5px
+	@media (max-width:768px)
+		span.text
+			display: none
 		.filter-product-form
-			padding-bottom: 8rem
-			-webkit-box-shadow: none
-			-moz-box-shadow: none
-			box-shadow: none
-			flex-flow: column
-			align-items: flex-start
+			.cart
+				flex: 0 0 auto
+	@media (max-width:576px)
+		span.text
+			display: block
+		.filter-product-form
+			overflow: visible
+			flex-wrap: wrap
+			height: auto
 			.form-group
-				margin: .5rem 0
-				width: 100%
+				flex: 0 0 50%
+				height: 30px
 				&:first-child
 					&:after
-						display: none
+						height: 30px
+						top: 0
+				.form-control
+					height: 100%
+			.cart
+				flex: 0 0 100%
+				height: auto
+				border-top: solid 2px rgba(235,235,235,1)
+			.cart-toggle
+				flex: 0 0 100%
+				height: 30px
+			.amount-wrapper
+				display: flex
+	@media (max-width: 440px)
+		.filter-product-form
+			.form-group
+				flex: 0 0 100%
 				input
-					padding: .3rem 1rem
 					width: 100%
-					-webkit-box-shadow: 0px 0px 0px 3px rgba(235,235,235,1)
-					-moz-box-shadow: 0px 0px 0px 3px rgba(235,235,235,1)
-					box-shadow: 0px 0px 0px 3px rgba(235,235,235,1)
-			.frm-btnwrap
-				margin-top: 1rem
+				&:first-child
+					border-bottom: solid 2px rgba(235,235,235,1)
+					&:after
+						display: none

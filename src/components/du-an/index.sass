@@ -1,9 +1,7 @@
-.project-display
+.project-display,.other-project
 	.figure
-		-webkit-box-shadow: 1px 1px 2px 1px rgba(245,245,245,1)
-		-moz-box-shadow: 1px 1px 2px 1px rgba(245,245,245,1)
 		box-shadow: 1px 1px 2px 1px rgba(245,245,245,1)
-		margin-bottom: r(20px)
+		margin-bottom: r(30px)
 		.figure-image
 			img
 				max-width: 100%
@@ -11,30 +9,47 @@
 				width: 100%
 		.figure-caption
 			padding: r(25px) 1rem r(30px) 1rem
+			height: 175px
 			h5
 				font-size: r(18px)
-				font-family: 'Encode Sans'
 				color: rgb(51, 51, 51)
 				line-height: r(26px)
 				font-weight: 600
 				margin-bottom: r(10px)
-			span
+				+line(1)
+			p
 				margin-bottom: .5rem
 				display: flex
 				justify-content: flex-start
 				align-items: flex-start
-				em
-					margin-right: .5rem
-					color: rgb(128, 128, 128)
-				p
+				span
 					font-size: r(15px)
 					font-weight: 400
-					font-family: 'Encode Sans'
 					color: rgb(128, 128, 128)
-		@media screen and(max-width:1600px)
+					+line(2)
+				&:nth-child(2)
+					&:before
+						margin-right: .5rem
+						color: rgb(128, 128, 128)
+						display: inline-block
+						font: normal normal normal 24px/1 "Material Design Icons"
+						font-size: inherit
+						text-rendering: auto
+						line-height: inherit
+						-webkit-font-smoothing: antialiased
+						-moz-osx-font-smoothing: grayscale
+						content: '\f34e'
+				&:nth-child(3)
+					&:before
+						margin-right: .5rem
+						color: rgb(128, 128, 128)
+						font-family: "Font Awesome 5 Free"
+						font-weight: 900
+						content: '\f0f2'
+		@media (max-width:1600px)
 			.figure-caption
 				padding: 1rem 1rem r(25px) 1rem
-		@media screen and(max-width:1024px)
+		@media (max-width:1024px)
 			.figure-caption
 				h5
 					font-size: r(16px)
@@ -45,9 +60,9 @@
 					p
 						font-size: r(14px)
 						line-height: r(21px)
-		@media screen and(max-width:768px)
+		@media (max-width:768px)
 			.figure-caption
-				padding: 0.25rem 0.25rem .5rem 0.25rem
+				padding: 15px
 				h5
 					font-size: r(16px)
 				span

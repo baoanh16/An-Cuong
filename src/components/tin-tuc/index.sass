@@ -1,43 +1,44 @@
 .news-display
-	.swiper-news
-		margin-bottom: r(20px)
-		.swiper-slide
-			position: relative
-			&:before
-				content: ''
-				display: block
-				position: absolute
-				left: 0
-				bottom: 0
-				width: 100%
-				height: 100%
-				background: linear-gradient(rgba(#fff,0), rgba(#000,.5))
-			img
-				max-width: 100%
-				height: auto
-				width: 100%
-			.swiper-caption
-				position: absolute
-				bottom: 1rem
-				left: 1rem
+	.big-news
+		margin-bottom: 30px
+		position: relative
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			bottom: 0
+			width: 100%
+			height: 100%
+			background: linear-gradient(rgba(#fff,0), rgba(#000,.5))
+		.news-caption
+			position: absolute
+			bottom: 1rem
+			left: 1rem
+			p
+				font-size: r(14px)
+				font-family: 'Encode Sans'
+				color: rgb(197, 197, 197)
+				line-height: r(22px)
+			h5
+				padding-right: 5rem
+				font-size: r(16px)
+				font-family: 'Encode Sans'
+				color: rgb(255, 255, 255)
+				line-height: r(24px)
+				font-weight: 600
+				+line(2)
+		@media (max-width: 768px)
+			.news-caption
 				p
-					font-size: r(14px)
-					font-family: 'Encode Sans'
-					color: rgb(197, 197, 197)
-					line-height: r(22px)
-
+					font-size: 11px
 				h5
-					padding-right: 5rem
-					font-size: r(16px)
-					font-family: 'Encode Sans'
-					color: rgb(255, 255, 255)
-					line-height: r(24px)
-					font-weight: 600
-
+					font-size: 13px
+					line-height: 1.5
 
 	.news-aside
 		border-top: 1px solid #ebebeb
-		padding: r(12px) 0 r(18px) 0
+		padding: 16px 0
 		&:last-child
 			border-bottom: 1px solid #ebebeb
 		p
@@ -46,45 +47,49 @@
 			color: rgb(153, 153, 153)
 			line-height: 1.786
 		h5
-			font-size: r(16px)
+			font-size: r(14px)
 			font-family: 'Encode Sans'
 			color: rgb(51, 51, 51)
 			line-height: r(22px)
 			text-transform: uppercase
 			font-weight: 600
+			+line(2)
+		@media (min-width: 1600px)
+			padding: 28px 0
+		@media (max-width: 768px)
+			padding: 9.5px 0
+			p
+				font-size: 11px
+			h5
+				font-size: 13px
+				+line(1)
+		@media (max-width: 576px)
+			&:last-child
+				margin-bottom: 30px
 	.news-item
+		margin-bottom: 30px
 		.figure
-			.figure-image
-				img
-					max-width: 100%
-					height: auto
-					width: 100%
 			.figure-caption
 				p
-					padding: 1rem 0 .5rem 0
+					margin-top: 10px
+					margin-bottom: 5px
 					font-size: r(14px)
-					font-family: 'Encode Sans'
 					color: rgb(153, 153, 153)
 					line-height: 1.786
 					font-weight: 400
 				h5
-					margin-bottom: 1rem
 					font-size: r(16px)
-					font-family: 'Encode Sans'
 					color: rgb(51, 51, 51)
 					line-height: r(22px)
 					text-transform: uppercase
 					font-weight: 600
-	@media screen and(max-width:1600px)
-		.news-item
+					+line(2)
+		@media (max-width: 768px)
 			.figure
 				.figure-caption
 					h5
-						font-size: r(15px)
-					
-		.news-aside
-			padding: r(5px) 0
-			p
-				font-size: r(13px)
-			h5
-				font-size: r(14px)
+						font-size: 13px
+					p
+						font-size: 11px
+						margin-top: 5px
+						margin-bottom: 0
