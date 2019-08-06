@@ -32,6 +32,42 @@
 									</div>
 									<h5>Lưu ý: Hình ảnh có thể là của một sản phẩm tương tự.</h5>
 								</div>
+                                <div class="product-add-cart">
+                                    <h3> <span>Giá: </span>
+                                        <xsl:value-of select='/ProductDetail/Price'></xsl:value-of>
+                                    </h3>
+                                    <div class="add-cart-wrapper">
+                                        <div class="unit"><span>/ bộ</span></div>
+                                        <div class="cart-item-quantity">
+                                            <div class="input-group">
+                                                <div class="input-group-btn">
+                                                    <div class="qty-minus btn-number"><em class="mdi mdi-minus"></em></div>
+                                                </div>
+                                                <input class="product-details-quantity form-control input-number" type="text"
+                                                    value="1">
+                                                <xsl:attribute name="name">
+                                                    <xsl:text>addtocart_</xsl:text>
+                                                    <xsl:value-of select="/ProductDetail/ProductId"
+                                                        disable-output-escaping="yes">
+                                                    </xsl:value-of>
+                                                    <xsl:text>.EnteredQuantity</xsl:text>
+                                                </xsl:attribute>
+                                                </input>
+                                                <div class="input-group-btn">
+                                                    <div class="qty-plus btn-number"><em class="mdi mdi-plus"></em></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="cart-item-buy" href="javascript:;"
+                                            onclick="AjaxCart.addproducttocart_details(this); return false;">
+                                            <xsl:attribute name="data-productid">
+                                                <xsl:value-of select="/ProductDetail/ProductId"></xsl:value-of>
+                                            </xsl:attribute>
+                                            <em class="mdi mdi-cart"></em>
+                                            <span>Mua ngay</span>
+                                        </a>
+                                    </div>
+                                </div>
 							</div>
 						</div>
 					</div>
@@ -196,68 +232,27 @@
 				</div>
 				<div class="row bottom-detail">
 					<div class="col-lg-6">
-						<div class="product-add-cart">
-							<h3> <span>Giá: </span>
-								<xsl:value-of select='/ProductDetail/Price'></xsl:value-of>
-							</h3>
-							<div class="add-cart-wrapper">
-								<div class="unit"><span>/ bộ</span></div>
-								<div class="cart-item-quantity">
-									<div class="input-group">
-										<div class="input-group-btn">
-											<div class="qty-minus btn-number"><em class="mdi mdi-minus"></em></div>
-										</div>
-										<input class="product-details-quantity form-control input-number" type="text"
-											value="1">
-										<xsl:attribute name="name">
-											<xsl:text>addtocart_</xsl:text>
-											<xsl:value-of select="/ProductDetail/ProductId"
-												disable-output-escaping="yes">
-											</xsl:value-of>
-											<xsl:text>.EnteredQuantity</xsl:text>
-										</xsl:attribute>
-										</input>
-										<div class="input-group-btn">
-											<div class="qty-plus btn-number"><em class="mdi mdi-plus"></em></div>
-										</div>
-									</div>
-								</div>
-								<a class="cart-item-buy" href="javascript:;"
-									onclick="AjaxCart.addproducttocart_details(this); return false;">
-									<xsl:attribute name="data-productid">
-										<xsl:value-of select="/ProductDetail/ProductId"></xsl:value-of>
-									</xsl:attribute>
-									<em class="mdi mdi-cart"></em>
-									<span>Mua ngay</span>
-								</a>
-							</div>
-						</div>
+						
 					</div>
 					<div class="col-lg-6">
 						<div class="social-network"></div>
 					</div>
 				</div>
-				<div class="product-tabs">
-					<div class="tabs">
-						<ul>
-							<li><a href="#tab-1">Chi tiết sản phẩm</a></li>
-							<!-- <li><a href="#tab-2">hướng dẫn sử dụng</a></li>
-							<li><a href="#tab-3">hướng dẫn bảo hành</a></li> -->
-						</ul>
-						<div id="tab-1">
-							<div class="row">
-								<div class="col-lg-6">
-									<xsl:value-of select='/ProductDetail/FullContent' disable-output-escaping='yes'>
-									</xsl:value-of>
-								</div>
-								<div class="col-lg-6">
-									<xsl:apply-templates select='/ProductDetail/ProductImages' mode='ContentImg'>
-									</xsl:apply-templates>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+                <xsl:if test="/ProductDetail/FullContent != ''">
+                    <div class="product-tabs">
+                        <div class="tabs">
+                            <ul>
+                                <li><a href="#tab-1">Chi tiết sản phẩm</a></li>
+                                <!-- <li><a href="#tab-2">hướng dẫn sử dụng</a></li>
+                                <li><a href="#tab-3">hướng dẫn bảo hành</a></li> -->
+                            </ul>
+                            <div id="tab-1">
+                                <xsl:value-of select='/ProductDetail/FullContent' disable-output-escaping='yes'>
+                                        </xsl:value-of>
+                            </div>
+                        </div>
+                    </div>
+                </xsl:if>
 			</section>
 			<section class="product-slide">
 				<div class="product-article-title">
@@ -269,6 +264,8 @@
 					<div class="swiper-wrapper">
 						<xsl:apply-templates select='/ProductDetail/ProductOther'></xsl:apply-templates>
 					</div>
+                    <div class="swiper-prev"><span class="fas fa-chevron-left"></span></div>
+                    <div class="swiper-next"><span class="fas fa-chevron-right"></span></div>
 				</div>
 			</section>
 		</div>
