@@ -1,5 +1,5 @@
 .search-page
-	padding: 70px 0
+	padding: 40px 0
 	h1
 		letter-spacing: -2px
 		margin-bottom: 20px
@@ -15,22 +15,23 @@
 	.btn-reindex
 		display: none
 	.searchcontrols
-		.form-inline
+		&.form-inline
 			position: relative
 			&:before
 				position: absolute
 				content: '\f349'
 				font-family: "Material Design Icons"
 				top: 0
-				right: 10px
+				right: 0
 				z-index: 1
 				font-size: 24px
-				color: #4285f4
+				color: #fff
 				width: 44px
 				height: 44px
 				display: flex
 				align-items: center
 				justify-content: center
+				pointer-events: none
 		.frm-btn
 			position: absolute
 			top: 0
@@ -58,20 +59,19 @@
 	input[type="submit"]
 		border-radius: 2px
 		user-select: none
-		background-color: rgba(0,0,0,0)
 		border: 0
 		box-shadow: none
 		cursor: pointer
 		text-align: center
-		display: flex
-		align-items: center
-		justify-content: center
 		height: 40px
 		outline: none
 		width: 44px
 		height: 44px
 		border-radius: 50%
 		font-size: 0
+		position: absolute
+		right: 0
+		top: 0
 	.text-danger
 		margin-top: 20px
 		font-size: 15px
@@ -81,12 +81,19 @@
 	.searchresultsummary
 		margin-bottom: 20px
 	.searchresults
-		margin-top: 30px
+		.figure-image
+			img
+				width: 100%
+				height: 100%
+				object-fit: contain
 		.modulepager
 			&:first-child
 				display: none
 	.searchresultlist
 		margin-bottom: 30px
+	.searchsummary
+		margin-bottom: 30px
+		margin-top: 10px
 	.searchresult
 		margin-bottom: 30px
 		box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28)

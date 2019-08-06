@@ -1,95 +1,86 @@
 .product-detail
 	padding-top: 30px
 	h5
-		margin: r(16px) 0 r(26px) 0
+		padding: r(16px) 0 r(26px) 0
 		text-align: center
 		font-size: r(15px)
-		color: rgb(153, 153, 153)
-		font-family: 'Encode Sans'
 		font-weight: 400
 		font-style: italic
+	.images-row
+		@media (max-width: 1025px)
+			flex-wrap: wrap-reverse
 	.product-detail-swiper
 		.swiper-product-top
 			.swiper-slide
 				border: 3px solid #ebebeb
 				text-align: center
-		.swiper-product-thumbs
-			width: 75%
-			.swiper-slide
-				border: 1px solid #ebebeb
+				.img
+					padding-top: 100%
+					position: relative
+					img
+						position: absolute
+						object-fit: contain
+						height: 100%
+						width: 100%
+						top: 0
+						left: 0
+			.product-detail-button-prev,.product-detail-button-next
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				cursor: pointer
+				color: $main
+				font-size: 30px
+				z-index: 20
+			.product-detail-button-prev
+				left: 0
+			.product-detail-button-next
+				right: 0
+	.swiper-product-thumbs
+		flex: 0 0 100%
+		height: 100%
+		.swiper-slide
+			height: 100% !important
+			.img
 				opacity: .3
-				text-align: center
-			.swiper-slide-thumb-active 
-				border: 1px solid #dbb062
-				opacity: 1
-	.product-detail-information
-		.pd-line
-			padding: r(16px) 0 r(20px) 0
-			border-top: 1px solid #ebebeb
-		h2
-			font-size: r(28px)
-			color: rgb(51, 51, 51)
-			font-weight: 600
-			line-height: r(35px)
-		h3
-			font-size: r(20px)
-			color: rgb(219, 176, 98)
-			font-weight: 600
-			line-height: r(28px)
-		h4
-			font-size: r(15px)
-			color: #333333
-			font-weight: 700
-			line-height: r(23px)
-		h5
-			font-size: r(15px)
-			color: rgb(219, 176, 98)
-			font-weight: 700
-			margin: 0 0
-			padding: 0 0
-			font-style: normal
-			text-align: left
-			line-height: r(23px)
-		p
-			font-size: r(15px)
-			color: rgb(219, 176, 98)
-			font-weight: 400
-			line-height: r(23px)
-			color: #333333
-		span
-			font-size: r(15px)
-			color: rgb(153, 153, 153)
-		.product-detail-support
-			margin-bottom: 10px
-			padding: 0 5px
-			a
-				border: 1px solid #dbb062
-				display: flex
-				height: 40px
-				justify-content: center
-				align-items: center
+				border: 1px solid #ebebeb
+				padding-top: 100%
+				position: relative
 				img
-					width: 1rem
-					margin-right: .5rem
-				em
-					font-size: r(16px)
-					color: #999999
-					margin-right: .5rem
-				p
-					white-space: nowrap
-					font-size: r(15px)
-							color: rgb(51, 51, 51)
-					font-weight: 400
-					line-height: r(23px)
-					&:first-letter
-						text-transform: uppercase
+					position: absolute
+					width: 100%
+					top: 0
+					left: 0
+					object-fit: contain
+					height: 100%
+		.swiper-slide-thumb-active 
+			.img
+				border: 1px solid $main
+				opacity: 1
+	.bottom-detail
+		margin-top: 30px
+		
+	.product-add-cart
+		h3
+			flex: 0 0 auto
+			margin-bottom: 20px
+			color: $main
+			font-weight: 400
+			font-size: r(28px)
+			text-align: center
 		.add-cart-wrapper
-			margin: r(20px) 0 r(15px) 0
 			display: flex
-			flex-flow: row
-			justify-content: flex-start
-			align-items: flex-start
+			flex-flow: row-reverse
+			justify-content: flex-end
+			flex: 1
+			.unit
+				margin-left: 15px
+				display: flex
+				align-items: center
+				font-size: 24px
+				line-height: 1
 			.cart-item-quantity
+				border: solid 1px #c5c5c5
 				.input-group
 					display: flex
 					justify-content: center
@@ -103,37 +94,34 @@
 					width: r(60px)
 					position: relative
 					&:hover
-						background: rgb(219, 176, 98)
+						background: $main
 						color: #fff
 						transition: .25s all ease-in-out
-					button
-						z-index: 5
-						position: absolute
-						top: 0
-						left: 0
-						width: 100%
+					.btn-number
 						height: 100%
-						cursor: pointer
-						opacity: 0
-						background: #f5f5f5
-						border: none
+						width: 100%
+						line-height: 40px
+						text-align: center
+						display: flex
+						align-items: center
+						justify-content: center
 						em
 							color: #c5c5c5
 				input
-					border: none
+					border: 0
 					text-align: center
 					background: #ffffff
 					width: r(60px)
 					height: r(50px)
 			.cart-item-buy
-				margin-left: r(20px)
-				background: #dbb062
+				margin-right: r(20px)
+				background: $main
 				display: flex
 				justify-content: center
 				align-items: center
-				height: 40px
+				height: 51px
 				padding: 0 20px
-				width: 100%
+				width: 40%
 				em
 					color: rgb(255, 255, 255)
 					margin-right: 1rem
@@ -145,33 +133,163 @@
 					text-transform: uppercase
 					&:focus
 						outline: none
-				@media (min-width: 1600px)
-					height: 50px
-		@media (max-width:1600px)
-			.pd-line
-				padding: r(12px) 0 r(12px) 0
-			h2
-				font-size: r(24px)
-			h3
-				font-size: r(18px)
-			.add-cart-wrapper
-				.cart-item-quantity
-					input
-						height: r(40px)
-						width: r(40px)
-					.input-group-btn
-						height: r(40px)
-						width: r(40px)
-				.cart-item-buy
-					span
-						font-size: 12px
 		@media (max-width: 1200px)
-			.product-detail-support
-				&:first-child
-					margin-right: 0
-		@media (max-width: 1025px)
-			margin-top: 30px
-			padding: 0 15px
 			.add-cart-wrapper
+				margin-top: 15px
+				.cart-item-quantity
+					margin-left: 0
+		@media (max-width: 576px)
+			.add-cart-wrapper
+				justify-content: space-between
+				.cart-item-quantity
+					flex: 0 0 48%
+					max-width: 48%
 				.cart-item-buy
-					width: 160px
+					max-width: 48%
+					flex: 0 0 48%
+					margin-left: 0
+					padding: 0 5px
+					span
+						font-size: 14px
+	.social-network
+		text-align: right
+		.jssocials-share
+			margin-bottom: 0
+	.product-detail-information
+		.pd-line
+			padding-bottom: 16px
+			+ .pd-line
+				padding-top: 16px
+				border-top: 1px solid #ebebeb
+		h2
+			font-size: r(28px)
+			color: rgb(51, 51, 51)
+			font-weight: 600
+			line-height: r(35px)
+		h3
+			font-size: r(20px)
+			color: $main
+			font-weight: 600
+			line-height: r(28px)
+		h4
+			font-size: r(15px)
+			color: #333333
+			font-weight: 700
+			line-height: r(23px)
+		h5
+			font-size: r(15px)
+			font-weight: 700
+			margin: 0 0
+			padding: 0 0
+			font-style: normal
+			text-align: left
+			line-height: r(23px)
+			color: $main
+		p
+			font-size: r(15px)
+			font-weight: 400
+			line-height: r(23px)
+			color: #333333
+		span
+			font-size: r(15px)
+			color: rgb(153, 153, 153)
+	.product-detail-support-row
+		margin: 0 -5px
+	.product-detail-support
+		margin-bottom: 10px
+		padding: 0 5px
+		flex: 0 0 50%
+		a
+			border: 1px solid $main
+			display: flex
+			height: 40px
+			justify-content: center
+			align-items: center
+			img
+				width: 1rem
+				margin-right: .5rem
+			em
+				font-size: r(16px)
+				color: #999999
+				margin-right: .5rem
+			p
+				white-space: nowrap
+				font-size: r(15px)
+						color: rgb(51, 51, 51)
+				font-weight: 400
+				line-height: r(23px)
+				&:first-letter
+					text-transform: uppercase
+	.product-tabs
+		padding: 30px 0
+		margin-top: 30px
+		border-top: 1px solid #e1e1e1
+		.tabs
+			> ul
+				display: flex
+				list-style: none
+				padding-left: 0
+				margin-bottom: 20px
+				li
+					flex: 0 0 (210 / 1410 * 100%)
+					margin-right: 10px
+					height: 50px
+					border: 1px solid #ebebeb
+					transition: 0.3s all
+					a
+						display: flex
+						align-items: center
+						justify-content: center
+						height: 100%
+						width: 100%
+						color: #999999
+						text-transform: uppercase
+						font-size: 15px
+					&:hover, &.active
+						background: $main
+						border-color: $main
+						transition: 0.3s all
+						a
+							color: #fff
+			div[id*="tab-"]
+				*
+					font-size: 15px
+					line-height: 1.5
+					margin-bottom: 10px
+				h3
+					margin-bottom: 10px
+				ul
+					padding-left: 1rem
+	@media (max-width: 1200px)
+		.product-tabs
+			.tabs
+				> ul
+					li
+						flex: 0 0 25%
+	@media (max-width: 1025px)
+		.product-detail-information
+			margin-top: 30px
+		.bottom-detail
+			margin-top: 4px
+		.product-detail-support-row
+			margin-top: 14px
+		.social-network
+			margin-top: 10px
+		.product-tabs
+			.tabs
+				> ul
+					overflow-x: auto
+					li
+						flex: 0 0 30%
+	@media (max-width: 768px)
+		.social-network
+			text-align: left
+		.product-detail-support
+			flex: 0 0 100%
+			padding: 0
+		.product-tabs
+			.tabs
+				> ul
+					overflow-x: auto
+					li
+						flex: 0 0 210px

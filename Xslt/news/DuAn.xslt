@@ -15,7 +15,7 @@
 		</section>
 	</xsl:template>
 	<xsl:template match='News'>
-		<div class="col-sm-6">
+		<div class="col-sm-6 col-lg-4">
 			<div class="figure">
 				<div class="figure-image shine">
 					<a>

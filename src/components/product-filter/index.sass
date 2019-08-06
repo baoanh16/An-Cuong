@@ -1,5 +1,6 @@
 .product-filter-wrapper
 	margin-bottom: 1rem
+	display: flex
 	.filter-product-form
 		border: solid 3px rgba(235,235,235,1)
 		display: flex
@@ -8,6 +9,7 @@
 		align-items: center
 		flex-flow: row
 		overflow: hidden
+		width: 100%
 		.form-group
 			&:first-child
 				width: 70%
@@ -21,45 +23,49 @@
 					width: 3px
 					height: r(30px)
 					background: rgba(235,235,235,1)
-				
+			&:last-child
+				width: 30%
 			input
 				border: none
 				width: 100%
 				padding: 1px 1rem
 				font-size: r(14px)
-				font-family: 'Encode Sans'
+				
 				line-height: r(22px)
 				&::place-hodler
 					font-size: r(14px)
-					font-family: 'Encode Sans'
+					
 					line-height: r(22px)
 					color: rgb(171, 171, 171)
 				&:focus
 					outline: none
 			span
 				display: none
-		.cart
+	.cart-wrapper
+		flex: 0 0 175px
+		height: r(35px)
+		border-left: 0
+	.cart
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 0 r(14px)
+		height: 100%
+		background: $main
+		.cart-toggle
 			display: flex
 			justify-content: center
 			align-items: center
-			height: r(35px)
-			padding: 0 r(14px)
-			flex: 0 0 175px
-			background-image: linear-gradient( 90deg, rgb(226,171,73) 0%, rgb(234,204,150) 100%)
-			.cart-toggle
-				display: flex
-				justify-content: center
-				align-items: center
-				em
-					color: #fff
-				.amount-wrapper
-					background: none
-					border: none
-					color: #fff
-					font-size: r(15px)
-					font-family: 'Encode Sans'
-					&:focus
-						outline: none
+			em
+				color: #fff
+			.amount-wrapper
+				background: none
+				border: none
+				color: #fff
+				font-size: r(15px)
+				
+				&:focus
+					outline: none
 	@media (max-width:1025px)
 		margin-top: 5px
 	@media (max-width:768px)
@@ -69,6 +75,10 @@
 			.cart
 				flex: 0 0 auto
 	@media (max-width:576px)
+		flex-direction: column
+		.cart-wrapper
+			flex: 0 0 auto
+			border: 0
 		span.text
 			display: block
 		.filter-product-form
@@ -84,15 +94,15 @@
 						top: 0
 				.form-control
 					height: 100%
-			.cart
-				flex: 0 0 100%
-				height: auto
-				border-top: solid 2px rgba(235,235,235,1)
-			.cart-toggle
-				flex: 0 0 100%
-				height: 30px
-			.amount-wrapper
-				display: flex
+		.cart
+			flex: 0 0 100%
+			height: auto
+			border-top: solid 2px rgba(235,235,235,1)
+		.cart-toggle
+			flex: 0 0 100%
+			height: 30px
+		.amount-wrapper
+			display: flex
 	@media (max-width: 440px)
 		.filter-product-form
 			.form-group

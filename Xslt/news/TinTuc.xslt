@@ -64,7 +64,7 @@
 		</xsl:if>
 	</xsl:template>
 	<xsl:template match='News' mode='SideNews'>
-		<xsl:if test="position()>1 and position() &lt; 5">
+		<xsl:if test="position()>1 and position() &lt; 6">
 			<div class="news-aside">
 				<p>
 					<xsl:value-of select='CreatedDate'></xsl:value-of>
@@ -86,7 +86,7 @@
 	</xsl:template>
 	<xsl:template match='News' mode='SmallNews'>
 		<xsl:if test="position()>5">
-			<div class="col-6 news-item">
+			<div class="col-6 col-lg-4 news-item">
 				<div class="figure">
 					<div class="figure-image shine">
 						<a>

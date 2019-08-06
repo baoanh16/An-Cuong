@@ -19,8 +19,7 @@
 	<portal:SkinFolderScript ID="SkinFolderScript4" runat="server" ScriptFileName="js/ecommerce.js"
 		AddToCombinedScript="true" />
 	<portal:GoogleAnalyticsScript ID="GoogleAnalyticsScript1" runat="server" />
-
-	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Encode+Sans:400,500,600,700&amp;display=swap" rel="stylesheet">
 
 	<!--*********************************************************************************************-->
 	<!-- Canh Cam - the best Web Solutions Provider - http://www.canhcam.vn                          -->

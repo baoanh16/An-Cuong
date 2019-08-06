@@ -7,24 +7,22 @@
 	</xsl:template>
 	<xsl:template match='Zone'>
 		<xsl:if test="position()=1">
-			<section class="about-us">
+			<section class="about-us" id="section-1">
 				<div class="row">
 					<xsl:apply-templates select='News' mode="ZoneNews1"></xsl:apply-templates>
 				</div>
 			</section>
 		</xsl:if>
 		<xsl:if test="position()=2">
-			<section class="field-of-business">
-				<div class="row">
-					<xsl:apply-templates select='News' mode="ZoneNews2-1"></xsl:apply-templates>
-				</div>
+			<section class="field-of-business" id="section-2">
+				<xsl:apply-templates select='News' mode="ZoneNews2-1"></xsl:apply-templates>
 				<div class="row card-wrapper">
 					<xsl:apply-templates select='News' mode="ZoneNews2-2"></xsl:apply-templates>
 				</div>
 			</section>
 		</xsl:if>
 		<xsl:if test="position()=3">
-			<section class="global-network">
+			<section class="global-network" id="section-3">
 				<div class="article-section-title">
 					<h2>
 						<xsl:value-of select='Title'></xsl:value-of>
@@ -51,6 +49,7 @@
 				<div class="row">
 					<xsl:apply-templates select='News' mode='ZoneNews3-1'></xsl:apply-templates>
 				</div>
+				<hr style="margin-top: 30px" />
 				<div class="row">
 					<xsl:apply-templates select='News' mode='ZoneNews3-2'></xsl:apply-templates>
 				</div>
@@ -59,7 +58,7 @@
 	</xsl:template>
 	<!--News-->
 	<xsl:template match='News' mode="ZoneNews1">
-		<div class="col-md-8">
+		<div class="col-md-6">
 			<div class="article-section-title">
 				<h2>
 					<xsl:value-of select='Title'></xsl:value-of>
@@ -73,7 +72,7 @@
 				</div>
 			</article>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-6">
 			<div class="about-us-image"><img>
 				<xsl:attribute name='src'>
 					<xsl:value-of select='ImageUrl'></xsl:value-of>

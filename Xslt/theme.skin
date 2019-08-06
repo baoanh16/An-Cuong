@@ -25,6 +25,7 @@
 	/>
 <portal:DealerDisplaySettings runat="server" 
 	ShowDescription="true"
+	ShowFax="true"
 	/>
 <portal:ProductDisplaySettings runat="server" 
 	ShowOldPrice="true"
@@ -32,6 +33,7 @@
     ShowSubTitle="true"
     ShowRelatedProduct="true"
     ShowAttachment="true"
+	ShowVideo="true"
 	/>
 <portal:SharedFilesDisplaySettings runat="server" 
 	ShowFolder="false"

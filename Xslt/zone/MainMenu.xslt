@@ -11,20 +11,46 @@
 
 	<xsl:template match="Zone">
 		<li>
-			<xsl:if test="IsActive='true'">
-				<xsl:attribute name='class'>
-					<xsl:text>active</xsl:text>
-				</xsl:attribute>
-			</xsl:if>
-			<a>
-				<xsl:attribute name='href'>
-					<xsl:value-of select='Url'></xsl:value-of>
-				</xsl:attribute>
-				<xsl:attribute name='title'>
-					<xsl:value-of select='Title'></xsl:value-of>
-				</xsl:attribute>
-				<xsl:value-of select='Title'></xsl:value-of>
-			</a>
+			<xsl:choose>
+				<xsl:when test='count(Zone) > 0'>
+					<xsl:attribute name='class'>
+						<xsl:text>has-sub</xsl:text>
+					</xsl:attribute>
+					<xsl:if test="IsActive='true'">
+						<xsl:attribute name='class'>
+							<xsl:text>has-sub active</xsl:text>
+						</xsl:attribute>
+					</xsl:if>
+					<a>
+						<xsl:attribute name='href'>
+							<xsl:value-of select='Url'></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name='title'>
+							<xsl:value-of select='Title'></xsl:value-of>
+						</xsl:attribute>
+						<xsl:value-of select='Title'></xsl:value-of>
+					</a>
+					<ul class="sub-menu">
+						<xsl:apply-templates select='Zone'></xsl:apply-templates>
+					</ul>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:if test="IsActive='true'">
+						<xsl:attribute name='class'>
+							<xsl:text>active</xsl:text>
+						</xsl:attribute>
+					</xsl:if>
+					<a>
+						<xsl:attribute name='href'>
+							<xsl:value-of select='Url'></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name='title'>
+							<xsl:value-of select='Title'></xsl:value-of>
+						</xsl:attribute>
+						<xsl:value-of select='Title'></xsl:value-of>
+					</a>
+				</xsl:otherwise>
+			</xsl:choose>
 		</li>
 	</xsl:template>
 

@@ -7,7 +7,7 @@
 	overflow: hidden
 	-webkit-box-orient: vertical
 html,body
-	font-family: 'Encode Sans'
+	
 main
 	margin-top: 30px
 img
@@ -17,6 +17,16 @@ a
 	color: inherit
 .h-100
 	height: 100%
+.Module-244,.Module-248,.Module-250,.Module-236
+	.ModuleContent
+		height: 100%
+.Module-219,.Module-252
+	width: 100%
+.Module-248,.Module-250
+	height: 100%
+.Module-253
+	position: sticky
+	top: 40px
 .article-section-title
 	display: flex
 	justify-content: space-between
@@ -24,33 +34,17 @@ a
 	h2
 		margin: r(30px) 0 r(20px) 0
 		font-size: r(28px)
-		font-family: 'Encode Sans'
+		
 		color: rgb(51, 51, 51)
 		font-weight: bold
 		line-height: r(35px)
 	p
 		font-size: r(14px)
-		font-family: 'Encode Sans'
+		
 		color: rgb(153, 153, 153)
 		line-height: r(22px)
 		margin-top: r(-12px)
 		font-weight: 400
-	.quantity-filter
-		ol
-			list-style-type: none
-			li
-				padding-right: 0 8px 0 4px
-				display: inline
-				border-right: 1px solid #999999
-				&.active
-					a
-						font-weight: 600
-						color: #333333
-				a
-					font-size: r(15px)
-					text-decoration: none
-					font-family: 'Encode Sans'
-					color: #999999
 	@media screen and(max-width: 1600px)
 		h2
 			font-size: r(24px)
@@ -65,7 +59,7 @@ a
 	h2
 		text-transform: uppercase
 		font-size: r(20px)
-		font-family: 'Encode Sans'
+		
 		color: rgb(51, 51, 51)
 		font-weight: 600
 		line-height: r(28px)
@@ -77,14 +71,14 @@ a
 	display: flex
 	justify-content: flex-start
 	align-items: center
-	background: #dbb062
+	background: #c6cbcc
 	padding: 1rem r(22px)
 	margin: r(14px) 0
+	height: 41px
 	h2
 		text-transform: uppercase
-		font-size: r(20px)
-		font-family: 'Encode Sans'
-		color: rgb(51, 51, 51)
+		font-size: r(16px)
+		color: #333
 		font-weight: 600
 		line-height: r(28px)
 
@@ -135,16 +129,20 @@ a
 			align-items: center
 			height: r(272px)
 			width: auto
+			padding: 30px
+			img
+				width: 100%
+				height: 100%
+				object-fit: contain
 		.figure-caption
 			margin-left: .5rem
 			h4
-				font-family: 'Encode Sans'
+				
 				color: #999999
 				font-weight: 700
 				font-size: r(14px)
-				margin-bottom: .2rem
 			p
-				font-family: 'Encode Sans'
+				
 				color: #333333
 				font-weight: 400
 				font-size: r(16px)
@@ -152,8 +150,8 @@ a
 				+line(1)
 			h5
 				font-size: r(14px)
-				font-family: 'Encode Sans'
-				color: rgb(219, 176, 98)
+				height: 53px
+				color: $main
 				font-weight: bold
 				padding-bottom: 1rem
 		.item-cart
@@ -161,13 +159,14 @@ a
 			display: flex
 			width: 100%
 			position: absolute
-			bottom: -3rem
+			bottom: -100%
 			justify-content: center
 			align-items: center
+			height: 53px
 			a
 				width: 100%
 				padding: r(10px) 0
-				background: #dbb062
+				background: $main
 				display: flex
 				justify-content: center
 				align-items: center
@@ -177,7 +176,7 @@ a
 				span
 					white-space: nowrap
 					font-size: r(15px)
-					font-family: 'Encode Sans'
+					
 					color: rgb(255, 255, 255)
 					font-weight: bold
 					text-transform: uppercase
@@ -211,3 +210,12 @@ a
 		display: none
 .productdetailpager
 	display: none
+.maps_popup
+	.fax
+		margin-bottom: 8px
+	a
+		font-size: 18px
+		text-decoration: underline
+		color: $main
+		+ a
+			margin-left: 5px

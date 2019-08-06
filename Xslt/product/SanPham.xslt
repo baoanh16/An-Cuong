@@ -8,6 +8,11 @@
 				<h2>
 					<xsl:value-of select='/ProductList/ZoneTitle'></xsl:value-of>
 				</h2>
+				<div class="quantity-filter">
+					<ol>
+						<xsl:apply-templates select='/ProductList/PageSize'></xsl:apply-templates>
+					</ol>
+				</div>
 			</div>
 			<div class="row ajaxresponsewrap">
 				<xsl:apply-templates select='/ProductList/Product'></xsl:apply-templates>
@@ -67,5 +72,23 @@
 				</div>
 			</div>
 		</div>
+	</xsl:template>
+	<xsl:template match="PageSize">
+		<li>
+			<xsl:if test="IsActive='true'">
+				<xsl:attribute name='class'>
+					<xsl:text>active</xsl:text>
+				</xsl:attribute>
+			</xsl:if>
+			<a>
+				<xsl:attribute name='href'>
+					<xsl:value-of select='Url'></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name='title'>
+					<xsl:value-of select='Title'></xsl:value-of>
+				</xsl:attribute>
+				<xsl:value-of select='Title'></xsl:value-of>
+			</a>
+		</li>
 	</xsl:template>
 </xsl:stylesheet>

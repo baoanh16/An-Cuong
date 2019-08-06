@@ -15,7 +15,7 @@
 					<xsl:apply-templates select='/NewsDetail/NewsAttributes'></xsl:apply-templates>
 				</div>
 			</div>
-						<div class="social-network">
+			<div class="social-network">
 			</div>
 			<ul class="project-detail-nav">
 				<li>
@@ -87,7 +87,7 @@
 		</div>
 	</xsl:template>
 	<xsl:template match='NewsOther'>
-		<div class="col-sm-6">
+		<div class="col-sm-6 col-lg-4">
 			<div class="figure">
 				<div class="figure-image shine">
 					<a>

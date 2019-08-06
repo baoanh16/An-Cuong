@@ -12,7 +12,9 @@
 		"_plugins/mapping.js",
 		"_plugins/mapping-listener.js",
 		"bower_components/fancybox/dist/jquery.fancybox.js",
-		"_plugins/jssocials.js"
+		"_plugins/jssocials.js",
+		"bower_components/noty/lib/noty.min.js",
+		"bower_components/Tabslet/jquery.tabslet.js"
 	],
 	"globalCss": [
 		"_plugins/grid.css",
@@ -20,6 +22,7 @@
 		"bower_components/swiper/dist/css/swiper.min.css",
 		"bower_components/fancybox/dist/jquery.fancybox.css",
 		"_plugins/jssocials.css",
-		"_plugins/jssocials-theme-flat.css"
+		"_plugins/jssocials-theme-flat.css",
+		"bower_components/noty/lib/noty.css"
 	]
 }

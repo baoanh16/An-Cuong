@@ -4,7 +4,7 @@
 
   <xsl:template match="/">
     <h1>
-      <xsl:value-of select="/VideoList/ModuleTitle"></xsl:value-of>
+      <xsl:value-of select="/VideoList/ModuleTitle" disable-output-escaping='yes'></xsl:value-of>
     </h1>
     <div class="video-wrap">
       <div id="videoPlayer"></div>

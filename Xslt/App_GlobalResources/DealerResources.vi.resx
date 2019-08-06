@@ -202,7 +202,7 @@
     <value>Email</value>
   </data>
   <data name="EditPageFaxLabel" xml:space="preserve">
-    <value>Giờ hoạt động</value>
+    <value>Email</value>
   </data>
   <data name="EditPageFileBrowserLink" xml:space="preserve">
     <value>Browser</value>

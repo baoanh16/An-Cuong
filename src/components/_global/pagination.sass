@@ -1,0 +1,21 @@
+.modulepager
+	margin: 40px 0
+	ul
+		padding-left: 0
+		display: flex
+		list-style: none
+		justify-content: center
+		li
+			+ li
+				padding-left: 12px
+				margin-left: 12px
+			span,a
+				display: flex
+				height: 30px
+				width: 30px
+				align-items: center
+				justify-content: center
+				border: 1px solid #fff
+			&.active
+				border: 1px solid $main
+				color: $main

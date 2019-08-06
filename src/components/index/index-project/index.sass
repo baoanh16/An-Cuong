@@ -28,9 +28,12 @@
 						color: #fff
 					.figure-button
 						opacity: 1
+		> a
+			display: block
+			height: 268px
 		img
-			max-width: 100%
-			height: auto
+			object-fit: cover
+			height: 100%
 			width: 100%
 			transition: all 0.4s ease-in-out, transform 0.2s ease-in-out
 			overflow: hidden
@@ -93,3 +96,5 @@
 					display: none
 		@media (max-width: 576px)
 			margin-bottom: 30px
+			> a
+				height: 150px

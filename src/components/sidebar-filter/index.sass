@@ -15,14 +15,13 @@
 				line-height: r(23px)
 				font-weight: 400
 			em
-				color: #dbb062
+				color: $main
 				transition: 0.3s all
 			&.active
 				em
 					transform: rotate(180deg)
 					transition: 0.3s all
 		.filter-body
-			display: none
 			.filter-input-wrapper
 				display: flex
 				justify-content: center
@@ -54,9 +53,9 @@
 						border: 1px solid #e1e1e1
 						&:focus
 							outline: none
-							border: 1px solid #dbb062
+							border: 1px solid $main
 						&:hover
-							border: 1px solid #dbb062
+							border: 1px solid $main
 			.form-check
 				height: 100%
 				padding: r(12px) r(20px) r(5px) r(20px)
@@ -96,9 +95,9 @@
 					padding: r(8px) r(62px)
 					outline: none
 					background: none
-					border: 1px solid rgb(219, 176, 98)
+					border: 1px solid $main
 					font-size: r(15px)
-					color: rgb(219, 176, 98)
+					color: $main
 					text-transform: uppercase
 					&:focus
 						outline: none

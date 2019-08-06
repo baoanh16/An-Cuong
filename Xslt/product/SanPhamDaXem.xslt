@@ -4,19 +4,23 @@
 	<xsl:output method="html" indent="yes" />
 	<xsl:template match="/">
 
-		<section class="product-recently">
+		<section class="viewed-product">
 			<div class="product-article-title">
 				<h2>
 					<xsl:value-of select='/ProductList/ModuleTitle'></xsl:value-of>
 				</h2>
 			</div>
-			<div class="row no-gutters">
-				<xsl:apply-templates select='/ProductList/Product'></xsl:apply-templates>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<xsl:apply-templates select='/ProductList/Product'></xsl:apply-templates>
+				</div>
+				<div class="swiper-prev"><span class="fas fa-chevron-left"></span></div>
+				<div class="swiper-next"><span class="fas fa-chevron-right"></span></div>
 			</div>
 		</section>
 	</xsl:template>
 	<xsl:template match='Product'>
-		<div class="col-xl-3 col-sm-4 col-6">
+		<div class="swiper-slide">
 			<div class="item">
 				<div class="figure">
 					<a class="figure-image shine">

@@ -3,35 +3,42 @@
 		list-style-type: none
 		margin: 0
 		padding: 0
-		li
+		background: #f2f2f2
+		> li
 			border-bottom: 1px solid rgba(#fafafa,1)
-			background: #f2f2f2
-			&.active,&:hover
-				background: #dbb062
-				a
+			> a
+				&:hover
 					font-weight: 700
-				ul
-					li
-						a
-							font-weight: 400
+					color: #fff
+					background: $main
+			&.active
+				> a
+					font-weight: 700
+					color: #fff
+					background: $main
 			&.have-children
 				position: relative
-				&:hover
-					background: #dbb062
+				&.active
 					ul
-						li
+						display: block !important
+				ul
+					li
+						border-bottom: 0
+						a
 							&:hover
-								background: #b6bdc7
+								color: $main
+						&.active
+							a
+								font-weight: 700
+								color: $main
 			a
 				position: relative
 				display: block
 				color: #333333
 				text-decoration: none
-				text-transform: uppercase
-				padding: r(14px) r(22px)
+				padding: 16.9px 22px
 				font-size: r(15px)
 				font-weight: 400
-				font-family: 'Encode Sans'
 				line-height: r(22px)
 				
 			ul
@@ -41,18 +48,19 @@
 				padding: 0
 				li
 					border-bottom: 1px solid rgba(#b6bdc7,1)
+					padding-left: 15px
 		@media (max-width:1600px)
 			li
 				a
 					font-size: r(14px)
-					padding: r(10px) r(22px)
+					padding: r(18px) r(22px)
 					line-height: r(20px)
 		@media (max-width:1025px)
 			display: none
 	.sidebar-toggle
 		display: flex
 		align-items: center
-		background: #dbb062
+		background: $main
 		color: #fff
 		.mdi
 			font-size: 24px

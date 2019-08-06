@@ -7,12 +7,8 @@ block var
 block main
 	// Includes components here
 	.container
-		.row
-			.col-12.col-lg-3
-				include ../components/index/sidebar-index/index.pug
-			.col-12.col-lg-9
-				include ../components/product-filter/index.pug
-				.article-section-title
-					h2 Tin tức
-				include ../components/tin-tuc/index.pug
-				
+		include ../components/product-filter/index.pug
+		include ../components/breadcrumb/index.pug
+		.article-section-title
+			h2 Tin tức
+		include ../components/tin-tuc/index.pug

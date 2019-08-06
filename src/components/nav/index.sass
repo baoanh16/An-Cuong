@@ -1,0 +1,26 @@
+.horizontal-nav
+	margin-top: 30px
+	ul
+		display: flex
+		padding-left: 0
+		list-style: none
+		li
+			margin-right: 10px
+			a
+				transition: 0.3s all
+				display: block
+				padding: 12px 20px
+				background: #dbdbdb
+				color: #666666
+				font-size: 15px
+				text-transform: uppercase
+			&.active, &:hover
+				a
+					background: $main
+					color: #fff
+	@media (max-width: 1025px)
+		ul
+			overflow-x: auto
+			justify-content: flex-start
+			li
+				flex: 0 0 auto

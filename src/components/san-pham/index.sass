@@ -3,3 +3,22 @@
 		padding: 0 5px
 	.row
 		margin: 0 -5px
+	.quantity-filter
+		ol
+			list-style-type: none
+			padding-left: 0
+			li
+				display: inline
+				+ li
+					border-left: 1.5px solid #999999
+					padding-left: 10px
+					margin-left: 10px
+				&.active
+					a
+						font-weight: 600
+						color: #333333
+				a
+					font-size: r(15px)
+					text-decoration: none
+					font-family: 'Encode Sans'
+					color: #999999

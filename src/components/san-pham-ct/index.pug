@@ -1,100 +1,150 @@
 section.product-detail
 	.row
-		.col-lg-7.product-detail-swiper
-			.swiper-container.swiper-product-top
-				.swiper-wrapper
-					.swiper-slide
-						img(src="./img/san-pham-ct/product-image-1.png", alt="Khóa điện tử")
-					.swiper-slide
-						img(src="./img/san-pham-ct/product-image-1.png", alt="Khóa điện tử")
-					.swiper-slide
-						img(src="./img/san-pham-ct/product-image-1.png", alt="Khóa điện tử")
-					.swiper-slide
-						img(src="./img/san-pham-ct/product-image-1.png", alt="Khóa điện tử")
-				.product-detail-button-next
-				.product-detail-button-prev
-			h5 Lưu ý: Hình ảnh có thể là của một sản phẩm tương tự.
-			.swiper-container.swiper-product-thumbs
-				.swiper-wrapper
-					.swiper-slide
-						img(src="./img/san-pham-ct/product-image-thumb-2.png", alt="Khóa điện tử")
-					.swiper-slide
-						img(src="./img/san-pham-ct/product-image-thumb-2.png", alt="Khóa điện tử")
-					.swiper-slide
-						img(src="./img/san-pham-ct/product-image-thumb-3.png", alt="Khóa điện tử")
-					.swiper-slide
-						img(src="./img/san-pham-ct/product-image-thumb-4.png", alt="Khóa điện tử")
-		.col-lg-5
-			.product-detail-information
-				h2 Khóa điện tử
-				h3 9.550.000 VND
-				.add-cart-wrapper
-					.cart-item-quantity
-						.input-group
-							.input-group-btn
-								button.qty-minus.btn.btn-default.btn-number(type='button', disabled='disabled', data-type='minus', data-field='quant[1]')
-								em.mdi.mdi-minus
-							input.product-details-quantity.form-control.input-number(type='text', name='quant[1]', value='1', min='1', max='100')
-							.input-group-btn
-								button.qty-plus.btn.btn-default.btn-number(type='button', data-type='plus', data-field='quant[1]')
-								em.mdi.mdi-plus
-					a(href="#").cart-item-buy
-						em.mdi.mdi-cart
-						span Mua ngay
-				.row.pd-line
-					.col-sm-4
-						h4 Mã số
-					.col-sm-8
-						h5 713.11.100
-				.row.pd-line
-					.col-sm-4
-						h4 Chất liệu
-					.col-sm-8
-						p Inox 304
-				.row.pd-line
-					.col-sm-4
-						h4  Tên hàng
-					.col-sm-8
-						p Khóa điện tử
-				.row.pd-line
-					.col-sm-4
-						h4 Mở khóa
-					.col-sm-8
-						p Mật mã, thẻ và chìa
-				.row.pd-line
-					.col-sm-4
-						h4 Khả dụng
-					.col-sm-8
-						p 200 mật mã, 800 thẻ và 2 chìa cơ
-				.row.pd-line
-					.col-sm-4
-						h4 Ưu điểm
-					.col-sm-8
-						p Có chức năng ẩn mã số
-						p Khóa đơn hoặc kép
-						p Thân khóa chống phá và cắt
-				.row.pd-line
-					.col-sm-4
-						h4 Ứng dụng
-					.col-sm-8
-						p Biệt thự, căn hộ, văn phòng.. với độ dày cửa38-52 mm
-				.row.pd-line
-					.col-sm-4
-						span Chia sẻ
-					.col-sm-8
-						.social-network
-							.fb-like(data-href='https://developers.facebook.com/docs/plugins/', data-width='', data-layout='button', data-action='like', data-size='small', data-show-faces='false', data-share='true')
-							a.twitter-follow-button(href='https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw', data-show-screen-name='false', data-dnt='true', data-show-count='false') Follow @TwitterDev
-				.row
-					.col-sm-6.col-lg-12.col-xl-6.product-detail-support
+		.col-lg-6
+			.row.images-row
+				.col-lg-2
+					.swiper-product-thumbs
+						.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									.img
+										img(src="./img/san-pham-ct/product-image-thumb-2.png", alt="Khóa điện tử")
+								.swiper-slide
+									.img
+										img(src="./img/san-pham-ct/product-image-thumb-2.png", alt="Khóa điện tử")
+								.swiper-slide
+									.img
+										img(src="./img/san-pham-ct/product-image-thumb-3.png", alt="Khóa điện tử")
+								.swiper-slide
+									.img
+										img(src="./img/san-pham-ct/product-image-thumb-4.png", alt="Khóa điện tử")
+				.col-lg-10
+					.product-detail-swiper
+						.swiper-container.swiper-product-top
+							.swiper-wrapper
+								.swiper-slide
+									.img
+										img(src="./img/san-pham-ct/product-image-1.png", alt="Khóa điện tử")
+								.swiper-slide
+									.img
+										img(src="./img/san-pham-ct/product-image-1.png", alt="Khóa điện tử")
+								.swiper-slide
+									.img
+										img(src="./img/san-pham-ct/product-image-1.png", alt="Khóa điện tử")
+								.swiper-slide
+									.img
+										img(src="./img/san-pham-ct/product-image-1.png", alt="Khóa điện tử")
+							.product-detail-button-next
+							.product-detail-button-prev
+						h5 Lưu ý: Hình ảnh có thể là của một sản phẩm tương tự.
+		.col-lg-6.product-detail-information
+			.row.no-gutters.pd-line
+				.col-sm-4
+					h4 Tên sản phẩm
+				.col-sm-8
+					p Khóa điện tử
+			.row.no-gutters.pd-line
+				.col-sm-4
+					h4 Mã số
+				.col-sm-8
+					h5.code 713.11.100
+			.row.no-gutters.pd-line
+				.col-sm-4
+					h4 Chất liệu
+				.col-sm-8
+					p Inox 304
+			.row.no-gutters.pd-line
+				.col-sm-4
+					h4  Tên hàng
+				.col-sm-8
+					p Khóa điện tử
+			.row.no-gutters.pd-line
+				.col-sm-4
+					h4 Mở khóa
+				.col-sm-8
+					p Mật mã, thẻ và chìa
+			.row.no-gutters.pd-line
+				.col-sm-4
+					h4 Khả dụng
+				.col-sm-8
+					p 200 mật mã, 800 thẻ và 2 chìa cơ
+			.row.no-gutters.pd-line
+				.col-sm-4
+					h4 Ưu điểm
+				.col-sm-8
+					p Có chức năng ẩn mã số
+					p Khóa đơn hoặc kép
+					p Thân khóa chống phá và cắt
+			.row.no-gutters.pd-line
+				.col-sm-4
+					h4 Ứng dụng
+				.col-sm-8
+					p Biệt thự, căn hộ, văn phòng.. với độ dày cửa38-52 mm
+			.row.no-gutters.product-detail-support-row
+					.product-detail-support
 						a(href="#")
 							img(src="./img/san-pham-ct/icon-pdf.png", alt="pdf file")
 							p tài liệu hướng dẫn
-					.col-sm-6.col-lg-12.col-xl-6.product-detail-support
+					.product-detail-support
 						a(data-fancybox="gallery" href="https://www.youtube.com/watch?v=vl6jn-DdafM")
 							em.mdi.mdi-video
 							p Video clip
-					.col-sm-6.col-lg-12.col-xl-6.product-detail-support
+					.product-detail-support
 						a(href="#")
 							em.mdi.mdi-file-document
 							p Hướng dân lắp đặt
+	.row.bottom-detail
+		.col-lg-6
+			.product-add-cart
+				h3 
+					span Giá: 
+					| 9.550.000 VND
+				.add-cart-wrapper
+					.unit
+						span / bộ
+					.cart-item-quantity
+						.input-group
+							.input-group-btn
+								.qty-minus.btn-number
+									em.mdi.mdi-minus
+							input.product-details-quantity.form-control.input-number(type='text', value='1')
+							.input-group-btn
+								.qty-plus.btn-number
+									em.mdi.mdi-plus
+					a(href="#").cart-item-buy
+						em.mdi.mdi-cart
+						span Mua ngay
+		.col-lg-6
+			.social-network
+	.product-tabs
+		.tabs
+			ul
+				li
+					a(href="#tab-1") Chi tiết sản phẩm
+				li
+					a(href="#tab-2") hướng dẫn sử dụng
+				li
+					a(href="#tab-3") hướng dẫn bảo hành
+			#tab-1
+				.row
+					.col-lg-6
+						h3 Tính năng
+						ul
+							li 
+								strong Cards: 
+								| 4 (up to 40 ca rds) / Thẻ từ: 4 (Cài đặt tối đa 40 thẻ)
+							li 
+								strong Pin code: 
+								| 6 - 12 digits  / Cài đặt mật mã từ 6 - 12 ký tự
+							li 
+								strong Michanical Keys: 
+								| 2 / 2 chìa khóa cơ
+						p Modern design with smart touchpad / Bàn phím cảm ứng thông minh, tự xóa dấu vân tay sau khi sử dụng
+						p Anti-Panic Egress with Safe handle / Trong trường hợp khẩn cấp, cửa sẽ tự động mở khóa khi nút bấm Anti-Panic Egress trên tay khóa được sử dụng
+						p Operation status notification on the keypad / Thông báo trạng thái hoạt động trên bàn phím
+						p Missing card key invalidation / Chức năng làm mất hiệu lực thẻ từ khi bị mất
+						p Automatic locking / Chức năng đóng cửa tự động trong 5 giây
+						p Alarm / Báo động khi có đột nhập, báo cháy khi nhiệt độ trên 60oC
+						p Low battery alarm / Đèn báo hiệu khi pin yếu
+					.col-lg-6
+						img(src="./img/san-pham-ct/product-image-1.png", alt="")

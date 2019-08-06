@@ -1,4 +1,5 @@
 .index-guide-catalogue
+	padding-bottom: 30px
 	.guide-video-sub
 		position: relative
 		overflow: hidden
@@ -35,7 +36,7 @@
 	.guide-video-wrapper
 		margin-bottom: 2px
 		position: relative
-		height: 312px
+		height: 362px
 		img
 			object-fit: cover
 			height: 100%
@@ -76,7 +77,7 @@
 			padding: 11px 16px
 			background: rgba(#fff,.5)
 			font-size: r(16px)
-			font-family: 'Encode Sans'
+			
 			color: rgb(51, 51, 51)
 			font-weight: 600
 			text-transform: uppercase
@@ -86,10 +87,12 @@
 			left: 2rem
 			font-weight: 500
 			font-size: r(16px)
-			font-family: 'Encode Sans'
+			
 			color: rgb(255, 255, 255)
 			line-height: 1.5
 			text-align: left
+		@media (max-width: 1600px)
+			height: 312px
 		@media (max-width: 1200px)
 			height: 323.5px
 	.index-guide-swiper-wrapper
@@ -100,7 +103,7 @@
 		h3
 			padding-bottom: r(20px)
 			font-size: r(16px)
-			font-family: 'Encode Sans'
+			
 			color: rgb(51, 51, 51)
 			font-weight: 600
 			text-transform: uppercase
@@ -137,7 +140,7 @@
 			height: auto
 			padding: 16px
 	.index-guide-contact
-		height: calc(405px / 2)
+		height: 49%
 		.figure
 			height: 100%
 			.figure-image
@@ -157,7 +160,7 @@
 					flex-flow: column
 					h2
 						font-size: r(16px)
-						font-family: 'Encode Sans'
+						
 						color: rgb(51, 51, 51)
 						font-weight: bold
 						text-transform: uppercase
@@ -186,7 +189,7 @@
 								font-size: r(20px)
 						h5
 							font-size: r(20px)
-							font-family: 'Encode Sans'
+							
 							color: rgb(255, 255, 255)
 							font-weight: bold
 							line-height: r(28px)
@@ -194,12 +197,14 @@
 
 						p
 							font-size: r(15px)
-							font-family: 'Encode Sans'
+							
 							color: rgb(255, 255, 255)
 							line-height: r(23px)
 							text-align: left
 		&:first-child
 			margin-bottom: 10px
+		@media (max-width: 1600px)
+			height: calc(405px / 2)
 		@media (max-width: 768px)
 			float: left
 			width: calc(50% - 5px)

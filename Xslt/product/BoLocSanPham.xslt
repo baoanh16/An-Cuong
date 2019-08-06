@@ -13,14 +13,14 @@
 						<div class="filter-body">
 							<div class="filter-input-wrapper">
 								<div class="form-group">
-									<input type="text">
+									<input type="text" class="min-input">
 									<xsl:attribute name='value'>
 										<xsl:value-of select="/ProductFilter/PriceMin"></xsl:value-of>
 									</xsl:attribute>
 									</input>
 								</div>
 								<div class="form-group">
-									<input type="text">
+									<input type="text" class="max-input">
 									<xsl:attribute name='value'>
 										<xsl:value-of select="/ProductFilter/PriceMax"></xsl:value-of>
 									</xsl:attribute>
@@ -28,12 +28,24 @@
 								</div>
 							</div>
 							<div class="frm-btnwrap">
-								<a class="btn-ok">
-									<xsl:attribute name="href">
-										<xsl:value-of select="/ProductFilter/UrlWithPrice"></xsl:value-of>
-									</xsl:attribute>
+								<a class="btn-ok" onclick="priceFilter()">
+
 									<xsl:text>Ok</xsl:text>
 								</a>
+								<div class="hidden">
+									<a class="urlwithprice">
+										<xsl:attribute name="href">
+											<xsl:value-of select="/ProductFilter/UrlWithPrice"></xsl:value-of>
+										</xsl:attribute>
+									</a>
+									<a class="urlwithoutprice">
+										<xsl:attribute name="href">
+											<xsl:value-of select="/ProductFilter/UrlWithoutPrice"></xsl:value-of>
+										</xsl:attribute>
+									</a>
+									<a class="pricemin"></a>
+									<a class="pricemax"></a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -60,20 +72,20 @@
 	</xsl:template>
 	<xsl:template match='Option'>
 		<div class="form-group form-check">
-			<input class="form-check-input ajaxlink" type="checkbox">
-			<xsl:attribute name='id'>
-				<xsl:value-of select='Title'></xsl:value-of>
-			</xsl:attribute>
-			<xsl:attribute name='value'>
-				<xsl:value-of select="Url"></xsl:value-of>
-			</xsl:attribute>
-			</input>
-			<label class="form-check-label">
-				<xsl:attribute name='for'>
-					<xsl:value-of select='Title'></xsl:value-of>
+			<xsl:if test="IsActive='true'">
+				<xsl:attribute name='class'>
+					<xsl:text>form-group form-check active</xsl:text>
 				</xsl:attribute>
-				<xsl:value-of select="Title"></xsl:value-of>
-			</label>
+			</xsl:if>
+			<a>
+				<xsl:attribute name='href'>
+					<xsl:value-of select='Url'></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name='target'>
+					<xsl:value-of select='Target'></xsl:value-of>
+				</xsl:attribute>
+				<xsl:value-of select='Title'></xsl:value-of>
+			</a>
 		</div>
 	</xsl:template>
 </xsl:stylesheet>
