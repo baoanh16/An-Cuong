@@ -30,14 +30,44 @@
 										<div class="product-detail-button-next"></div>
 										<div class="product-detail-button-prev"></div>
 									</div>
-									<h5>Lưu ý: Hình ảnh có thể là của một sản phẩm tương tự.</h5>
+									<h5><xsl:value-of select="/ProductDetail/NoteText"></xsl:value-of></h5>
 								</div>
                                 <div class="product-add-cart">
-                                    <h3> <span>Giá: </span>
+                                    <h3> <span><xsl:value-of select="/ProductDetail/ProductComparePrice"></xsl:value-of>: </span>
                                         <xsl:value-of select='/ProductDetail/Price'></xsl:value-of>
                                     </h3>
                                     <div class="add-cart-wrapper">
-                                        <div class="unit"><span>/ bộ</span></div>
+                                        <div class="unit"><span>
+											<xsl:if test="floor(/ProductDetail/ShowOption div 4) mod 2 = 1">
+												<xsl:text>/ </xsl:text> 
+												<xsl:value-of select="/ProductDetail/PCText"></xsl:value-of>
+											</xsl:if>
+											
+											<xsl:if test="floor(/ProductDetail/ShowOption div 8) mod 2 = 1">
+												<xsl:text>/ </xsl:text> 	
+												<xsl:value-of select="/ProductDetail/RollText"></xsl:value-of>
+											</xsl:if>
+											<xsl:if test="floor(/ProductDetail/ShowOption div 16) mod 2 = 1">
+												<xsl:text>/ </xsl:text> 
+												<xsl:value-of select="/ProductDetail/SetText"></xsl:value-of>
+											</xsl:if>
+											<xsl:if test="floor(/ProductDetail/ShowOption div 32) mod 2 = 1">
+												<xsl:text>/ </xsl:text> 
+												<xsl:value-of select="/ProductDetail/BarText"></xsl:value-of>
+											</xsl:if>
+											<xsl:if test="floor(/ProductDetail/ShowOption div 64) mod 2 = 1">
+												<xsl:text>/ </xsl:text> 
+												<xsl:value-of select="/ProductDetail/PlateText"></xsl:value-of>
+											</xsl:if>
+											<xsl:if test="floor(/ProductDetail/ShowOption div 128) mod 2 = 1">
+												<xsl:text>/ </xsl:text> 
+												<xsl:value-of select="/ProductDetail/MeterText"></xsl:value-of>
+											</xsl:if>
+											<xsl:if test="floor(/ProductDetail/ShowOption div 256) mod 2 = 1">
+												<xsl:text>/ </xsl:text> 
+												<xsl:value-of select="/ProductDetail/BoxText"></xsl:value-of>
+											</xsl:if>
+										</span></div>
                                         <div class="cart-item-quantity">
                                             <div class="input-group">
                                                 <div class="input-group-btn">
@@ -64,7 +94,7 @@
                                                 <xsl:value-of select="/ProductDetail/ProductId"></xsl:value-of>
                                             </xsl:attribute>
                                             <em class="mdi mdi-cart"></em>
-                                            <span>Mua ngay</span>
+                                            <span><xsl:value-of select="/ProductDetail/BuyNow"></xsl:value-of></span>
                                         </a>
                                     </div>
                                 </div>
@@ -74,7 +104,7 @@
 					<div class="col-lg-6 product-detail-information">
 						<div class="row no-gutters pd-line">
 							<div class="col-sm-4">
-								<h4>Tên sản phẩm</h4>
+								<h4><xsl:value-of select="/ProductDetail/ProductNameLabel"></xsl:value-of></h4>
 							</div>
 							<div class="col-sm-8">
 								<p>
@@ -86,7 +116,7 @@
 						</div>
 						<div class="row no-gutters pd-line">
 							<div class="col-sm-4">
-								<h4>Mã số</h4>
+								<h4><xsl:value-of select="/ProductDetail/CodeLabel"></xsl:value-of></h4>
 							</div>
 							<div class="col-sm-8">
 								<h5 class="code">
@@ -94,45 +124,55 @@
 								</h5>
 							</div>
 						</div>
-						<xsl:apply-templates select='/ProductDetail/ProductAttributes'></xsl:apply-templates>
+						<xsl:apply-templates select='/ProductDetail/ProductAttributes' mode="Full"></xsl:apply-templates>
 						<div class="row no-gutters product-detail-support-row">
-							<xsl:if test="/ProductDetail/FileUrl != ''">
-								<div class="col-sm-6 col-lg-12 col-xl-6 product-detail-support ">
-									<a target="_blank">
-										<xsl:attribute name='href'>
-											<xsl:value-of select='/ProductDetail/FileUrl'></xsl:value-of>
-										</xsl:attribute>
-										<img src="/Data/Sites/1/skins/default/img/san-pham-ct/icon-pdf.png"
-											alt="pdf file" />
-										<p>tài liệu hướng dẫn</p>
-									</a>
-								</div>
-							</xsl:if>
-							<xsl:if test="/ProductDetail/SubTitle != ''">
-								<div class="col-sm-6 col-lg-12 col-xl-6 product-detail-support">
-									<a data-fancybox="gallery">
-										<xsl:attribute name='href'>
-											<xsl:value-of select='/ProductDetail/SubTitle'
-												disable-output-escaping='yes'>
-											</xsl:value-of>
-										</xsl:attribute>
-										<em class="mdi mdi-video"></em>
-										<p>Video clip</p>
-									</a>
-								</div>
-							</xsl:if>
-							<xsl:if test="/ProductDetail/BriefContent != ''">
-								<div class="col-sm-6 col-lg-12 col-xl-6 product-detail-support">
-									<a target="_blank">
-										<xsl:attribute name='href'>
-											<xsl:value-of select='/ProductDetail/BriefContent'></xsl:value-of>
-										</xsl:attribute>
-										<em class="mdi mdi-file-document"></em>
-										<p>Hướng dân lắp đặt</p>
-									</a>
-								</div>
-							</xsl:if>
+							<!-- <xsl:if test="/ProductDetail/FileUrl != ''"> -->
+							<div class="col-sm-6 col-lg-12 col-xl-6 product-detail-support ">
+								<a target="_blank">
+									<xsl:attribute name='href'>
+										<xsl:value-of select='/ProductDetail/FileUrl'></xsl:value-of>
+									</xsl:attribute>
+									<img src="/Data/Sites/1/skins/default/img/san-pham-ct/icon-pdf.png"
+										alt="pdf file" />
+									<p><xsl:value-of select="/ProductDetail/ManualDocument"></xsl:value-of></p>
+								</a>
+							</div>
+							<!-- </xsl:if> -->
+							<!-- <xsl:if test="/ProductDetail/SubTitle != ''"> -->
+							<div class="col-sm-6 col-lg-12 col-xl-6 product-detail-support">
+								<a data-fancybox="gallery">
+									<xsl:attribute name='href'>
+										<xsl:value-of select='/ProductDetail/SubTitle'
+											disable-output-escaping='yes'>
+										</xsl:value-of>
+									</xsl:attribute>
+									<em class="mdi mdi-video"></em>
+									<p>Video clip</p>
+								</a>
+							</div>
+							<!-- </xsl:if> -->
+							<!-- <xsl:if test="/ProductDetail/BriefContent != ''"> -->
+							<div class="col-sm-6 col-lg-12 col-xl-6 product-detail-support">
+								<a target="_blank">
+									<xsl:attribute name='href'>
+										<xsl:value-of select='/ProductDetail/BriefContent'></xsl:value-of>
+									</xsl:attribute>
+									<em class="mdi mdi-file-document"></em>
+									<p><xsl:value-of select="/ProductDetail/InstallationInstructions"></xsl:value-of></p>
+								</a>
+							</div>
+							<div class="col-sm-6 col-lg-12 col-xl-6 product-detail-support">
+								<a target="_blank">
+									<!-- <xsl:attribute name='href'>
+										<xsl:value-of select='/ProductDetail/BriefContent'></xsl:value-of>
+									</xsl:attribute> -->
+									<em class="mdi mdi-view-360"></em>
+									<p>View 360</p>
+								</a>
+							</div>
+							<!-- </xsl:if> -->
 						</div>
+						<div class="social-network"></div>
 					</div>
 					<!-- <div class="col-lg-6">
 						<div class="product-detail-information">
@@ -235,7 +275,7 @@
 						
 					</div>
 					<div class="col-lg-6">
-						<div class="social-network"></div>
+						
 					</div>
 				</div>
                 <xsl:if test="/ProductDetail/FullContent != ''">
@@ -257,7 +297,7 @@
 			<section class="product-slide">
 				<div class="product-article-title">
 					<h2>
-						sản phẩm khác
+						<xsl:value-of select="/ProductDetail/OtherProductText"></xsl:value-of>
 					</h2>
 				</div>
 				<div class="swiper-container">
@@ -310,7 +350,7 @@
 			</div>
 		</div>
 	</xsl:template>
-	<xsl:template match='ProductAttributes'>
+	<xsl:template match='ProductAttributes' mode="Full">
 		<div class="row pd-line no-gutters">
 			<div class="col-sm-4">
 				<h4>
@@ -324,6 +364,11 @@
 			</div>
 		</div>
 	</xsl:template>
+	<!-- <xsl:template match="ProductAttributes" mode="Dvt">
+		<xsl:if test="position()=7">
+			<xsl:value-of select="Content" disable-output-escaping="yes"></xsl:value-of>
+		</xsl:if>
+	</xsl:template> -->
 	<xsl:template match='ProductOther'>
 		<div class="swiper-slide">
 			<div class="item">
@@ -371,7 +416,7 @@
 								<xsl:value-of select="ProductId"></xsl:value-of>
 							</xsl:attribute>
 							<em class="mdi mdi-cart"></em>
-							<span>Thêm vào giỏ hàng</span>
+							<span><xsl:value-of select="/ProductDetail/AddToCartText"></xsl:value-of></span>
 						</a>
 					</div>
 				</div>

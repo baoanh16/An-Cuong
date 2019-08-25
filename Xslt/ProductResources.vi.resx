@@ -1755,4 +1755,43 @@
   <data name="OtherProductText" xml:space="preserve">
     <value>Sản phẩm khác</value>
   </data>
+  <data name="CodeLabel" xml:space="preserve">
+    <value>Mã số</value>
+  </data>
+  <data name="BuyNow" xml:space="preserve">
+    <value>Mua ngay</value>
+  </data>
+  <data name="ManualDocument" xml:space="preserve">
+    <value>Tài liệu hướng dẫn</value>
+  </data>
+  <data name="InstallationInstructions" xml:space="preserve">
+    <value>Hướng dẫn lắp đặt</value>
+  </data>
+  <data name="NoteText" xml:space="preserve">
+    <value>Lưu ý: Hình ảnh mang tính chất tham khảo</value>
+  </data>
+  <data name="AddToCartText" xml:space="preserve">
+    <value>Thêm vào giỏ hàng</value>
+  </data>
+  <data name="PCText" xml:space="preserve">
+    <value>Cái</value>
+  </data>
+  <data name="RollText" xml:space="preserve">
+    <value>Cuộn</value>
+  </data>
+  <data name="SetText" xml:space="preserve">
+    <value>Bộ</value>
+  </data>
+  <data name="BarText" xml:space="preserve">
+    <value>Thanh</value>
+  </data>
+  <data name="PlateText" xml:space="preserve">
+    <value>Tấm</value>
+  </data>
+  <data name="MeterText" xml:space="preserve">
+    <value>Mét</value>
+  </data>
+  <data name="BoxText" xml:space="preserve">
+    <value>Hộp</value>
+  </data>
 </root>

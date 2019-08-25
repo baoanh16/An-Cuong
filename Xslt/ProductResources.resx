@@ -1749,4 +1749,43 @@
   <data name="OtherProductText" xml:space="preserve">
     <value>Other Products</value>
   </data>
+  <data name="CodeLabel" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="BuyNow" xml:space="preserve">
+    <value>Buy Now</value>
+  </data>
+  <data name="ManualDocument" xml:space="preserve">
+    <value>Manual document</value>
+  </data>
+  <data name="InstallationInstructions" xml:space="preserve">
+    <value>Installation instructions</value>
+  </data>
+  <data name="NoteText" xml:space="preserve">
+    <value>Pictures are for reference only</value>
+  </data>
+  <data name="AddToCartText" xml:space="preserve">
+    <value>Add to cart</value>
+  </data>
+  <data name="PCText" xml:space="preserve">
+    <value>PC</value>
+  </data>
+  <data name="RollText" xml:space="preserve">
+    <value>Roll</value>
+  </data>
+  <data name="SetText" xml:space="preserve">
+    <value>Set</value>
+  </data>
+  <data name="BarText" xml:space="preserve">
+    <value>Bar</value>
+  </data>
+  <data name="PlateText" xml:space="preserve">
+    <value>Plate</value>
+  </data>
+  <data name="MeterText" xml:space="preserve">
+    <value>Meter</value>
+  </data>
+  <data name="BoxText" xml:space="preserve">
+    <value>Box</value>
+  </data>
 </root>

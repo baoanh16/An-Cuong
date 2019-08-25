@@ -11,7 +11,7 @@
 				</xsl:attribute>
 				<div class="cart-toggle"><em class="mdi mdi-cart"></em>
 					<div class="amount-wrapper">
-						<span class="text">Giỏ hàng </span>
+						<span class="text"><xsl:value-of select="/ShoppingCart/CartTypeShoppingCart"></xsl:value-of> </span>
 						<xsl:text>(</xsl:text>
 						<span class="amount">
 

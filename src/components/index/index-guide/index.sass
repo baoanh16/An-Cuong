@@ -42,6 +42,9 @@
 			height: 100%
 			width: 100%
 		&:hover
+			h2 
+				a 
+					color: #ff7c3f
 			&:before
 				z-index: -1
 			&:after
@@ -107,6 +110,9 @@
 			color: rgb(51, 51, 51)
 			font-weight: 600
 			text-transform: uppercase
+			&:hover 
+				a 
+					color: #ff7c3f
 		.navigation-wrapper
 			display: flex
 			justify-content: center
@@ -169,14 +175,18 @@
 						background: rgba(#fff,.5)
 						margin-bottom: r(5px)
 						padding: 11px 16px
+						&:hover 
+							color: $main
+							a 
+								color: $main
 					.figure-caption
 						display: flex
 						justify-content: flex-start
 						align-items: center
 						margin:  1rem  0 0 1rem
 						.caption-icon
-							background: rgba(#dbb062,.5)
-							border: 1px solid #dbb062
+							background: rgba(#e2ab49,.5)
+							border: 1px solid #e2ab49
 							width: r(46px)
 							height: r(46px)
 							margin-right: .5rem
@@ -194,6 +204,10 @@
 							font-weight: bold
 							line-height: r(28px)
 							text-align: left
+							&:hover 
+								color: $main
+								a 
+									color: $main
 
 						p
 							font-size: r(15px)
@@ -201,6 +215,10 @@
 							color: rgb(255, 255, 255)
 							line-height: r(23px)
 							text-align: left
+							&:hover 
+								color: $main
+								a 
+									color: $main
 		&:first-child
 			margin-bottom: 10px
 		@media (max-width: 1600px)

@@ -132,7 +132,7 @@
 							<xsl:attribute name="data-itemguid">
 								<xsl:value-of select="ItemGuid"></xsl:value-of>
 							</xsl:attribute>
-							<xsl:text>Bỏ sản phẩm</xsl:text>
+							<xsl:value-of select="/ShoppingCart/RemoveProduct"></xsl:value-of>
 							<!--<xsl:value-of select="/ShoppingCart/RemoveText"></xsl:value-of>-->
 						</a>
 						<!-- <a class="loveit" href="#" onclick="AjaxCart.carttowishlist(this);return false;">

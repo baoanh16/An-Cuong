@@ -246,25 +246,28 @@ function swiperInit() {
 	}
 
 	var viewedProduct = new Swiper(".viewed-product .swiper-container", {
-		slidesPerView: sliderPerView,
+		slidesPerView: 4,
 		spaceBetween: 10,
 		breakpoints: {
-			1025: {
-				slidesPerView: 3
-			},
 			768: {
-				slidesPerView: 2
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			1025: {
+				slidesPerView: 3,
+				spaceBetween: 10,
 			}
+			
 		},
 		navigation: {
 			nextEl: ".viewed-product .swiper-next",
 			prevEl: ".viewed-product .swiper-prev"
 		},
-		on: {
-			init: function() {
-				$(window).trigger("resize");
-			}
-		}
+		// on: {
+		// 	init: function() {
+		// 		$(window).trigger("resize");
+		// 	}
+		// }
 	});
 
 	var flashSale = new Swiper(".flash-sale .swiper-container", {
