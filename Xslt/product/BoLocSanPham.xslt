@@ -8,7 +8,7 @@
 				<div class="col-12">
 					<div class="filter-wrapper">
 						<div class="filter-title">
-							<h2>Giá</h2><em class="mdi mdi-menu-down"></em>
+							<h2><xsl:value-of select="/ProductFilter/PriceText2"></xsl:value-of></h2><em class="mdi mdi-menu-down"></em>
 						</div>
 						<div class="filter-body">
 							<div class="filter-input-wrapper">

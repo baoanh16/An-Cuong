@@ -52,19 +52,19 @@
 					<div class="row flex flex-wrap">
 						<div class="col-6 gifts">
 							<xsl:if test="/ShoppingCart/HasGift='true'">
-								<h3>Quà tặng:</h3>
+								<h3><xsl:value-of select="/ShoppingCart/GiftText"></xsl:value-of>:</h3>
 								<xsl:apply-templates select="/ShoppingCart/CartItem" mode="Gifts"></xsl:apply-templates>
 							</xsl:if>
 						</div>
 						<div class="col-6">
 							<div class="totalamount">
-								<xsl:text>Tạm tính: </xsl:text>
+								<xsl:value-of select="/ShoppingCart/SubTotalText"></xsl:value-of><xsl:text>: </xsl:text>
 								<strong>
 									<xsl:value-of select="/ShoppingCart/SubTotal"></xsl:value-of>
 								</strong>
 							</div>
 							<div class="totalamount">
-								<xsl:text>Giảm giá: </xsl:text>
+								<xsl:value-of select="/ShoppingCart/DiscountText"></xsl:value-of><xsl:text>: </xsl:text>
 								<strong>
 									<xsl:value-of select="/ShoppingCart/DiscountTotal"></xsl:value-of>
 								</strong>
@@ -84,7 +84,7 @@
 								<xsl:attribute name="href">
 									<xsl:value-of select="/ShoppingCart/ContinueShoppingUrl"></xsl:value-of>
 								</xsl:attribute>
-								Tiếp tục mua sắm
+								<xsl:value-of select="/ShoppingCart/ContinueShoppingText"></xsl:value-of>
 							</a>
 						</xsl:if>
 						<button class="hvr-sweep-to-right btn-continue btn-pay" id="checkout" name="checkout">

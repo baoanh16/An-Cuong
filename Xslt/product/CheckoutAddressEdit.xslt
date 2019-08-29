@@ -4,7 +4,7 @@
 
   <xsl:template match="/">
     <div class="receive-address clearfix">
-      <h3 class="title">Địa chỉ nhận hàng</h3>
+      <h3 class="title"><xsl:value-of select="/CheckoutAddress/ShippingAddressText"></xsl:value-of></h3>
       <section class="cart-form clearfix">
         <div class="group clearfix">
           <section class="form-group">
@@ -35,7 +35,7 @@
               </input>
               <div class="des">
                 <xsl:value-of select="/CheckoutAddress/ContactNumberText"></xsl:value-of>
-                <xsl:text>(Nhân viên giao nhận Imudex sẽ liên hệ với SĐT này.)</xsl:text>
+                <xsl:text>(</xsl:text><xsl:value-of select="/CheckoutAddress/ImundexDeliveryText"></xsl:value-of> <xsl:text>.)</xsl:text>
               </div>
             </div>
           </section>
@@ -44,7 +44,7 @@
               <label>
                 <xsl:value-of select="/CheckoutAddress/EmailText"></xsl:value-of>
               </label>
-              <div class="des">(Không bắt buộc)</div>
+              <div class="des">(<xsl:value-of select="/CheckoutAddress/OptionalText" disable-output-escaping="yes"></xsl:value-of>)</div>
             </div>
             <div class="input">
               <input type="text" name="Address_Email" placeholder="Nhập email">
@@ -102,8 +102,8 @@
           <section class="form-group">
             <div class="label">
               <label>
-                Lời nhắn:
-                <div class="des">(Không bắt buộc)</div>
+                <xsl:value-of select="/CheckoutAddress/MessageText"></xsl:value-of>:
+                <div class="des">(<xsl:value-of select="/CheckoutAddress/OptionalText" disable-output-escaping="yes"></xsl:value-of>)</div>
               </label>
             </div>
             <div class="input">
@@ -116,7 +116,7 @@
         <div class="group clearfix">
           <section class="check-group">
             <input id="ttmh" type="checkbox" name="Address_SameBilling" checked="checked"></input>
-            <label id="btn-ttmh" for="ttmh">Thông tin người mua hàng giống như trên</label>
+            <label id="btn-ttmh" for="ttmh"><xsl:value-of select="/CheckoutAddress/BuyerInformationText"></xsl:value-of></label>
           </section>
           <section class="user-info clearfix">
             <section class="form-group">
@@ -155,7 +155,7 @@
                 <label>
                   <xsl:value-of select="/CheckoutAddress/EmailText"></xsl:value-of>
                 </label>
-                <div class="des">(Không bắt buộc)</div>
+                <div class="des">(<xsl:value-of select="/CheckoutAddress/OptionalText" disable-output-escaping="yes"></xsl:value-of>)</div>
               </div>
               <div class="input">
                 <input type="text" name="ShippingAddress_Email" placeholder="Nhập email">
@@ -223,11 +223,11 @@
       <section class="title">
         <div class="check-group">
           <input id="Invoice_Required" type="checkbox" name="Invoice_Required"></input>
-          <label id="btn-xuathd" for="Invoice_Required">Yêu cầu xuất hóa đơn GTGT cho đơn hàng này</label>
+          <label id="btn-xuathd" for="Invoice_Required"><xsl:value-of select="/CheckoutAddress/RequestVATText"></xsl:value-of></label>
         </div>
       </section>
       <section class="cart-form bill-form clearfix">
-        <div class="module-title">Vui lòng điền đầy đủ thông tin công ty để nhận hóa đơn GTGT</div>
+        <div class="module-title"><xsl:value-of select="/CheckoutAddress/PleaseCompleteText"></xsl:value-of></div>
         <div class="form-group">
           <div class="label">
             <label>
@@ -270,7 +270,7 @@
             </input>
           </div>
         </div>
-        <div class="des">Lưu ý: Giá trị hóa đơn không bao gồm giá trị giảm giá</div>
+        <div class="des"><xsl:value-of select="/CheckoutAddress/NoteTheInvoiceText"></xsl:value-of></div>
       </section>
     </div>
     <!--<div class="coupon clearfix">
@@ -307,7 +307,7 @@
     </div>-->
     <section class="cart-button clearfix">
       <a href="/cart" class="btn-back">
-        <xsl:text>Quay lại</xsl:text>
+        <xsl:value-of select="/CheckoutAddress/ComeBackText"></xsl:value-of>
       </a>
       <button id="checkout" name="checkout" class="hvr-sweep-to-right btn-continue">
         <xsl:attribute name="onclick">
@@ -315,7 +315,7 @@
           <xsl:value-of select="/CheckoutAddress/NextPageUrl"></xsl:value-of>
           <xsl:text>');return false;</xsl:text>
         </xsl:attribute>
-        <xsl:text>Tiếp tục</xsl:text>
+        <xsl:value-of select="/CheckoutAddress/ContinueText"></xsl:value-of>
       </button>
     </section>
   </xsl:template>

@@ -324,16 +324,22 @@
 	</xsl:template>
 	<xsl:template match='ProductImages' mode="BigThumbnail">
 		<div class="swiper-slide">
-			<div class="img">
-				<img>
-				<xsl:attribute name='src'>
-					<xsl:value-of select='ImageUrl'></xsl:value-of>
+			<a data-fancybox="gallery">
+				<xsl:attribute name="href">
+					<xsl:value-of select="ImageUrl"></xsl:value-of>
 				</xsl:attribute>
-				<xsl:attribute name='alt'>
-					<xsl:value-of select='Title'></xsl:value-of>
-				</xsl:attribute>
-				</img>
-			</div>
+			
+				<div class="img">
+					<img>
+					<xsl:attribute name='src'>
+						<xsl:value-of select='ImageUrl'></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name='alt'>
+						<xsl:value-of select='Title'></xsl:value-of>
+					</xsl:attribute>
+					</img>
+				</div>
+			</a>
 		</div>
 	</xsl:template>
 	<xsl:template match='ProductImages' mode="SmallThumbnail">

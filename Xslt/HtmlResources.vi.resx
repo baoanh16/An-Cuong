@@ -174,6 +174,9 @@
   <data name="PriceText" xml:space="preserve">
     <value>Giá:</value>
   </data>
+  <data name="PriceText2" xml:space="preserve">
+    <value>Giá</value>
+  </data>
   <data name="ProductRelatedText" xml:space="preserve">
     <value>Sản phẩm cùng loại</value>
   </data>
@@ -221,5 +224,77 @@
   </data>
   <data name="AddToCartText" xml:space="preserve">
     <value>Thêm vào giỏ hàng</value>
+  </data>
+  <data name="GiftText" xml:space="preserve">
+    <value>Quà tặng</value>
+  </data>
+  <data name="SubTotalText" xml:space="preserve">
+    <value>Tạm tính</value>
+  </data>
+  <data name="DiscountText" xml:space="preserve">
+    <value>Giảm giá</value>
+  </data>
+  <data name="ContinueShoppingText" xml:space="preserve">
+    <value>Tiếp tục mua sắm</value>
+  </data>
+  <data name="ShippingAddressText" xml:space="preserve">
+    <value>Địa chỉ nhận hàng</value>
+  </data>
+  <data name="ImundexDeliveryText" xml:space="preserve">
+    <value>Nhân viên giao nhận Imundex sẽ liên hệ với SĐT này</value>
+  </data>
+  <data name="OptionalText" xml:space="preserve">
+    <value>Không bắt buộc</value>
+  </data>
+  <data name="MessageText" xml:space="preserve">
+    <value>Lời nhắn</value>
+  </data>
+  <data name="BuyerInformationText" xml:space="preserve">
+    <value>Thông tin người mua hàng giống như trên</value>
+  </data>
+  <data name="RequestVATText" xml:space="preserve">
+    <value>Yêu cầu xuất hóa đơn GTGT cho đơn hàng này</value>
+  </data>
+  <data name="PleaseCompleteText" xml:space="preserve">
+    <value>Vui lòng điền đầy đủ thông tin công ty để nhận hóa đơn GTGT</value>
+  </data>
+  <data name="NoteTheInvoiceText" xml:space="preserve">
+    <value>Lưu ý: Giá trị hóa đơn không bao gồm giá trị giảm giá</value>
+  </data>
+  <data name="ComeBackText" xml:space="preserve">
+    <value>Quay lại</value>
+  </data>
+  <data name="ContinueText" xml:space="preserve">
+    <value>Tiếp tục</value>
+  </data>
+  <data name="NumberPhoneText" xml:space="preserve">
+    <value>Số điện thoại</value>
+  </data>
+  <data name="CodeUsedText" xml:space="preserve">
+    <value>Mã sử dụng</value>
+  </data>
+  <data name="PromotionCodeText" xml:space="preserve">
+    <value>Mã khuyến mãi</value>
+  </data>
+  <data name="PointsOfUseText" xml:space="preserve">
+    <value>Điểm sử dụng</value>
+  </data>
+  <data name="ShippingMethodText" xml:space="preserve">
+    <value>Phương thức vận chuyển</value>
+  </data>
+  <data name="PaymentMethodsText" xml:space="preserve">
+    <value>Phương thức thanh toán</value>
+  </data>
+  <data name="BackToCartText" xml:space="preserve">
+    <value>Quay lại giỏ hàng</value>
+  </data>
+  <data name="BackToCartText" xml:space="preserve">
+    <value>Quay lại giỏ hàng</value>
+  </data>
+  <data name="CompletedText" xml:space="preserve">
+    <value>Hoàn tất</value>
+  </data>
+  <data name="IHaveReadText" xml:space="preserve">
+    <value>Tôi đã đọc và đồng ý điều khoản trên</value>
   </data>
 </root>

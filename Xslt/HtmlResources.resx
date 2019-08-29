@@ -174,6 +174,9 @@
   <data name="PriceText" xml:space="preserve">
     <value>Price:</value>
   </data>
+  <data name="PriceText2" xml:space="preserve">
+    <value>Price</value>
+  </data>
   <data name="ProductRelatedText" xml:space="preserve">
     <value>Product Related</value>
   </data>
@@ -221,5 +224,74 @@
   </data>
   <data name="AddToCartText" xml:space="preserve">
     <value>Add To Cart</value>
+  </data>
+  <data name="GiftText" xml:space="preserve">
+    <value>Gift</value>
+  </data>
+  <data name="SubTotalText" xml:space="preserve">
+    <value>SubTotal</value>
+  </data>
+  <data name="DiscountText" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="ContinueShoppingText" xml:space="preserve">
+    <value>Continue Shopping</value>
+  </data>
+  <data name="ShippingAddressText" xml:space="preserve">
+    <value>Shipping Address</value>
+  </data>
+  <data name="ImundexDeliveryText" xml:space="preserve">
+    <value>Imundex delivery staff will contact this phone number</value>
+  </data>
+  <data name="OptionalText" xml:space="preserve">
+    <value>Optional</value>
+  </data>
+  <data name="MessageText" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="BuyerInformationText" xml:space="preserve">
+    <value>Buyer information is the same as above</value>
+  </data>
+  <data name="RequestVATText" xml:space="preserve">
+    <value>Request VAT invoice for daily orders</value>
+  </data>
+  <data name="PleaseCompleteText" xml:space="preserve">
+    <value>Please complete the company information to receive VAT invoice</value>
+  </data>
+  <data name="NoteTheInvoiceText" xml:space="preserve">
+    <value>Note: The invoice value does not include discounted value</value>
+  </data>
+  <data name="ComeBackText" xml:space="preserve">
+    <value>Come Back</value>
+  </data>
+  <data name="ContinueText" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="NumberPhoneText" xml:space="preserve">
+    <value>Number Phone</value>
+  </data>
+  <data name="CodeUsedText" xml:space="preserve">
+    <value>Code Used</value>
+  </data>
+  <data name="PromotionCodeText" xml:space="preserve">
+    <value>Promotion Code</value>
+  </data>
+  <data name="PointsOfUseText" xml:space="preserve">
+    <value>Points Of Use</value>
+  </data>
+  <data name="ShippingMethodText" xml:space="preserve">
+    <value>Shipping Method</value>
+  </data>
+  <data name="PaymentMethodsText" xml:space="preserve">
+    <value>Payment Methods</value>
+  </data>
+  <data name="BackToCartText" xml:space="preserve">
+    <value>Back To Cart</value>
+  </data>
+  <data name="CompletedText" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="IHaveReadText" xml:space="preserve">
+    <value>I have read and agree to the above terms</value>
   </data>
 </root>
