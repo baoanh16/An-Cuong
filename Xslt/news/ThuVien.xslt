@@ -14,6 +14,9 @@
 			</div>
 		</section>
 	</xsl:template>
+	<!-- <xsl:template match="Zone">
+		<xsl:apply-templates select="News"></xsl:apply-templates>
+	</xsl:template> -->
 	<xsl:template match='News'>
 		<div class="col-6 col-lg-4 news-item">
 			<div class="figure">

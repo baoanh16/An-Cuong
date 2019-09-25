@@ -4,12 +4,14 @@
 	<xsl:output method="html" indent="yes" />
 	<xsl:template match="/">
 		<section class="flash-sale">
-			<div class="product-article-title">
-				<h2>
-					<img src="/Data/Sites/1/skins/default/img/flash.png" alt="" />
-					<xsl:value-of select='/ProductList/ModuleTitle'></xsl:value-of>
-				</h2>
-			</div>
+			<xsl:if test="count(/ProductList/Product) > 0">
+				<div class="product-article-title">
+					<h2>
+						<img src="/Data/Sites/1/skins/default/img/flash.png" alt="" />
+						<xsl:value-of select='/ProductList/ModuleTitle'></xsl:value-of>
+					</h2>
+				</div>
+			</xsl:if>
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
 					<xsl:apply-templates select='/ProductList/Product'></xsl:apply-templates>

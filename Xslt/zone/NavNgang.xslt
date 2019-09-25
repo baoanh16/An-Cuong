@@ -18,7 +18,7 @@
 						<xsl:attribute name='title'>
 							<xsl:value-of select='Title'></xsl:value-of>
 						</xsl:attribute>
-						<xsl:text>Tất cả</xsl:text>
+						<xsl:value-of select="/ZoneList/AllText"></xsl:value-of>
 					</a>
 				</li>
 				<xsl:apply-templates select='/ZoneList/Zone'></xsl:apply-templates>

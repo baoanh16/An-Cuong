@@ -5,13 +5,13 @@
   <xsl:template match="/">
     <section class="payment-info clearfix">
       <xsl:if test="count(/CheckoutMethod/Shipping)>0">
-        <h3 class="title">Phương thức vận chuyển</h3>
+        <h3 class="title"><xsl:value-of select="/CheckoutMethod/ShippingMethodText"></xsl:value-of></h3>
         <div class="cart-form clearfix">
           <xsl:apply-templates select="/CheckoutMethod/Shipping"></xsl:apply-templates>
         </div>
       </xsl:if>
       <xsl:if test="count(/CheckoutMethod/Payment)>0">
-        <h3 class="title">Phương thức thanh toán</h3>
+        <h3 class="title"><xsl:value-of select="/CheckoutMethod/PaymentMethodsText"></xsl:value-of></h3>
         <div class="cart-form clearfix">
           <xsl:apply-templates select="/CheckoutMethod/Payment"></xsl:apply-templates>
         </div>
@@ -24,7 +24,7 @@
           <xsl:attribute name="target">
             <xsl:value-of select="Target"></xsl:value-of>
           </xsl:attribute>
-          <xsl:text> Quay lại Giỏ hàng</xsl:text>
+          <xsl:value-of select="/CheckoutMethod/BackToCartText"></xsl:value-of>
         </a>
         <button type="submit" id="checkout" name="checkout" class="hvr-sweep-to-right btn-continue">
           <xsl:attribute name="onclick">
@@ -32,7 +32,7 @@
             <xsl:value-of select="/CheckoutMethod/NextPageUrl"></xsl:value-of>
             <xsl:text>');return false;</xsl:text>
           </xsl:attribute>
-          <xsl:text>Hoàn Tất </xsl:text>
+          <xsl:value-of select="/CheckoutMethod/CompletedText"></xsl:value-of>
         </button>
       </div>
     </section>
@@ -94,7 +94,7 @@
         <xsl:if test="Id=3">
           <div class="agree">
             <input id="PaymentAgree" type="checkbox" checked="checked" name="PaymentAgree" />
-            <label for="PaymentAgree">Tôi đã đọc và đồng ý điều khoản trên</label>
+            <label for="PaymentAgree"><xsl:value-of select="/CheckoutMethod/IHaveReadText"></xsl:value-of></label>
           </div>
         </xsl:if>
       </div>

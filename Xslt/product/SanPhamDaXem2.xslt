@@ -3,24 +3,24 @@
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes" />
 	<xsl:template match="/">
-		<section class="product-display ajaxresponse">
-			<div class="article-section-title">
+
+		<section class="viewed-product viewed-product-2">
+			<div class="product-article-title">
 				<h2>
-					<xsl:value-of select='/ProductList/ZoneTitle'></xsl:value-of>
+					<xsl:value-of select='/ProductList/ModuleTitle'></xsl:value-of>
 				</h2>
-				<div class="quantity-filter">
-					<ol>
-						<xsl:apply-templates select='/ProductList/PageSize'></xsl:apply-templates>
-					</ol>
-				</div>
 			</div>
-			<div class="row ajaxresponsewrap">
-				<xsl:apply-templates select='/ProductList/Product'></xsl:apply-templates>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<xsl:apply-templates select='/ProductList/Product'></xsl:apply-templates>
+				</div>
+				<div class="swiper-prev"><span class="fas fa-chevron-left"></span></div>
+				<div class="swiper-next"><span class="fas fa-chevron-right"></span></div>
 			</div>
 		</section>
 	</xsl:template>
 	<xsl:template match='Product'>
-		<div class="col-xl-3 col-sm-4 col-6">
+		<div class="swiper-slide">
 			<div class="item">
 				<div class="figure">
 					<a class="figure-image shine">
@@ -72,23 +72,5 @@
 				</div>
 			</div>
 		</div>
-	</xsl:template>
-	<xsl:template match="PageSize">
-		<li>
-			<xsl:if test="IsActive='true'">
-				<xsl:attribute name='class'>
-					<xsl:text>active</xsl:text>
-				</xsl:attribute>
-			</xsl:if>
-			<a>
-				<xsl:attribute name='href'>
-					<xsl:value-of select='Url'></xsl:value-of>
-				</xsl:attribute>
-				<xsl:attribute name='title'>
-					<xsl:value-of select='Title'></xsl:value-of>
-				</xsl:attribute>
-				<xsl:value-of select='Title'></xsl:value-of>
-			</a>
-		</li>
 	</xsl:template>
 </xsl:stylesheet>
