@@ -14,9 +14,12 @@
               </label>
             </div>
             <div class="input">
-              <input type="text" name="Address_FirstName" placeholder="Nhập họ tên">
+              <input type="text" name="Address_FirstName">
                 <xsl:attribute name="value">
                   <xsl:value-of select="/CheckoutAddress/FirstName"></xsl:value-of>
+                </xsl:attribute>
+                <xsl:attribute name="placeholder">
+                  <xsl:value-of select="/CheckoutAddress/EnterYourFirstAndLastNameText"></xsl:value-of>
                 </xsl:attribute>
               </input>
             </div>
@@ -28,9 +31,12 @@
               </label>
             </div>
             <div class="input phone">
-              <input type="text" name="Address_Phone" placeholder="Nhập Số điện thoại">
+              <input type="text" name="Address_Phone">
                 <xsl:attribute name="value">
                   <xsl:value-of select="/CheckoutAddress/Phone"></xsl:value-of>
+                </xsl:attribute>
+                <xsl:attribute name="placeholder">
+                  <xsl:value-of select="/CheckoutAddress/EnterYourPhoneNumberText"></xsl:value-of>
                 </xsl:attribute>
               </input>
               <div class="des">
@@ -47,9 +53,12 @@
               <div class="des">(<xsl:value-of select="/CheckoutAddress/OptionalText" disable-output-escaping="yes"></xsl:value-of>)</div>
             </div>
             <div class="input">
-              <input type="text" name="Address_Email" placeholder="Nhập email">
+              <input type="text" name="Address_Email">
                 <xsl:attribute name="value">
                   <xsl:value-of select="/CheckoutAddress/Email"></xsl:value-of>
+                </xsl:attribute>
+                <xsl:attribute name="placeholder">
+                  <xsl:value-of select="/CheckoutAddress/MailText"></xsl:value-of>
                 </xsl:attribute>
               </input>
             </div>
@@ -92,9 +101,12 @@
               </label>
             </div>
             <div class="input">
-              <input type="text" name="Address_Address" placeholder="Vd: 64 đường Hiệp Bình">
+              <input type="text" name="Address_Address">
                 <xsl:attribute name="value">
                   <xsl:value-of select="/CheckoutAddress/Address"></xsl:value-of>
+                </xsl:attribute>
+                <xsl:attribute name="placeholder">
+                  <xsl:value-of select="/CheckoutAddress/ExStreetText"></xsl:value-of>
                 </xsl:attribute>
               </input>
             </div>
@@ -107,7 +119,10 @@
               </label>
             </div>
             <div class="input">
-              <textarea name="OrderNote" cols="30" rows="2" placeholder="Ví dụ: Chuyển hàng ngoài giờ hành chính">
+              <textarea name="OrderNote" cols="30" rows="2">
+                <xsl:attribute name="placeholder">
+                  <xsl:value-of select="/CheckoutAddress/ExShipText"></xsl:value-of>
+                </xsl:attribute>
                 <xsl:value-of select="/CheckoutAddress/OrderNote"></xsl:value-of>
               </textarea>
             </div>
@@ -126,9 +141,12 @@
                 </label>
               </div>
               <div class="input">
-                <input type="text" name="ShippingAddress_FirstName" placeholder="Nhập họ tên">
+                <input type="text" name="ShippingAddress_FirstName">
                   <xsl:attribute name="value">
                     <xsl:value-of select="/CheckoutAddress/ShippingFirstName"></xsl:value-of>
+                  </xsl:attribute>
+                  <xsl:attribute name="placeholder">
+                    <xsl:value-of select="/CheckoutAddress/EnterYourFirstAndLastNameText"></xsl:value-of>
                   </xsl:attribute>
                 </input>
               </div>
@@ -140,9 +158,12 @@
                 </label>
               </div>
               <div class="input phone">
-                <input type="text" name="ShippingAddress_Phone" placeholder="Nhập Số điện thoại">
+                <input type="text" name="ShippingAddress_Phone">
                   <xsl:attribute name="value">
                     <xsl:value-of select="/CheckoutAddress/ShippingPhone"></xsl:value-of>
+                  </xsl:attribute>
+                  <xsl:attribute name="placeholder">
+                    <xsl:value-of select="/CheckoutAddress/EnterYourPhoneNumberText"></xsl:value-of>
                   </xsl:attribute>
                 </input>
                 <div class="des">
@@ -158,9 +179,12 @@
                 <div class="des">(<xsl:value-of select="/CheckoutAddress/OptionalText" disable-output-escaping="yes"></xsl:value-of>)</div>
               </div>
               <div class="input">
-                <input type="text" name="ShippingAddress_Email" placeholder="Nhập email">
+                <input type="text" name="ShippingAddress_Email">
                   <xsl:attribute name="value">
                     <xsl:value-of select="/CheckoutAddress/ShippingEmail"></xsl:value-of>
+                  </xsl:attribute>
+                  <xsl:attribute name="placeholder">
+                    <xsl:value-of select="/CheckoutAddress/MailText"></xsl:value-of>
                   </xsl:attribute>
                 </input>
               </div>
@@ -203,9 +227,12 @@
                 </label>
               </div>
               <div class="input">
-                <input type="text" name="ShippingAddress_Address" placeholder="Vd: 64 đường Hiệp Bình">
+                <input type="text" name="ShippingAddress_Address">
                   <xsl:attribute name="value">
                     <xsl:value-of select="/CheckoutAddress/ShippingAddress"></xsl:value-of>
+                  </xsl:attribute>
+                  <xsl:attribute name="placeholder">
+                    <xsl:value-of select="/CheckoutAddress/ExStreetText"></xsl:value-of>
                   </xsl:attribute>
                 </input>
               </div>

@@ -38,7 +38,7 @@
               <tr class="billing-address">
                 <td>
                   <span>
-                    <xsl:text>Địa chỉ:</xsl:text>
+                    <xsl:value-of select="/ShoppingCart/AddressText"></xsl:value-of>
                   </span>
                 </td>
                 <td>

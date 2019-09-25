@@ -297,4 +297,25 @@
   <data name="IHaveReadText" xml:space="preserve">
     <value>Tôi đã đọc và đồng ý điều khoản trên</value>
   </data>
+  <data name="AddressText" xml:space="preserve">
+    <value>Địa chỉ</value>
+  </data>
+  <data name="EnterYourEmailText" xml:space="preserve">
+    <value>Vui lòng nhập Email</value>
+  </data>
+  <data name="EnterYourFirstAndLastNameText" xml:space="preserve">
+    <value>Nhập họ và tên</value>
+  </data>
+  <data name="EnterYourPhoneNumberText" xml:space="preserve">
+    <value>Nhập số điện thoại</value>
+  </data>
+  <data name="ExStreetText" xml:space="preserve">
+    <value>Vd: 64 đường Hiệp Bình</value>
+  </data>
+  <data name="ExShipText" xml:space="preserve">
+    <value>Vd: Chuyển hàng ngoài giờ hành chính</value>
+  </data>
+  <data name="MailText" xml:space="preserve">
+    <value>Nhập email</value>
+  </data>
 </root>

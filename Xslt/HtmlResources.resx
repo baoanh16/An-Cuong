@@ -294,4 +294,25 @@
   <data name="IHaveReadText" xml:space="preserve">
     <value>I have read and agree to the above terms</value>
   </data>
+  <data name="AddressText" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="EnterYourEmailText" xml:space="preserve">
+    <value>Enter Your Email</value>
+  </data>
+  <data name="EnterYourFirstAndLastNameText" xml:space="preserve">
+    <value>Enter your first and last name</value>
+  </data>
+  <data name="EnterYourPhoneNumberText" xml:space="preserve">
+    <value>Enter your phone number</value>
+  </data>
+  <data name="ExStreetText" xml:space="preserve">
+    <value>Ex: 64 Hiep Binh Street</value>
+  </data>
+  <data name="ExShipText" xml:space="preserve">
+    <value>Ex: Ship goods outside office hours</value>
+  </data>
+  <data name="MailText" xml:space="preserve">
+    <value>Enter Your Email</value>
+  </data>
 </root>
