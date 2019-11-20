@@ -318,4 +318,13 @@
   <data name="MailText" xml:space="preserve">
     <value>Nhập email</value>
   </data>
+  <data name="AttractiveDealsFirstWordText" xml:space="preserve">
+    <value>ƯU ĐÃI </value>
+  </data>
+  <data name="AttractiveDealsLastWordText" xml:space="preserve">
+    <value> HẤP DẪN</value>
+  </data>
+   <data name="CodeText" xml:space="preserve">
+    <value>Mã số: </value>
+  </data>
 </root>

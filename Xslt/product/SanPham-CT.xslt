@@ -30,81 +30,99 @@
 										<div class="product-detail-button-next"></div>
 										<div class="product-detail-button-prev"></div>
 									</div>
-									<h5><xsl:value-of select="/ProductDetail/NoteText"></xsl:value-of></h5>
+									<h5>
+										<xsl:value-of select="/ProductDetail/NoteText"></xsl:value-of>
+									</h5>
 								</div>
-                                <div class="product-add-cart">
-                                    <h3> <span><xsl:value-of select="/ProductDetail/ProductComparePrice"></xsl:value-of>: </span>
-                                        <xsl:value-of select='/ProductDetail/Price'></xsl:value-of>
-                                    </h3>
-                                    <div class="add-cart-wrapper">
-                                        <div class="unit"><span>
-											<xsl:if test="floor(/ProductDetail/ShowOption div 4) mod 2 = 1">
-												<xsl:text>/ </xsl:text> 
-												<xsl:value-of select="/ProductDetail/PCText"></xsl:value-of>
-											</xsl:if>
-											
-											<xsl:if test="floor(/ProductDetail/ShowOption div 8) mod 2 = 1">
-												<xsl:text>/ </xsl:text> 	
-												<xsl:value-of select="/ProductDetail/RollText"></xsl:value-of>
-											</xsl:if>
-											<xsl:if test="floor(/ProductDetail/ShowOption div 16) mod 2 = 1">
-												<xsl:text>/ </xsl:text> 
-												<xsl:value-of select="/ProductDetail/SetText"></xsl:value-of>
-											</xsl:if>
-											<xsl:if test="floor(/ProductDetail/ShowOption div 32) mod 2 = 1">
-												<xsl:text>/ </xsl:text> 
-												<xsl:value-of select="/ProductDetail/BarText"></xsl:value-of>
-											</xsl:if>
-											<xsl:if test="floor(/ProductDetail/ShowOption div 64) mod 2 = 1">
-												<xsl:text>/ </xsl:text> 
-												<xsl:value-of select="/ProductDetail/PlateText"></xsl:value-of>
-											</xsl:if>
-											<xsl:if test="floor(/ProductDetail/ShowOption div 128) mod 2 = 1">
-												<xsl:text>/ </xsl:text> 
-												<xsl:value-of select="/ProductDetail/MeterText"></xsl:value-of>
-											</xsl:if>
-											<xsl:if test="floor(/ProductDetail/ShowOption div 256) mod 2 = 1">
-												<xsl:text>/ </xsl:text> 
-												<xsl:value-of select="/ProductDetail/BoxText"></xsl:value-of>
-											</xsl:if>
-										</span></div>
-                                        <div class="cart-item-quantity">
-                                            <div class="input-group">
-                                                <div class="input-group-btn">
-                                                    <div class="qty-minus btn-number"><em class="mdi mdi-minus"></em></div>
-                                                </div>
-                                                <input class="product-details-quantity form-control input-number" type="text"
-                                                    value="1">
-                                                <xsl:attribute name="name">
-                                                    <xsl:text>addtocart_</xsl:text>
-                                                    <xsl:value-of select="/ProductDetail/ProductId"
-                                                        disable-output-escaping="yes">
-                                                    </xsl:value-of>
-                                                    <xsl:text>.EnteredQuantity</xsl:text>
-                                                </xsl:attribute>
-                                                </input>
-                                                <div class="input-group-btn">
-                                                    <div class="qty-plus btn-number"><em class="mdi mdi-plus"></em></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <a class="cart-item-buy" href="javascript:;"
-                                            onclick="AjaxCart.addproducttocart_details(this); return false;">
-                                            <xsl:attribute name="data-productid">
-                                                <xsl:value-of select="/ProductDetail/ProductId"></xsl:value-of>
-                                            </xsl:attribute>
-                                            <em class="mdi mdi-cart"></em>
-                                            <span><xsl:value-of select="/ProductDetail/BuyNow"></xsl:value-of></span>
-                                        </a>
-                                    </div>
-                                </div>
+								<div class="product-add-cart">
+									<h3> <span>
+											<xsl:value-of select="/ProductDetail/ProductComparePrice"></xsl:value-of>:
+										</span>
+										<xsl:value-of select='/ProductDetail/Price'></xsl:value-of>
+									</h3>
+									<div class="add-cart-wrapper">
+										<div class="unit"><span>
+												<xsl:if test="floor(/ProductDetail/ShowOption div 4) mod 2 = 1">
+													<xsl:text>/ </xsl:text>
+													<xsl:value-of select="/ProductDetail/PCText"></xsl:value-of>
+												</xsl:if>
+
+												<xsl:if test="floor(/ProductDetail/ShowOption div 8) mod 2 = 1">
+													<xsl:text>/ </xsl:text>
+													<xsl:value-of select="/ProductDetail/RollText"></xsl:value-of>
+												</xsl:if>
+												<xsl:if test="floor(/ProductDetail/ShowOption div 16) mod 2 = 1">
+													<xsl:text>/ </xsl:text>
+													<xsl:value-of select="/ProductDetail/SetText"></xsl:value-of>
+												</xsl:if>
+												<xsl:if test="floor(/ProductDetail/ShowOption div 32) mod 2 = 1">
+													<xsl:text>/ </xsl:text>
+													<xsl:value-of select="/ProductDetail/BarText"></xsl:value-of>
+												</xsl:if>
+												<xsl:if test="floor(/ProductDetail/ShowOption div 64) mod 2 = 1">
+													<xsl:text>/ </xsl:text>
+													<xsl:value-of select="/ProductDetail/PlateText"></xsl:value-of>
+												</xsl:if>
+												<xsl:if test="floor(/ProductDetail/ShowOption div 128) mod 2 = 1">
+													<xsl:text>/ </xsl:text>
+													<xsl:value-of select="/ProductDetail/MeterText"></xsl:value-of>
+												</xsl:if>
+												<xsl:if test="floor(/ProductDetail/ShowOption div 256) mod 2 = 1">
+													<xsl:text>/ </xsl:text>
+													<xsl:value-of select="/ProductDetail/BoxText"></xsl:value-of>
+												</xsl:if>
+												<xsl:if test="floor(/ProductDetail/ShowOption div 512) mod 2 = 1">
+													<xsl:text>/ </xsl:text>
+													<xsl:value-of select="/ProductDetail/PairText"></xsl:value-of>
+												</xsl:if>
+												<xsl:if test="floor(/ProductDetail/ShowOption div 1024) mod 2 = 1">
+													<xsl:text>/ </xsl:text>
+													<xsl:value-of select="/ProductDetail/SquareText"></xsl:value-of>
+												</xsl:if>
+											</span></div>
+										<div class="cart-item-quantity">
+											<div class="input-group">
+												<div class="input-group-btn">
+													<div class="qty-minus btn-number"><em class="mdi mdi-minus"></em>
+													</div>
+												</div>
+												<input class="product-details-quantity form-control input-number"
+													type="text" value="1">
+												<xsl:attribute name="name">
+													<xsl:text>addtocart_</xsl:text>
+													<xsl:value-of select="/ProductDetail/ProductId"
+														disable-output-escaping="yes">
+													</xsl:value-of>
+													<xsl:text>.EnteredQuantity</xsl:text>
+												</xsl:attribute>
+												</input>
+												<div class="input-group-btn">
+													<div class="qty-plus btn-number"><em class="mdi mdi-plus"></em>
+													</div>
+												</div>
+											</div>
+										</div>
+										<a class="cart-item-buy" href="javascript:;"
+											onclick="AjaxCart.addproducttocart_details(this); return false;">
+											<xsl:attribute name="data-productid">
+												<xsl:value-of select="/ProductDetail/ProductId"></xsl:value-of>
+											</xsl:attribute>
+											<em class="mdi mdi-cart"></em>
+											<span>
+												<xsl:value-of select="/ProductDetail/BuyNow"></xsl:value-of>
+											</span>
+										</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-6 product-detail-information">
 						<div class="row no-gutters pd-line">
 							<div class="col-sm-4">
-								<h4><xsl:value-of select="/ProductDetail/ProductNameLabel"></xsl:value-of></h4>
+								<h4>
+									<xsl:value-of select="/ProductDetail/ProductNameLabel"></xsl:value-of>
+								</h4>
 							</div>
 							<div class="col-sm-8">
 								<p>
@@ -116,7 +134,9 @@
 						</div>
 						<div class="row no-gutters pd-line">
 							<div class="col-sm-4">
-								<h4><xsl:value-of select="/ProductDetail/CodeLabel"></xsl:value-of></h4>
+								<h4>
+									<xsl:value-of select="/ProductDetail/CodeLabel"></xsl:value-of>
+								</h4>
 							</div>
 							<div class="col-sm-8">
 								<h5 class="code">
@@ -124,7 +144,8 @@
 								</h5>
 							</div>
 						</div>
-						<xsl:apply-templates select='/ProductDetail/ProductAttributes' mode="Full"></xsl:apply-templates>
+						<xsl:apply-templates select='/ProductDetail/ProductAttributes' mode="Full">
+						</xsl:apply-templates>
 						<div class="row no-gutters product-detail-support-row">
 							<!-- <xsl:if test="/ProductDetail/FileUrl != ''"> -->
 							<div class="col-sm-6 col-lg-12 col-xl-6 product-detail-support ">
@@ -134,7 +155,9 @@
 									</xsl:attribute>
 									<img src="/Data/Sites/1/skins/default/img/san-pham-ct/icon-pdf.png"
 										alt="pdf file" />
-									<p><xsl:value-of select="/ProductDetail/ManualDocument"></xsl:value-of></p>
+									<p>
+										<xsl:value-of select="/ProductDetail/ManualDocument"></xsl:value-of>
+									</p>
 								</a>
 							</div>
 							<!-- </xsl:if> -->
@@ -142,8 +165,7 @@
 							<div class="col-sm-6 col-lg-12 col-xl-6 product-detail-support">
 								<a data-fancybox="gallery">
 									<xsl:attribute name='href'>
-										<xsl:value-of select='/ProductDetail/SubTitle'
-											disable-output-escaping='yes'>
+										<xsl:value-of select='/ProductDetail/SubTitle' disable-output-escaping='yes'>
 										</xsl:value-of>
 									</xsl:attribute>
 									<em class="mdi mdi-video"></em>
@@ -158,7 +180,9 @@
 										<xsl:value-of select='/ProductDetail/BriefContent'></xsl:value-of>
 									</xsl:attribute>
 									<em class="mdi mdi-file-document"></em>
-									<p><xsl:value-of select="/ProductDetail/InstallationInstructions"></xsl:value-of></p>
+									<p>
+										<xsl:value-of select="/ProductDetail/InstallationInstructions"></xsl:value-of>
+									</p>
 								</a>
 							</div>
 							<div class="col-sm-6 col-lg-12 col-xl-6 product-detail-support">
@@ -272,27 +296,29 @@
 				</div>
 				<div class="row bottom-detail">
 					<div class="col-lg-6">
-						
+
 					</div>
 					<div class="col-lg-6">
-						
+
 					</div>
 				</div>
-                <xsl:if test="/ProductDetail/FullContent != ''">
-                    <div class="product-tabs">
-                        <div class="tabs">
-                            <ul>
-                                <li><a href="#tab-1">Chi tiết sản phẩm</a></li>
-                                <!-- <li><a href="#tab-2">hướng dẫn sử dụng</a></li>
+				<xsl:if test="/ProductDetail/FullContent != ''">
+					<div class="product-tabs">
+						<div class="tabs">
+							<ul>
+								<li><a href="#tab-1">
+										<xsl:value-of select="/ProductDetail/ProductDetailsText"></xsl:value-of>
+									</a></li>
+								<!-- <li><a href="#tab-2">hướng dẫn sử dụng</a></li>
                                 <li><a href="#tab-3">hướng dẫn bảo hành</a></li> -->
-                            </ul>
-                            <div id="tab-1">
-                                <xsl:value-of select='/ProductDetail/FullContent' disable-output-escaping='yes'>
-                                        </xsl:value-of>
-                            </div>
-                        </div>
-                    </div>
-                </xsl:if>
+							</ul>
+							<div id="tab-1">
+								<xsl:value-of select='/ProductDetail/FullContent' disable-output-escaping='yes'>
+								</xsl:value-of>
+							</div>
+						</div>
+					</div>
+				</xsl:if>
 			</section>
 			<section class="product-slide">
 				<div class="product-article-title">
@@ -304,8 +330,8 @@
 					<div class="swiper-wrapper">
 						<xsl:apply-templates select='/ProductDetail/ProductOther'></xsl:apply-templates>
 					</div>
-                    <div class="swiper-prev"><span class="fas fa-chevron-left"></span></div>
-                    <div class="swiper-next"><span class="fas fa-chevron-right"></span></div>
+					<div class="swiper-prev"><span class="fas fa-chevron-left"></span></div>
+					<div class="swiper-next"><span class="fas fa-chevron-right"></span></div>
 				</div>
 			</section>
 		</div>
@@ -328,7 +354,7 @@
 				<xsl:attribute name="href">
 					<xsl:value-of select="ImageUrl"></xsl:value-of>
 				</xsl:attribute>
-			
+
 				<div class="img">
 					<img>
 					<xsl:attribute name='src'>
@@ -422,7 +448,9 @@
 								<xsl:value-of select="ProductId"></xsl:value-of>
 							</xsl:attribute>
 							<em class="mdi mdi-cart"></em>
-							<span><xsl:value-of select="/ProductDetail/AddToCartText"></xsl:value-of></span>
+							<span>
+								<xsl:value-of select="/ProductDetail/AddToCartText"></xsl:value-of>
+							</span>
 						</a>
 					</div>
 				</div>

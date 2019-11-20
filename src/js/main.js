@@ -106,6 +106,20 @@ $(document).ready(function() {
 		.before($(".product-filter-wrapper"))
 		.before($(".Module-246"));
 	$(".product-detail-page .product-slide").after($(".Module-228"));
+	var arr360Src = [];
+	$(".img-array img").each(function() {
+		let src = $(this).attr("src");
+		arr360Src.push(src);
+	});
+	try {
+		$("#mySpriteSpin").spritespin({
+			animate: false,
+			responsive: true,
+			reverse: true,
+			// path to the source images.
+			source: arr360Src
+		});
+	} catch (error) {}
 });
 
 function swiperInit() {
@@ -131,8 +145,8 @@ function swiperInit() {
 			delay: 3500
 		},
 		navigation: {
-			nextEl: ".index-news-swiper-prev",
-			prevEl: ".index-news-swiper-next"
+			nextEl: ".index-news-swiper-next",
+			prevEl: ".index-news-swiper-prev"
 		}
 	});
 
@@ -251,18 +265,17 @@ function swiperInit() {
 		breakpoints: {
 			768: {
 				slidesPerView: 2,
-				spaceBetween: 10,
+				spaceBetween: 10
 			},
 			1025: {
 				slidesPerView: 3,
-				spaceBetween: 10,
+				spaceBetween: 10
 			}
-			
 		},
 		navigation: {
 			nextEl: ".viewed-product .swiper-next",
 			prevEl: ".viewed-product .swiper-prev"
-		},
+		}
 		// on: {
 		// 	init: function() {
 		// 		$(window).trigger("resize");

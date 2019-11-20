@@ -315,4 +315,13 @@
   <data name="MailText" xml:space="preserve">
     <value>Enter Your Email</value>
   </data>
+  <data name="AttractiveDealsFirstWordText" xml:space="preserve">
+    <value>Attractive </value>
+  </data>
+  <data name="AttractiveDealsLastWordText" xml:space="preserve">
+    <value> Deals</value>
+  </data>
+  <data name="CodeText" xml:space="preserve">
+    <value>Code: </value>
+  </data>
 </root>

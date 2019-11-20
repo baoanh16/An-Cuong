@@ -71,7 +71,9 @@
 								<xsl:value-of select="ProductId"></xsl:value-of>
 							</xsl:attribute>
 							<em class="mdi mdi-cart"></em>
-							<span>Thêm vào giỏ hàng</span>
+							<span>
+								<xsl:value-of select='/ProductList/AddToCartText'></xsl:value-of>
+							</span>
 						</a>
 					</div>
 				</div>

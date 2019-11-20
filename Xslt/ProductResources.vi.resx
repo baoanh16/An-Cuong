@@ -1794,4 +1794,13 @@
   <data name="BoxText" xml:space="preserve">
     <value>Hộp</value>
   </data>
+  <data name="PairText" xml:space="preserve">
+    <value>Cặp</value>
+  </data>
+  <data name="SquareText" xml:space="preserve">
+    <value>M2</value>
+  </data>
+  <data name="ProductDetailsText" xml:space="preserve">
+    <value>Chi tiết sản phẩm</value>
+  </data>
 </root>

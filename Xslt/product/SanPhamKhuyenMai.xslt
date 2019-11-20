@@ -25,7 +25,7 @@
 				<xsl:attribute name="title">
 					<xsl:value-of select="Title"></xsl:value-of>
 				</xsl:attribute>
-			
+
 				<div class="swiper-image">
 					<img>
 					<xsl:attribute name='src'>
@@ -39,7 +39,7 @@
 				<div class="swiper-caption">
 					<h3>
 						<!-- <xsl:value-of select='BriefContent' disable-output-escaping='yes'></xsl:value-of> -->
-						<xsl:text>ƯU ĐÃI </xsl:text>
+						<xsl:value-of select='/ProductList/AttractiveDealsFirstWordText'></xsl:value-of>
 						<xsl:if test="OldPrice != ''">
 							<xsl:variable name='price'>
 								<xsl:value-of select="substring-before(Price, ' ')"></xsl:value-of>
@@ -59,10 +59,10 @@
 							<xsl:value-of select="ceiling($percentage)"></xsl:value-of>
 							<xsl:text>%</xsl:text>
 						</xsl:if>
-						<xsl:text> HẤP DẪN</xsl:text>
+						<xsl:value-of select='/ProductList/AttractiveDealsLastWordText'></xsl:value-of>
 					</h3>
 					<h5>
-						<xsl:text>Mã số: </xsl:text>
+						<xsl:value-of select='/ProductList/CodeText'></xsl:value-of>
 						<xsl:value-of select='Code'></xsl:value-of>
 					</h5>
 					<h4>

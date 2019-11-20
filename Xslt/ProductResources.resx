@@ -1788,4 +1788,13 @@
   <data name="BoxText" xml:space="preserve">
     <value>Box</value>
   </data>
+  <data name="PairText" xml:space="preserve">
+    <value>Pair</value>
+  </data>
+  <data name="SquareText" xml:space="preserve">
+    <value>Sq.M</value>
+  </data>
+  <data name="ProductDetailsText" xml:space="preserve">
+    <value>More details</value>
+  </data>
 </root>

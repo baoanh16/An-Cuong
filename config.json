@@ -11,6 +11,7 @@
 		"_plugins/lazysizes.min.js",
 		"_plugins/mapping.js",
 		"_plugins/mapping-listener.js",
+		"_plugins/threesixty.js",
 		"bower_components/fancybox/dist/jquery.fancybox.js",
 		"_plugins/jssocials.js",
 		"bower_components/noty/lib/noty.min.js",
